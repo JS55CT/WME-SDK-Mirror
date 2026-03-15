@@ -1,0 +1,12 @@
+# Generated URL lists (rebuilt by build-url-list.py each run)
+url-list.txt
+url-list-paths.txt
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# OS artifacts
+.DS_Store
+Thumbs.db

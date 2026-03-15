@@ -1,0 +1,33 @@
+---
+title: SDK.Node interface
+source: interfaces/index.SDK.Node.html
+created: 2026-03-11
+tool: extract-to-md.py
+notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
+---
+
+# Interface Node
+
+```typescript
+interface Node {
+  Â Â Â Â connectedSegmentIds: number [] ;
+  Â Â Â Â geometry: Point ;
+  Â Â Â Â id: number ;
+}
+```
+## Properties
+### `connectedSegmentIds`
+
+```typescript
+connectedSegmentIds: number []
+```
+### `geometry`
+
+```typescript
+geometry: Point
+```
+### `id`
+
+```typescript
+id: number
+```
