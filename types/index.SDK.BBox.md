@@ -1,7 +1,7 @@
 ---
 title: SDK.BBox type
 source: types/index.SDK.BBox.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -10,6 +10,6 @@ notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 
 ```typescript
 BBox: 
-  Â Â Â Â | [ number , number , number , number ]
-  Â Â Â Â | [ number , number , number , number , number , number ]
+  | [ number , number , number , number ]
+  | [ number , number , number , number , number , number ]
 ```

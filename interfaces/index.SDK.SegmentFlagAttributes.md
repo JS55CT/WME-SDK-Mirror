@@ -1,7 +1,7 @@
 ---
 title: SDK.SegmentFlagAttributes interface
 source: interfaces/index.SDK.SegmentFlagAttributes.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -10,15 +10,15 @@ notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 
 ```typescript
 interface SegmentFlagAttributes {
-  Â Â Â Â beacons: boolean ;
-  Â Â Â Â fwdLanesEnabled: boolean ;
-  Â Â Â Â fwdSpeedCamera: boolean ;
-  Â Â Â Â headlights: boolean ;
-  Â Â Â Â nearbyHOV: boolean ;
-  Â Â Â Â revLanesEnabled: boolean ;
-  Â Â Â Â revSpeedCamera: boolean ;
-  Â Â Â Â tunnel: boolean ;
-  Â Â Â Â unpaved: boolean ;
+  beacons: boolean ;
+  fwdLanesEnabled: boolean ;
+  fwdSpeedCamera: boolean ;
+  headlights: boolean ;
+  nearbyHOV: boolean ;
+  revLanesEnabled: boolean ;
+  revSpeedCamera: boolean ;
+  tunnel: boolean ;
+  unpaved: boolean ;
 }
 ```
 ## Properties

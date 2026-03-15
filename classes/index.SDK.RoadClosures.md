@@ -1,7 +1,7 @@
 ---
 title: SDK.RoadClosures class
 source: classes/index.SDK.RoadClosures.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -10,16 +10,16 @@ notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 
 ```typescript
 addClosure (
-  Â Â Â Â args: {
-  Â Â Â Â Â Â Â Â description: string ;
-  Â Â Â Â Â Â Â Â endDate: number ;
-  Â Â Â Â Â Â Â Â fromNodeClosed: boolean ;
-  Â Â Â Â Â Â Â Â isForward: boolean ;
-  Â Â Â Â Â Â Â Â isPermanent: boolean ;
-  Â Â Â Â Â Â Â Â segmentId: number ;
-  Â Â Â Â Â Â Â Â startDate: number ;
-  Â Â Â Â Â Â Â Â trafficEventId: null | string ;
-  Â Â Â Â } ,
+  args: {
+  description: string ;
+  endDate: number ;
+  fromNodeClosed: boolean ;
+  isForward: boolean ;
+  isPermanent: boolean ;
+  segmentId: number ;
+  startDate: number ;
+  trafficEventId: null | string ;
+} ,
   ) : RoadClosure
 ```
 Methods for dealing with RoadClosures.
@@ -28,16 +28,16 @@ Methods for dealing with RoadClosures.
 
 ```typescript
 addClosure (
-  Â Â Â Â args: {
-  Â Â Â Â Â Â Â Â description: string ;
-  Â Â Â Â Â Â Â Â endDate: number ;
-  Â Â Â Â Â Â Â Â fromNodeClosed: boolean ;
-  Â Â Â Â Â Â Â Â isForward: boolean ;
-  Â Â Â Â Â Â Â Â isPermanent: boolean ;
-  Â Â Â Â Â Â Â Â segmentId: number ;
-  Â Â Â Â Â Â Â Â startDate: number ;
-  Â Â Â Â Â Â Â Â trafficEventId: null | string ;
-  Â Â Â Â } ,
+  args: {
+  description: string ;
+  endDate: number ;
+  fromNodeClosed: boolean ;
+  isForward: boolean ;
+  isPermanent: boolean ;
+  segmentId: number ;
+  startDate: number ;
+  trafficEventId: null | string ;
+} ,
   ) : RoadClosure
 ```
 the created road closure.

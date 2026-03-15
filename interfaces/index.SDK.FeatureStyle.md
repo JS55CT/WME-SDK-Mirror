@@ -1,7 +1,7 @@
 ---
 title: SDK.FeatureStyle interface
 source: interfaces/index.SDK.FeatureStyle.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -10,65 +10,65 @@ notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 
 ```typescript
 interface FeatureStyle {
-  Â Â Â Â backgroundGraphic ?: string ;
-  Â Â Â Â backgroundGraphicZIndex ?: number ;
-  Â Â Â Â backgroundHeight ?: string | number ;
-  Â Â Â Â backgroundWidth ?: string | number ;
-  Â Â Â Â backgroundXOffset ?: string | number ;
-  Â Â Â Â backgroundYOffset ?: string | number ;
-  Â Â Â Â cursor ?: string ;
-  Â Â Â Â display ?: string ;
-  Â Â Â Â externalGraphic ?: null | string ;
-  Â Â Â Â fill ?: boolean ;
-  Â Â Â Â fillColor ?: string ;
-  Â Â Â Â fillOpacity ?: number ;
-  Â Â Â Â fontColor ?: string ;
-  Â Â Â Â fontFamily ?: string ;
-  Â Â Â Â fontOpacity ?: number ;
-  Â Â Â Â fontSize ?: string ;
-  Â Â Â Â fontStyle ?: string ;
-  Â Â Â Â fontWeight ?: string ;
-  Â Â Â Â graphic ?: boolean ;
-  Â Â Â Â graphicHeight ?: string | number ;
-  Â Â Â Â graphicName ?: string ;
-  Â Â Â Â graphicOpacity ?: string | number ;
-  Â Â Â Â graphicWidth ?: string | number ;
-  Â Â Â Â graphicXOffset ?: number ;
-  Â Â Â Â graphicYOffset ?: string | number ;
-  Â Â Â Â graphicZIndex ?: string | number ;
-  Â Â Â Â hoverFillColor ?: string ;
-  Â Â Â Â hoverFillOpacity ?: number ;
-  Â Â Â Â hoverPointRadius ?: number ;
-  Â Â Â Â hoverPointUnit ?: string ;
-  Â Â Â Â hoverStrokeColor ?: string ;
-  Â Â Â Â hoverStrokeOpacity ?: number ;
-  Â Â Â Â hoverStrokeWidth ?: number ;
-  Â Â Â Â label ?: string ;
-  Â Â Â Â labelAlign ?: string ;
-  Â Â Â Â labelOutlineColor ?: string ;
-  Â Â Â Â labelOutlineOpacity ?: number ;
-  Â Â Â Â labelOutlineWidth ?: number ;
-  Â Â Â Â labelSelect ?: boolean ;
-  Â Â Â Â labelXOffset ?: number ;
-  Â Â Â Â labelYOffset ?: number ;
-  Â Â Â Â pointerEvents ?: string ;
-  Â Â Â Â pointRadius ?: string | number ;
-  Â Â Â Â rotation ?: string | number ;
-  Â Â Â Â stroke ?: boolean ;
-  Â Â Â Â strokeColor ?: string ;
-  Â Â Â Â strokeDashstyle ?:
-  Â Â Â Â Â Â Â Â | "solid"
-  Â Â Â Â Â Â Â Â | "dot"
-  Â Â Â Â Â Â Â Â | "dash"
-  Â Â Â Â Â Â Â Â | "dashdot"
-  Â Â Â Â Â Â Â Â | "longdash"
-  Â Â Â Â Â Â Â Â | "longdashdot" ;
-  Â Â Â Â strokeLinecap ?: "butt"
-  Â Â Â Â | "round"
-  Â Â Â Â | "square" ;
-  Â Â Â Â strokeOpacity ?: string | number ;
-  Â Â Â Â strokeWidth ?: string | number ;
-  Â Â Â Â title ?: string ;
+  backgroundGraphic ?: string ;
+  backgroundGraphicZIndex ?: number ;
+  backgroundHeight ?: string | number ;
+  backgroundWidth ?: string | number ;
+  backgroundXOffset ?: string | number ;
+  backgroundYOffset ?: string | number ;
+  cursor ?: string ;
+  display ?: string ;
+  externalGraphic ?: null | string ;
+  fill ?: boolean ;
+  fillColor ?: string ;
+  fillOpacity ?: number ;
+  fontColor ?: string ;
+  fontFamily ?: string ;
+  fontOpacity ?: number ;
+  fontSize ?: string ;
+  fontStyle ?: string ;
+  fontWeight ?: string ;
+  graphic ?: boolean ;
+  graphicHeight ?: string | number ;
+  graphicName ?: string ;
+  graphicOpacity ?: string | number ;
+  graphicWidth ?: string | number ;
+  graphicXOffset ?: number ;
+  graphicYOffset ?: string | number ;
+  graphicZIndex ?: string | number ;
+  hoverFillColor ?: string ;
+  hoverFillOpacity ?: number ;
+  hoverPointRadius ?: number ;
+  hoverPointUnit ?: string ;
+  hoverStrokeColor ?: string ;
+  hoverStrokeOpacity ?: number ;
+  hoverStrokeWidth ?: number ;
+  label ?: string ;
+  labelAlign ?: string ;
+  labelOutlineColor ?: string ;
+  labelOutlineOpacity ?: number ;
+  labelOutlineWidth ?: number ;
+  labelSelect ?: boolean ;
+  labelXOffset ?: number ;
+  labelYOffset ?: number ;
+  pointerEvents ?: string ;
+  pointRadius ?: string | number ;
+  rotation ?: string | number ;
+  stroke ?: boolean ;
+  strokeColor ?: string ;
+  strokeDashstyle ?:
+  | "solid"
+  | "dot"
+  | "dash"
+  | "dashdot"
+  | "longdash"
+  | "longdashdot" ;
+  strokeLinecap ?: "butt"
+  | "round"
+  | "square" ;
+  strokeOpacity ?: string | number ;
+  strokeWidth ?: string | number ;
+  title ?: string ;
 }
 ```
 List of OpenLayers supported styles taken from OL 2 docs

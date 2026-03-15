@@ -1,7 +1,7 @@
 ---
 title: SDK.ErrorOptions interface
 source: interfaces/index.SDK.ErrorOptions.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -10,7 +10,7 @@ notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 
 ```typescript
 interface ErrorOptions {
-  Â Â Â Â cause ?: unknown ;
+  cause ?: unknown ;
 }
 ```
 ## Properties

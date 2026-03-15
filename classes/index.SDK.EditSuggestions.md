@@ -1,7 +1,7 @@
 ---
 title: SDK.EditSuggestions class
 source: classes/index.SDK.EditSuggestions.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -29,7 +29,7 @@ edit suggestion with id, or null if not found in the WME data model
 
 ```typescript
 getEditSuggestionChanges (
-  Â Â Â Â args: { editSuggestionId: string } ,
+  args: { editSuggestionId: string } ,
   ) : EditSuggestionChange []
 ```
 an array of edit suggestion changes

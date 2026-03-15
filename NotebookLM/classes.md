@@ -3,7 +3,7 @@
 ---
 title: SDK.BigJunctions class
 source: classes/index.SDK.BigJunctions.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -41,7 +41,7 @@ bigJunction with id, or null if not found in the WME data model
 ---
 title: SDK.ChargingStation class
 source: classes/index.SDK.ChargingStation.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -91,7 +91,7 @@ payment methods of the venue in case the venue is a charging station, null other
 ---
 title: SDK.Cities class
 source: classes/index.SDK.Cities.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -100,7 +100,7 @@ notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 
 ```typescript
 addCity (
-  Â Â Â Â options: { cityName: string ; countryId ?: number ; stateId ?: number } ,
+  options: { cityName: string ; countryId ?: number ; stateId ?: number } ,
   ) : City
 ```
 Methods for dealing with Cities.
@@ -109,7 +109,7 @@ Methods for dealing with Cities.
 
 ```typescript
 addCity (
-  Â Â Â Â options: { cityName: string ; countryId ?: number ; stateId ?: number } ,
+  options: { cityName: string ; countryId ?: number ; stateId ?: number } ,
   ) : City
 ```
 a new city object
@@ -129,7 +129,7 @@ city with id, or null if not found in the WME data model
 
 ```typescript
 getCity (
-  Â Â Â Â options: { cityName: string ; countryId ?: number ; stateId ?: number } ,
+  options: { cityName: string ; countryId ?: number ; stateId ?: number } ,
   ) : null | City
 ```
 a city object or null if not found
@@ -147,7 +147,7 @@ top city or null
 ---
 title: SDK.Countries class
 source: classes/index.SDK.Countries.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -186,7 +186,7 @@ if none set
 ---
 title: SDK.DataModel class
 source: classes/index.SDK.DataModel.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -313,7 +313,7 @@ Venues: Venues = ...
 
 ```typescript
 isDeletable (
-  Â Â Â Â args: { dataModelName: DataModelName ; objectId: string | number } ,
+  args: { dataModelName: DataModelName ; objectId: string | number } ,
   ) : boolean
 ```
 true if the object is deletable, false otherwise.
@@ -321,7 +321,7 @@ true if the object is deletable, false otherwise.
 
 ```typescript
 isDeleted (
-  Â Â Â Â args: { dataModelName: DataModelName ; objectId: string | number } ,
+  args: { dataModelName: DataModelName ; objectId: string | number } ,
   ) : boolean
 ```
 true if the object is deleted, false otherwise.
@@ -329,7 +329,7 @@ true if the object is deleted, false otherwise.
 
 ```typescript
 isNew (
-  Â Â Â Â args: { dataModelName: DataModelName ; objectId: string | number } ,
+  args: { dataModelName: DataModelName ; objectId: string | number } ,
   ) : boolean
 ```
 true if the object is new, false otherwise.
@@ -347,7 +347,7 @@ promise that resolves once the data refresh completed.
 ---
 title: SDK.DataModelNotFoundError class
 source: classes/index.SDK.DataModelNotFoundError.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -383,7 +383,7 @@ name: "DataModelNotFoundError"
 ---
 title: SDK.EditSuggestions class
 source: classes/index.SDK.EditSuggestions.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -411,7 +411,7 @@ edit suggestion with id, or null if not found in the WME data model
 
 ```typescript
 getEditSuggestionChanges (
-  Â Â Â Â args: { editSuggestionId: string } ,
+  args: { editSuggestionId: string } ,
   ) : EditSuggestionChange []
 ```
 an array of edit suggestion changes
@@ -423,7 +423,7 @@ an array of edit suggestion changes
 ---
 title: SDK.Editing class
 source: classes/index.SDK.Editing.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -495,7 +495,7 @@ true if user is editing as a guest in "practice mode"
 ```typescript
 isSnapshotModeOn () : boolean
 ```
-true if user is in "snapshot mode", viewing whatâs currently live
+true if user is in "snapshot mode", viewing what’s currently live
 in the Waze app.
 ### `lockEditing`
 
@@ -546,7 +546,7 @@ undoAll () : void
 ---
 title: SDK.HouseNumbers class
 source: classes/index.SDK.HouseNumbers.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -586,7 +586,7 @@ A Promise that resolves to an array of HouseNumber objects.
 
 ```typescript
 moveHouseNumber (
-  Â Â Â Â args: { houseNumberId: string ; point: Point ; segmentId ?: number } ,
+  args: { houseNumberId: string ; point: Point ; segmentId ?: number } ,
   ) : void
 ```
 
@@ -594,7 +594,7 @@ moveHouseNumber (
 
 ```typescript
 moveHouseNumberFractionPoint (
-  Â Â Â Â args: { fractionPoint: Point ; houseNumberId: string } ,
+  args: { fractionPoint: Point ; houseNumberId: string } ,
   ) : void
 ```
 
@@ -602,13 +602,13 @@ moveHouseNumberFractionPoint (
 
 ```typescript
 updateHouseNumber (
-  Â Â Â Â args: {
-  Â Â Â Â Â Â Â Â fractionPoint ?: Point ;
-  Â Â Â Â Â Â Â Â houseNumberId: string ;
-  Â Â Â Â Â Â Â Â number ?: string ;
-  Â Â Â Â Â Â Â Â point ?: Point ;
-  Â Â Â Â Â Â Â Â segmentId ?: number ;
-  Â Â Â Â } ,
+  args: {
+  fractionPoint ?: Point ;
+  houseNumberId: string ;
+  number ?: string ;
+  point ?: Point ;
+  segmentId ?: number ;
+} ,
   ) : void
 ```
 
@@ -619,7 +619,7 @@ updateHouseNumber (
 ---
 title: SDK.InvalidStateError class
 source: classes/index.SDK.InvalidStateError.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -646,7 +646,7 @@ name: "InvalidStateError"
 ---
 title: SDK.Junctions class
 source: classes/index.SDK.Junctions.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -678,7 +678,7 @@ junctions with id, or null if not found in the WME data model
 ---
 title: SDK.LayerSwitcher class
 source: classes/index.SDK.LayerSwitcher.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -757,7 +757,7 @@ setRoadsLayerCheckboxChecked ( args: { isChecked: boolean } ) : void
 ---
 title: SDK.MajorTrafficEvents class
 source: classes/index.SDK.MajorTrafficEvents.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -789,7 +789,7 @@ major traffic event with id, or null if not found in the WME data model
 ---
 title: SDK.ManagedAreas class
 source: classes/index.SDK.ManagedAreas.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -821,7 +821,7 @@ managed area with id, or null if not found in the WME data model
 ---
 title: SDK.Map class
 source: classes/index.SDK.Map.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -848,7 +848,7 @@ MIN_ZOOM_LEVEL: ZoomLevel = MIN_ZOOM_LEVEL
 
 ```typescript
 addFeaturesToLayer (
-  Â Â Â Â args: { features: SdkFeature < SdkFeatureGeometry > [] ; layerName: string } ,
+  args: { features: SdkFeature < SdkFeatureGeometry > [] ; layerName: string } ,
   ) : void
 ```
 
@@ -862,12 +862,12 @@ addFeatureToLayer ( args: { feature: SdkFeature ; layerName: string } ) : void
 
 ```typescript
 addLayer (
-  Â Â Â Â args: {
-  Â Â Â Â Â Â Â Â layerName: string ;
-  Â Â Â Â Â Â Â Â styleContext ?: SdkFeatureStyleContext ;
-  Â Â Â Â Â Â Â Â styleRules ?: SdkFeatureStyleRule [] ;
-  Â Â Â Â Â Â Â Â zIndexing ?: boolean ;
-  Â Â Â Â } ,
+  args: {
+  layerName: string ;
+  styleContext ?: SdkFeatureStyleContext ;
+  styleRules ?: SdkFeatureStyleRule [] ;
+  zIndexing ?: boolean ;
+} ,
   ) : void
 ```
 **Example: Basic layer with no styling**
@@ -955,7 +955,7 @@ sdk.Map.addFeatureToLayer({
 
 ```typescript
 addStyleRuleToLayer (
-  Â Â Â Â args: { layerName: WME_LAYER_NAMES ; styleRules: SdkFeatureStyleRule [] } ,
+  args: { layerName: WME_LAYER_NAMES ; styleRules: SdkFeatureStyleRule [] } ,
   ) : void
 ```
 
@@ -975,7 +975,7 @@ centerMapOnGeometry ( args: { geometry: Point | Polygon | LineString } ) : void
 
 ```typescript
 dangerouslyAddFeaturesToLayerWithoutValidation (
-  Â Â Â Â args: { features: object [] ; layerName: string } ,
+  args: { features: object [] ; layerName: string } ,
   ) : void
 ```
 
@@ -1046,7 +1046,7 @@ enableSelectionToggling () : void
 
 ```typescript
 getFeatureDomElement (
-  Â Â Â Â args: { featureId: string | number ; layerName: string } ,
+  args: { featureId: string | number ; layerName: string } ,
   ) : null | HTMLElement | SVGElement
 ```
 a DOM element of a feature on the map within the given layer.
@@ -1160,7 +1160,7 @@ removeAllFeaturesFromLayer ( args: { layerName: string } ) : void
 
 ```typescript
 removeFeatureFromLayer (
-  Â Â Â Â args: { featureId: string | number ; layerName: string } ,
+  args: { featureId: string | number ; layerName: string } ,
   ) : void
 ```
 
@@ -1168,7 +1168,7 @@ removeFeatureFromLayer (
 
 ```typescript
 removeFeaturesFromLayer (
-  Â Â Â Â args: { featureIds: ( string | number ) [] ; layerName: string } ,
+  args: { featureIds: ( string | number ) [] ; layerName: string } ,
   ) : void
 ```
 
@@ -1233,7 +1233,7 @@ zoomToExtent ( args: { bbox: BBox } ) : void
 ---
 title: SDK.MapComments class
 source: classes/index.SDK.MapComments.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -1242,12 +1242,12 @@ notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 
 ```typescript
 addComment (
-  Â Â Â Â args: {
-  Â Â Â Â Â Â Â Â body: string ;
-  Â Â Â Â Â Â Â Â endDate: number ;
-  Â Â Â Â Â Â Â Â geometry: Point | Polygon ;
-  Â Â Â Â Â Â Â Â subject: string ;
-  Â Â Â Â } ,
+  args: {
+  body: string ;
+  endDate: number ;
+  geometry: Point | Polygon ;
+  subject: string ;
+} ,
   ) : MapComment
 ```
 Methods for dealing with MapComments.
@@ -1256,12 +1256,12 @@ Methods for dealing with MapComments.
 
 ```typescript
 addComment (
-  Â Â Â Â args: {
-  Â Â Â Â Â Â Â Â body: string ;
-  Â Â Â Â Â Â Â Â endDate: number ;
-  Â Â Â Â Â Â Â Â geometry: Point | Polygon ;
-  Â Â Â Â Â Â Â Â subject: string ;
-  Â Â Â Â } ,
+  args: {
+  body: string ;
+  endDate: number ;
+  geometry: Point | Polygon ;
+  subject: string ;
+} ,
   ) : MapComment
 ```
 the created map comment.
@@ -1281,13 +1281,13 @@ map comment with id, or null if not found in the WME data model
 
 ```typescript
 updateComment (
-  Â Â Â Â args: {
-  Â Â Â Â Â Â Â Â body ?: string ;
-  Â Â Â Â Â Â Â Â endDate ?: null | number ;
-  Â Â Â Â Â Â Â Â geometry ?: Point | Polygon ;
-  Â Â Â Â Â Â Â Â mapCommentId: string ;
-  Â Â Â Â Â Â Â Â subject ?: string ;
-  Â Â Â Â } ,
+  args: {
+  body ?: string ;
+  endDate ?: null | number ;
+  geometry ?: Point | Polygon ;
+  mapCommentId: string ;
+  subject ?: string ;
+} ,
   ) : MapComment
 ```
 the updated map comment.
@@ -1299,7 +1299,7 @@ the updated map comment.
 ---
 title: SDK.MapProblems class
 source: classes/index.SDK.MapProblems.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -1331,7 +1331,7 @@ map problem with id, or null if not found in the WME data model
 ---
 title: SDK.MapUpdateRequests class
 source: classes/index.SDK.MapUpdateRequests.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -1340,7 +1340,7 @@ notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 
 ```typescript
 addComment (
-  Â Â Â Â args: { mapUpdateRequestId: number ; text: string } ,
+  args: { mapUpdateRequestId: number ; text: string } ,
   ) : Promise < ConversationElement >
 ```
 Methods for dealing with MapUpdateRequests.
@@ -1349,7 +1349,7 @@ Methods for dealing with MapUpdateRequests.
 
 ```typescript
 addComment (
-  Â Â Â Â args: { mapUpdateRequestId: number ; text: string } ,
+  args: { mapUpdateRequestId: number ; text: string } ,
   ) : Promise < ConversationElement >
 ```
 A promise that resolves to a created conversation element representing the comment.
@@ -1369,7 +1369,7 @@ map update request with id, or null if not found in the WME data model
 
 ```typescript
 getUpdateRequestDetails (
-  Â Â Â Â args: { mapUpdateRequestId: number } ,
+  args: { mapUpdateRequestId: number } ,
   ) : Promise < null | UpdateRequestDetails >
 ```
 map update request details. If details are not present in the WME data model, they will be fetched.
@@ -1378,10 +1378,10 @@ Returns null if not found in the WME data model.
 
 ```typescript
 updateResolutionState (
-  Â Â Â Â args: {
-  Â Â Â Â Â Â Â Â mapUpdateRequestId: number ;
-  Â Â Â Â Â Â Â Â resolutionState: UpdateableMapProblemState ;
-  Â Â Â Â } ,
+  args: {
+  mapUpdateRequestId: number ;
+  resolutionState: UpdateableMapProblemState ;
+} ,
   ) : void
 ```
 
@@ -1392,7 +1392,7 @@ updateResolutionState (
 ---
 title: SDK.Nodes class
 source: classes/index.SDK.Nodes.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -1453,7 +1453,7 @@ moveNode ( args: { geometry: Point ; id: number } ) : void
 ---
 title: SDK.ParkingLot class
 source: classes/index.SDK.ParkingLot.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -1517,7 +1517,7 @@ whether lot type of the current venue varies depending on time/day in case the v
 
 ```typescript
 setEstimatedNumberOfSpots (
-  Â Â Â Â args: { estimatedNumberOfSpots: SpotsEstimate ; venueId: string } ,
+  args: { estimatedNumberOfSpots: SpotsEstimate ; venueId: string } ,
   ) : void
 ```
 
@@ -1528,7 +1528,7 @@ setEstimatedNumberOfSpots (
 ---
 title: SDK.PermanentHazards class
 source: classes/index.SDK.PermanentHazards.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -1560,7 +1560,7 @@ camera with id, or null if not found in the WME data model
 ---
 title: SDK.RestrictedDrivingAreas class
 source: classes/index.SDK.RestrictedDrivingAreas.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -1592,7 +1592,7 @@ restricted driving area with id, or null if not found in the WME data model
 ---
 title: SDK.RoadClosures class
 source: classes/index.SDK.RoadClosures.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -1601,16 +1601,16 @@ notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 
 ```typescript
 addClosure (
-  Â Â Â Â args: {
-  Â Â Â Â Â Â Â Â description: string ;
-  Â Â Â Â Â Â Â Â endDate: number ;
-  Â Â Â Â Â Â Â Â fromNodeClosed: boolean ;
-  Â Â Â Â Â Â Â Â isForward: boolean ;
-  Â Â Â Â Â Â Â Â isPermanent: boolean ;
-  Â Â Â Â Â Â Â Â segmentId: number ;
-  Â Â Â Â Â Â Â Â startDate: number ;
-  Â Â Â Â Â Â Â Â trafficEventId: null | string ;
-  Â Â Â Â } ,
+  args: {
+  description: string ;
+  endDate: number ;
+  fromNodeClosed: boolean ;
+  isForward: boolean ;
+  isPermanent: boolean ;
+  segmentId: number ;
+  startDate: number ;
+  trafficEventId: null | string ;
+} ,
   ) : RoadClosure
 ```
 Methods for dealing with RoadClosures.
@@ -1619,16 +1619,16 @@ Methods for dealing with RoadClosures.
 
 ```typescript
 addClosure (
-  Â Â Â Â args: {
-  Â Â Â Â Â Â Â Â description: string ;
-  Â Â Â Â Â Â Â Â endDate: number ;
-  Â Â Â Â Â Â Â Â fromNodeClosed: boolean ;
-  Â Â Â Â Â Â Â Â isForward: boolean ;
-  Â Â Â Â Â Â Â Â isPermanent: boolean ;
-  Â Â Â Â Â Â Â Â segmentId: number ;
-  Â Â Â Â Â Â Â Â startDate: number ;
-  Â Â Â Â Â Â Â Â trafficEventId: null | string ;
-  Â Â Â Â } ,
+  args: {
+  description: string ;
+  endDate: number ;
+  fromNodeClosed: boolean ;
+  isForward: boolean ;
+  isPermanent: boolean ;
+  segmentId: number ;
+  startDate: number ;
+  trafficEventId: null | string ;
+} ,
   ) : RoadClosure
 ```
 the created road closure.
@@ -1652,7 +1652,7 @@ road closure with id, or null if not found in the WME data model
 ---
 title: SDK.SdkEventBus class
 source: classes/index.SDK.SdkEventBus.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -1674,10 +1674,10 @@ clear () : void
 
 ```typescript
 off < EventName extends keyof SdkEvents > (
-  Â Â Â Â args: {
-  Â Â Â Â Â Â Â Â eventHandler: EventHandler < SdkEvents [ EventName ] > ;
-  Â Â Â Â Â Â Â Â eventName: EventName ;
-  Â Â Â Â } ,
+  args: {
+  eventHandler: EventHandler < SdkEvents [ EventName ] > ;
+  eventName: EventName ;
+} ,
   ) : void
 ```
 
@@ -1685,10 +1685,10 @@ off < EventName extends keyof SdkEvents > (
 
 ```typescript
 on < EventName extends keyof SdkEvents > (
-  Â Â Â Â args: {
-  Â Â Â Â Â Â Â Â eventHandler: EventHandler < SdkEvents [ EventName ] > ;
-  Â Â Â Â Â Â Â Â eventName: EventName ;
-  Â Â Â Â } ,
+  args: {
+  eventHandler: EventHandler < SdkEvents [ EventName ] > ;
+  eventName: EventName ;
+} ,
   ) : () = > void
 ```
 a cleanup function that will unregister the handler from the event.
@@ -1696,7 +1696,7 @@ a cleanup function that will unregister the handler from the event.
 
 ```typescript
 once < EventName extends keyof SdkEvents > (
-  Â Â Â Â args: { eventName: EventName } ,
+  args: { eventName: EventName } ,
   ) : Promise < SdkEvents [ EventName ] >
 ```
 a promise that gets resolved once the event happens.
@@ -1731,7 +1731,7 @@ trackLayerEvents ( args: { layerName: string } ) : void
 ---
 title: SDK.Segments class
 source: classes/index.SDK.Segments.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -1753,7 +1753,7 @@ addAlternateStreet ( args: { segmentIds: number [] ; streetId: number } ) : void
 
 ```typescript
 addIntersection (
-  Â Â Â Â args: { segmentIds: [ number , number ] } ,
+  args: { segmentIds: [ number , number ] } ,
   ) : { sourceSplits: [ number , number ] ; targetSplits: [ number , number ] }
 ```
 the ids of the four newly created segments.
@@ -1803,7 +1803,7 @@ segment with id, or null if not found in the WME data model
 
 ```typescript
 getConnectedSegments (
-  Â Â Â Â args: { reverseDirection ?: boolean ; segmentId: number } ,
+  args: { reverseDirection ?: boolean ; segmentId: number } ,
   ) : Segment []
 ```
 connected segments in specified direction
@@ -1835,7 +1835,7 @@ the WKT string representation of the segment's geometry
 
 ```typescript
 hasPermissions (
-  Â Â Â Â args: { permission ?: SegmentPermission ; segmentId: number } ,
+  args: { permission ?: SegmentPermission ; segmentId: number } ,
   ) : boolean
 ```
 whether the current user has a permission for this segment or not.
@@ -1873,11 +1873,11 @@ two segments the original segment was split into.
 
 ```typescript
 updateAddress (
-  Â Â Â Â args: {
-  Â Â Â Â Â Â Â Â alternateStreetIds ?: number [] ;
-  Â Â Â Â Â Â Â Â primaryStreetId ?: number ;
-  Â Â Â Â Â Â Â Â segmentId: number ;
-  Â Â Â Â } ,
+  args: {
+  alternateStreetIds ?: number [] ;
+  primaryStreetId ?: number ;
+  segmentId: number ;
+} ,
   ) : void
 ```
 
@@ -1885,27 +1885,27 @@ updateAddress (
 
 ```typescript
 updateSegment (
-  Â Â Â Â args: {
-  Â Â Â Â Â Â Â Â direction ?: SegmentDirection ;
-  Â Â Â Â Â Â Â Â elevationLevel ?: number ;
-  Â Â Â Â Â Â Â Â flagAttributes ?: Pick <
-  Â Â Â Â Â Â Â Â Â Â Â Â SegmentFlagAttributes ,
-  Â Â Â Â Â Â Â Â Â Â Â Â "tunnel"
-  Â Â Â Â Â Â Â Â Â Â Â Â | "unpaved"
-  Â Â Â Â Â Â Â Â Â Â Â Â | "headlights"
-  Â Â Â Â Â Â Â Â Â Â Â Â | "nearbyHOV" ,
-  Â Â Â Â Â Â Â Â > ;
-  Â Â Â Â Â Â Â Â fromLanesInfo ?: null | SegmentLanesInfo ;
-  Â Â Â Â Â Â Â Â fwdSpeedLimit ?: null | number ;
-  Â Â Â Â Â Â Â Â geometry ?: LineString ;
-  Â Â Â Â Â Â Â Â hasToll ?: boolean ;
-  Â Â Â Â Â Â Â Â lockRank ?: UserRank ;
-  Â Â Â Â Â Â Â Â revSpeedLimit ?: null | number ;
-  Â Â Â Â Â Â Â Â roadType ?: RoadTypeId ;
-  Â Â Â Â Â Â Â Â routingRoadType ?: 1 | 2 | 3 | 6 | 7 ;
-  Â Â Â Â Â Â Â Â segmentId: number ;
-  Â Â Â Â Â Â Â Â toLanesInfo ?: null | SegmentLanesInfo ;
-  Â Â Â Â } ,
+  args: {
+  direction ?: SegmentDirection ;
+  elevationLevel ?: number ;
+  flagAttributes ?: Pick <
+  SegmentFlagAttributes ,
+  "tunnel"
+  | "unpaved"
+  | "headlights"
+  | "nearbyHOV" ,
+  > ;
+  fromLanesInfo ?: null | SegmentLanesInfo ;
+  fwdSpeedLimit ?: null | number ;
+  geometry ?: LineString ;
+  hasToll ?: boolean ;
+  lockRank ?: UserRank ;
+  revSpeedLimit ?: null | number ;
+  roadType ?: RoadTypeId ;
+  routingRoadType ?: 1 | 2 | 3 | 6 | 7 ;
+  segmentId: number ;
+  toLanesInfo ?: null | SegmentLanesInfo ;
+} ,
   ) : void
 ```
 
@@ -1922,7 +1922,7 @@ verifyTurns ( args: { isForward: boolean ; segmentId: number } ) : void
 ---
 title: SDK.Settings class
 source: classes/index.SDK.Settings.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -1971,7 +1971,7 @@ setUserSettings ( options: Partial < UserSettings > ) : void
 ---
 title: SDK.Shortcuts class
 source: classes/index.SDK.Shortcuts.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -2021,7 +2021,7 @@ true if a shortcut with specified id is already registered.
 ---
 title: SDK.Sidebar class
 source: classes/index.SDK.Sidebar.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -2052,7 +2052,7 @@ removeScriptTab () : void
 ---
 title: SDK.States class
 source: classes/index.SDK.States.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -2103,7 +2103,7 @@ true if there are any states apart from the default state in the WME data model.
 ---
 title: SDK.Streets class
 source: classes/index.SDK.Streets.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -2152,7 +2152,7 @@ updateStreet ( args: { direction ?: string ; streetId: number } ) : void
 ---
 title: SDK.TurnClosures class
 source: classes/index.SDK.TurnClosures.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -2161,13 +2161,13 @@ notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 
 ```typescript
 addClosure (
-  Â Â Â Â args: {
-  Â Â Â Â Â Â Â Â description: string ;
-  Â Â Â Â Â Â Â Â endDate: number ;
-  Â Â Â Â Â Â Â Â majorTrafficEventId ?: string ;
-  Â Â Â Â Â Â Â Â startDate: number ;
-  Â Â Â Â Â Â Â Â turnId: string ;
-  Â Â Â Â } ,
+  args: {
+  description: string ;
+  endDate: number ;
+  majorTrafficEventId ?: string ;
+  startDate: number ;
+  turnId: string ;
+} ,
   ) : TurnClosure
 ```
 Methods for dealing with TurnClosures.
@@ -2176,13 +2176,13 @@ Methods for dealing with TurnClosures.
 
 ```typescript
 addClosure (
-  Â Â Â Â args: {
-  Â Â Â Â Â Â Â Â description: string ;
-  Â Â Â Â Â Â Â Â endDate: number ;
-  Â Â Â Â Â Â Â Â majorTrafficEventId ?: string ;
-  Â Â Â Â Â Â Â Â startDate: number ;
-  Â Â Â Â Â Â Â Â turnId: string ;
-  Â Â Â Â } ,
+  args: {
+  description: string ;
+  endDate: number ;
+  majorTrafficEventId ?: string ;
+  startDate: number ;
+  turnId: string ;
+} ,
   ) : TurnClosure
 ```
 The newly created turn closure object.
@@ -2206,7 +2206,7 @@ turn closure with id, or null if not found in the WME data model
 ---
 title: SDK.Turns class
 source: classes/index.SDK.Turns.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -2228,7 +2228,7 @@ true if all the segments going through the node allow connections to be edited.
 
 ```typescript
 createPathTurn (
-  Â Â Â Â args: { fromSegmentId: number ; isForward: boolean ; toSegmentId: number } ,
+  args: { fromSegmentId: number ; isForward: boolean ; toSegmentId: number } ,
   ) : Turn
 ```
 created path turn from the source segment to the target segment.
@@ -2266,7 +2266,7 @@ all turns to the segment
 
 ```typescript
 isTurnAllowed (
-  Â Â Â Â args: { fromSegmentId: number ; nodeId: number ; toSegmentId: number } ,
+  args: { fromSegmentId: number ; nodeId: number ; toSegmentId: number } ,
   ) : boolean
 ```
 true if a turn is allowed
@@ -2274,7 +2274,7 @@ true if a turn is allowed
 
 ```typescript
 isTurnAllowedBySegmentDirections (
-  Â Â Â Â args: { fromSegmentId: number ; nodeId: number ; toSegmentId: number } ,
+  args: { fromSegmentId: number ; nodeId: number ; toSegmentId: number } ,
   ) : boolean
 ```
 true if a turn is allowed
@@ -2282,11 +2282,11 @@ true if a turn is allowed
 
 ```typescript
 setSegmentTurnsLaneCount (
-  Â Â Â Â args: {
-  Â Â Â Â Â Â Â Â laneCount: number ;
-  Â Â Â Â Â Â Â Â laneDirection: SegmentLaneGuidanceDirection ;
-  Â Â Â Â Â Â Â Â segmentId: number ;
-  Â Â Â Â } ,
+  args: {
+  laneCount: number ;
+  laneDirection: SegmentLaneGuidanceDirection ;
+  segmentId: number ;
+} ,
   ) : void
 ```
 
@@ -2309,7 +2309,7 @@ updateTurn ( args: { isAllowed ?: boolean ; turnId: string } ) : void
 ---
 title: SDK.Users class
 source: classes/index.SDK.Users.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -2347,7 +2347,7 @@ a formatted link for a users editor profile page
 ---
 title: SDK.ValidationError class
 source: classes/index.SDK.ValidationError.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -2374,7 +2374,7 @@ name: "ValidationError"
 ---
 title: SDK.Venues class
 source: classes/index.SDK.Venues.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -2486,7 +2486,7 @@ whether the current user has a permission for this venue or not.
 
 ```typescript
 replaceNavigationPoints (
-  Â Â Â Â args: { navigationPoints: Partial < NavigationPoint > [] ; venueId: string } ,
+  args: { navigationPoints: Partial < NavigationPoint > [] ; venueId: string } ,
   ) : void
 ```
 
@@ -2500,7 +2500,7 @@ showVenueUpdateRequestDialog ( args: { venueId: string } ) : void
 
 ```typescript
 updateAddress (
-  Â Â Â Â args: { houseNumber ?: string ; streetId ?: number ; venueId: string } ,
+  args: { houseNumber ?: string ; streetId ?: number ; venueId: string } ,
   ) : void
 ```
 
@@ -2508,20 +2508,20 @@ updateAddress (
 
 ```typescript
 updateVenue (
-  Â Â Â Â args: {
-  Â Â Â Â Â Â Â Â aliases ?: string [] ;
-  Â Â Â Â Â Â Â Â brand ?: string ;
-  Â Â Â Â Â Â Â Â categories ?: VenueCategoryId [] ;
-  Â Â Â Â Â Â Â Â description ?: string ;
-  Â Â Â Â Â Â Â Â geometry ?: Point | Polygon ;
-  Â Â Â Â Â Â Â Â lockRank ?: number ;
-  Â Â Â Â Â Â Â Â name ?: string ;
-  Â Â Â Â Â Â Â Â openingHours ?: OpeningHour [] ;
-  Â Â Â Â Â Â Â Â phone ?: string ;
-  Â Â Â Â Â Â Â Â services ?: ServiceType [] ;
-  Â Â Â Â Â Â Â Â url ?: string ;
-  Â Â Â Â Â Â Â Â venueId: string ;
-  Â Â Â Â } ,
+  args: {
+  aliases ?: string [] ;
+  brand ?: string ;
+  categories ?: VenueCategoryId [] ;
+  description ?: string ;
+  geometry ?: Point | Polygon ;
+  lockRank ?: number ;
+  name ?: string ;
+  openingHours ?: OpeningHour [] ;
+  phone ?: string ;
+  services ?: ServiceType [] ;
+  url ?: string ;
+  venueId: string ;
+} ,
   ) : void
 ```
 
@@ -2529,7 +2529,7 @@ updateVenue (
 
 ```typescript
 updateVenueIsResidential (
-  Â Â Â Â args: { isResidential: boolean ; venueId: string } ,
+  args: { isResidential: boolean ; venueId: string } ,
   ) : void
 ```
 
@@ -2537,11 +2537,11 @@ updateVenueIsResidential (
 
 ```typescript
 updateVenueUpdateRequest (
-  Â Â Â Â args: {
-  Â Â Â Â Â Â Â Â isApproved: boolean ;
-  Â Â Â Â Â Â Â Â venueId: string ;
-  Â Â Â Â Â Â Â Â venueUpdateRequestId: string ;
-  Â Â Â Â } ,
+  args: {
+  isApproved: boolean ;
+  venueId: string ;
+  venueUpdateRequestId: string ;
+} ,
   ) : void
 ```
 
@@ -2552,7 +2552,7 @@ updateVenueUpdateRequest (
 ---
 title: SDK.WMEError class
 source: classes/index.SDK.WMEError.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -2580,7 +2580,7 @@ name: "WMEError"
 ---
 title: SDK.WmeSDK class
 source: classes/index.SDK.WmeSDK.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -2606,10 +2606,10 @@ Editing: Editing = ...
 
 ```typescript
 Errors: {
-  Â Â Â Â DataModelNotFoundError: typeof DataModelNotFoundError ;
-  Â Â Â Â InvalidStateError: typeof InvalidStateError ;
-  Â Â Â Â ValidationError: typeof ValidationError ;
-  Â Â Â Â WMEError: typeof WMEError ;
+  DataModelNotFoundError: typeof DataModelNotFoundError ;
+  InvalidStateError: typeof InvalidStateError ;
+  ValidationError: typeof ValidationError ;
+  WMEError: typeof WMEError ;
 }
 ```
 ### **Readonly** `Events`
@@ -2692,7 +2692,7 @@ true if running in the WME beta environment
 ---
 title: SDK.WmeState class
 source: classes/index.SDK.WmeState.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---

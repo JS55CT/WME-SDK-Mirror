@@ -1,7 +1,7 @@
 ---
 title: SDK.RoadClosure interface
 source: interfaces/index.SDK.RoadClosure.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -10,16 +10,16 @@ notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 
 ```typescript
 interface RoadClosure {
-  Â Â Â Â description: null | string ;
-  Â Â Â Â endDate: null | string ;
-  Â Â Â Â id: string ;
-  Â Â Â Â isForward: boolean ;
-  Â Â Â Â isPermanent: boolean ;
-  Â Â Â Â modificationData: ModificationMetadata ;
-  Â Â Â Â segmentId: number ;
-  Â Â Â Â startDate: null | string ;
-  Â Â Â Â status: ClosureStatus ;
-  Â Â Â Â trafficEventId: null | string ;
+  description: null | string ;
+  endDate: null | string ;
+  id: string ;
+  isForward: boolean ;
+  isPermanent: boolean ;
+  modificationData: ModificationMetadata ;
+  segmentId: number ;
+  startDate: null | string ;
+  status: ClosureStatus ;
+  trafficEventId: null | string ;
 }
 ```
 ## Properties

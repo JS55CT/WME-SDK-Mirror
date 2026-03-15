@@ -1,7 +1,7 @@
 ---
 title: SDK.RestrictedDrivingArea interface
 source: interfaces/index.SDK.RestrictedDrivingArea.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -10,12 +10,12 @@ notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 
 ```typescript
 interface RestrictedDrivingArea {
-  Â Â Â Â center: Point ;
-  Â Â Â Â geometry: Polygon ;
-  Â Â Â Â id: number ;
-  Â Â Â Â modificationData: ModificationMetadata ;
-  Â Â Â Â name: string ;
-  Â Â Â Â restrictionName: string ;
+  center: Point ;
+  geometry: Polygon ;
+  id: number ;
+  modificationData: ModificationMetadata ;
+  name: string ;
+  restrictionName: string ;
 }
 ```
 ## Properties

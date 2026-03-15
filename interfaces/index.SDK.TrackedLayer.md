@@ -1,7 +1,7 @@
 ---
 title: SDK.TrackedLayer interface
 source: interfaces/index.SDK.TrackedLayer.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -10,12 +10,12 @@ notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 
 ```typescript
 interface TrackedLayer {
-  Â Â Â Â events: {
-  Â Â Â Â Â Â Â Â visibilitychanged: () = > void ;
-  Â Â Â Â Â Â Â Â "waze-feature-clicked": ( e: { feature: WMEFeature } ) = > void ;
-  Â Â Â Â Â Â Â Â "waze-feature-in": ( e: { feature: WMEFeature } ) = > void ;
-  Â Â Â Â Â Â Â Â "waze-feature-out": ( e: { feature: WMEFeature } ) = > void ;
-  Â Â Â Â } ;
+  events: {
+  visibilitychanged: () = > void ;
+  "waze-feature-clicked": ( e: { feature: WMEFeature } ) = > void ;
+  "waze-feature-in": ( e: { feature: WMEFeature } ) = > void ;
+  "waze-feature-out": ( e: { feature: WMEFeature } ) = > void ;
+} ;
 }
 ```
 ## Properties
@@ -23,9 +23,9 @@ interface TrackedLayer {
 
 ```typescript
 events: {
-  Â Â Â Â visibilitychanged: () = > void ;
-  Â Â Â Â "waze-feature-clicked": ( e: { feature: WMEFeature } ) = > void ;
-  Â Â Â Â "waze-feature-in": ( e: { feature: WMEFeature } ) = > void ;
-  Â Â Â Â "waze-feature-out": ( e: { feature: WMEFeature } ) = > void ;
+  visibilitychanged: () = > void ;
+  "waze-feature-clicked": ( e: { feature: WMEFeature } ) = > void ;
+  "waze-feature-in": ( e: { feature: WMEFeature } ) = > void ;
+  "waze-feature-out": ( e: { feature: WMEFeature } ) = > void ;
 }
 ```

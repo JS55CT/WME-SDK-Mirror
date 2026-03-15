@@ -1,7 +1,7 @@
 ---
 title: SDK.TileLayerOptions interface
 source: interfaces/index.SDK.TileLayerOptions.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -10,13 +10,13 @@ notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 
 ```typescript
 interface TileLayerOptions {
-  Â Â Â Â tileHeight: number ;
-  Â Â Â Â tileWidth: number ;
-  Â Â Â Â url: {
-  Â Â Â Â Â Â Â Â fileName: string ;
-  Â Â Â Â Â Â Â Â params ?: Record < string , unknown > ;
-  Â Â Â Â Â Â Â Â servers: string [] ;
-  Â Â Â Â } ;
+  tileHeight: number ;
+  tileWidth: number ;
+  url: {
+  fileName: string ;
+  params ?: Record < string , unknown > ;
+  servers: string [] ;
+} ;
 }
 ```
 #### Members

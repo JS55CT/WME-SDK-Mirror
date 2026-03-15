@@ -1,7 +1,7 @@
 ---
 title: SDK.UpdateableMapProblemState variable
 source: variables/index.SDK.UpdateableMapProblemState.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -10,9 +10,9 @@ notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 
 ```typescript
 UpdateableMapProblemState: {
-  Â Â Â Â NOT_IDENTIFIED: "not-identified" ;
-  Â Â Â Â OPEN: "open" ;
-  Â Â Â Â SOLVED: "solved" ;
+  NOT_IDENTIFIED: "not-identified" ;
+  OPEN: "open" ;
+  SOLVED: "solved" ;
 } = ...
 ```
 #### Members

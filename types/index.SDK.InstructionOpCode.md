@@ -1,7 +1,7 @@
 ---
 title: SDK.InstructionOpCode type
 source: types/index.SDK.InstructionOpCode.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -10,14 +10,14 @@ notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 
 ```typescript
 InstructionOpCode: 
-  Â Â Â Â | typeof CONTINUE
-  Â Â Â Â | typeof EXIT_LEFT
-  Â Â Â Â | typeof EXIT_RIGHT
-  Â Â Â Â | typeof KEEP_LEFT
-  Â Â Â Â | typeof KEEP_RIGHT
-  Â Â Â Â | typeof NONE
-  Â Â Â Â | typeof ROUNDABOUT_ENTER
-  Â Â Â Â | typeof TURN_LEFT
-  Â Â Â Â | typeof TURN_RIGHT
-  Â Â Â Â | typeof UTURN
+  | typeof CONTINUE
+  | typeof EXIT_LEFT
+  | typeof EXIT_RIGHT
+  | typeof KEEP_LEFT
+  | typeof KEEP_RIGHT
+  | typeof NONE
+  | typeof ROUNDABOUT_ENTER
+  | typeof TURN_LEFT
+  | typeof TURN_RIGHT
+  | typeof UTURN
 ```

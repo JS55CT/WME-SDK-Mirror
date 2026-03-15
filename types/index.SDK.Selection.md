@@ -1,7 +1,7 @@
 ---
 title: SDK.Selection type
 source: types/index.SDK.Selection.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -10,13 +10,13 @@ notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 
 ```typescript
 Selection: 
-  Â Â Â Â | { ids: number [] ; objectType: typeof SEGMENT }
-  Â Â Â Â | { ids: string [] ; objectType: typeof VENUE }
-  Â Â Â Â | { ids: number [] ; objectType: typeof BIG_JUNCTION }
-  Â Â Â Â | { ids: number [] ; objectType: typeof CITY }
-  Â Â Â Â | { ids: string [] ; objectType: typeof MAP_COMMENT }
-  Â Â Â Â | { ids: number [] ; objectType: typeof NODE }
-  Â Â Â Â | { ids: number [] ; objectType: typeof PERMANENT_HAZARD }
-  Â Â Â Â | { ids: number [] ; objectType: typeof RESTRICTED_DRIVING_AREA }
-  Â Â Â Â | { ids: number [] ; objectType: typeof SEGMENT_SUGGESTION }
+  | { ids: number [] ; objectType: typeof SEGMENT }
+  | { ids: string [] ; objectType: typeof VENUE }
+  | { ids: number [] ; objectType: typeof BIG_JUNCTION }
+  | { ids: number [] ; objectType: typeof CITY }
+  | { ids: string [] ; objectType: typeof MAP_COMMENT }
+  | { ids: number [] ; objectType: typeof NODE }
+  | { ids: number [] ; objectType: typeof PERMANENT_HAZARD }
+  | { ids: number [] ; objectType: typeof RESTRICTED_DRIVING_AREA }
+  | { ids: number [] ; objectType: typeof SEGMENT_SUGGESTION }
 ```

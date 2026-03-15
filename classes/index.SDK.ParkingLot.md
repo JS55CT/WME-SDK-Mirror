@@ -1,7 +1,7 @@
 ---
 title: SDK.ParkingLot class
 source: classes/index.SDK.ParkingLot.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -65,6 +65,6 @@ whether lot type of the current venue varies depending on time/day in case the v
 
 ```typescript
 setEstimatedNumberOfSpots (
-  Â Â Â Â args: { estimatedNumberOfSpots: SpotsEstimate ; venueId: string } ,
+  args: { estimatedNumberOfSpots: SpotsEstimate ; venueId: string } ,
   ) : void
 ```

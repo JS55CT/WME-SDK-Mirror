@@ -1,7 +1,7 @@
 ---
 title: SDK.Segment interface
 source: interfaces/index.SDK.Segment.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -10,40 +10,40 @@ notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 
 ```typescript
 interface Segment {
-  Â Â Â Â allowNoDirection: boolean ;
-  Â Â Â Â alternateStreetIds: number [] ;
-  Â Â Â Â areFwdTurnsVerified: boolean ;
-  Â Â Â Â areRevTurnsVerified: boolean ;
-  Â Â Â Â elevationLevel: null | number ;
-  Â Â Â Â flagAttributes: SegmentFlagAttributes ;
-  Â Â Â Â fromLanesInfo: null | SegmentLanesInfo ;
-  Â Â Â Â fromNodeId: null | number ;
-  Â Â Â Â fromNodeLanesCount: number ;
-  Â Â Â Â fwdSpeedLimit: null | number ;
-  Â Â Â Â geometry: LineString ;
-  Â Â Â Â hasClosures: boolean ;
-  Â Â Â Â hasHouseNumbers: boolean ;
-  Â Â Â Â hasRestrictions: boolean ;
-  Â Â Â Â hasSeparator: boolean ;
-  Â Â Â Â id: number ;
-  Â Â Â Â isAtoB: boolean ;
-  Â Â Â Â isBtoA: boolean ;
-  Â Â Â Â isFwdSpeedLimitVerified: boolean ;
-  Â Â Â Â isRevSpeedLimitVerified: boolean ;
-  Â Â Â Â isTwoWay: boolean ;
-  Â Â Â Â junctionId: null | number ;
-  Â Â Â Â length: number ;
-  Â Â Â Â lockRank: UserRank ;
-  Â Â Â Â modificationData: ModificationMetadata ;
-  Â Â Â Â primaryStreetId: null | number ;
-  Â Â Â Â rank: UserRank ;
-  Â Â Â Â restrictions: BaseRestriction [] ;
-  Â Â Â Â revSpeedLimit: null | number ;
-  Â Â Â Â roadType: RoadTypeId ;
-  Â Â Â Â routingRoadType: null | 1 | 2 | 3 | 6 | 7 ;
-  Â Â Â Â toLanesInfo: null | SegmentLanesInfo ;
-  Â Â Â Â toNodeId: null | number ;
-  Â Â Â Â toNodeLanesCount: number ;
+  allowNoDirection: boolean ;
+  alternateStreetIds: number [] ;
+  areFwdTurnsVerified: boolean ;
+  areRevTurnsVerified: boolean ;
+  elevationLevel: null | number ;
+  flagAttributes: SegmentFlagAttributes ;
+  fromLanesInfo: null | SegmentLanesInfo ;
+  fromNodeId: null | number ;
+  fromNodeLanesCount: number ;
+  fwdSpeedLimit: null | number ;
+  geometry: LineString ;
+  hasClosures: boolean ;
+  hasHouseNumbers: boolean ;
+  hasRestrictions: boolean ;
+  hasSeparator: boolean ;
+  id: number ;
+  isAtoB: boolean ;
+  isBtoA: boolean ;
+  isFwdSpeedLimitVerified: boolean ;
+  isRevSpeedLimitVerified: boolean ;
+  isTwoWay: boolean ;
+  junctionId: null | number ;
+  length: number ;
+  lockRank: UserRank ;
+  modificationData: ModificationMetadata ;
+  primaryStreetId: null | number ;
+  rank: UserRank ;
+  restrictions: BaseRestriction [] ;
+  revSpeedLimit: null | number ;
+  roadType: RoadTypeId ;
+  routingRoadType: null | 1 | 2 | 3 | 6 | 7 ;
+  toLanesInfo: null | SegmentLanesInfo ;
+  toNodeId: null | number ;
+  toNodeLanesCount: number ;
 }
 ```
 ## Properties

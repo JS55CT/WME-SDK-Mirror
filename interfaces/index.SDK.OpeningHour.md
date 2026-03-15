@@ -1,7 +1,7 @@
 ---
 title: SDK.OpeningHour interface
 source: interfaces/index.SDK.OpeningHour.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -10,9 +10,9 @@ notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 
 ```typescript
 interface OpeningHour {
-  Â Â Â Â days: number [] ;
-  Â Â Â Â fromHour: string ;
-  Â Â Â Â toHour: string ;
+  days: number [] ;
+  fromHour: string ;
+  toHour: string ;
 }
 ```
 ## Properties

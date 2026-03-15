@@ -1,7 +1,7 @@
 ---
 title: SDK.Street interface
 source: interfaces/index.SDK.Street.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -10,15 +10,15 @@ notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 
 ```typescript
 interface Street {
-  Â Â Â Â cityId: null | number ;
-  Â Â Â Â direction: null | string ;
-  Â Â Â Â englishName: null | string ;
-  Â Â Â Â id: number ;
-  Â Â Â Â isEmpty: boolean ;
-  Â Â Â Â modificationData: ModificationMetadata ;
-  Â Â Â Â name: null | string ;
-  Â Â Â Â signText: null | string ;
-  Â Â Â Â signType: null | number ;
+  cityId: null | number ;
+  direction: null | string ;
+  englishName: null | string ;
+  id: number ;
+  isEmpty: boolean ;
+  modificationData: ModificationMetadata ;
+  name: null | string ;
+  signText: null | string ;
+  signType: null | number ;
 }
 ```
 ## Properties

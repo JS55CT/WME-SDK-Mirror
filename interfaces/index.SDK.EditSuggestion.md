@@ -1,7 +1,7 @@
 ---
 title: SDK.EditSuggestion interface
 source: interfaces/index.SDK.EditSuggestion.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -10,14 +10,14 @@ notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 
 ```typescript
 interface EditSuggestion {
-  Â Â Â Â bbox: BBox ;
-  Â Â Â Â id: string ;
-  Â Â Â Â isRead: boolean ;
-  Â Â Â Â isStarred: boolean ;
-  Â Â Â Â modificationData: ModificationMetadata ;
-  Â Â Â Â source: EditSuggestionSource ;
-  Â Â Â Â status: EditSuggestionStatus ;
-  Â Â Â Â suggestions: Suggestion [] ;
+  bbox: BBox ;
+  id: string ;
+  isRead: boolean ;
+  isStarred: boolean ;
+  modificationData: ModificationMetadata ;
+  source: EditSuggestionSource ;
+  status: EditSuggestionStatus ;
+  suggestions: Suggestion [] ;
 }
 ```
 Represents an edit suggestion, potentially containing multiple individual suggestions.

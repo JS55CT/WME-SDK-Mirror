@@ -1,7 +1,7 @@
 ---
 sdk: WME
 version: v2.343
-generated: 2026-03-11
+generated: 2026-03-15
 sections:
   classes: classes.md
   modules: modules.md
@@ -47,7 +47,7 @@ docs:
 > For searching SDK entities, refer to the Source Guide below, then navigate to the relevant section.
 
 > **SDK Version:** v2.343
-> **Docs generated:** 2026-03-11
+> **Docs generated:** 2026-03-15
 
 > Each section below lists the source file and the entities it contains.
 
@@ -204,7 +204,7 @@ This section describes each documentation source included for NotebookLM compreh
 
 ## Interfaces
 
-- [interfaces.md](interfaces.md) — *76 entries*
+- [interfaces.md](interfaces.md) — *75 entries*
     - index.SDK.AffectedObject
     - index.SDK.BaseAddress
     - index.SDK.BaseRestriction
@@ -269,7 +269,6 @@ This section describes each documentation source included for NotebookLM compreh
     - index.SDK.Turn
     - index.SDK.TurnClosure
     - index.SDK.TurnLanes
-    - index.SDK.TurnRestriction
     - index.SDK.UpdateRequestDetails
     - index.SDK.UpdateRequestUserPreferences
     - index.SDK.UserProfile

@@ -1,7 +1,7 @@
 ---
 title: SDK.HouseNumbers class
 source: classes/index.SDK.HouseNumbers.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -41,7 +41,7 @@ A Promise that resolves to an array of HouseNumber objects.
 
 ```typescript
 moveHouseNumber (
-  Â Â Â Â args: { houseNumberId: string ; point: Point ; segmentId ?: number } ,
+  args: { houseNumberId: string ; point: Point ; segmentId ?: number } ,
   ) : void
 ```
 
@@ -49,7 +49,7 @@ moveHouseNumber (
 
 ```typescript
 moveHouseNumberFractionPoint (
-  Â Â Â Â args: { fractionPoint: Point ; houseNumberId: string } ,
+  args: { fractionPoint: Point ; houseNumberId: string } ,
   ) : void
 ```
 
@@ -57,12 +57,12 @@ moveHouseNumberFractionPoint (
 
 ```typescript
 updateHouseNumber (
-  Â Â Â Â args: {
-  Â Â Â Â Â Â Â Â fractionPoint ?: Point ;
-  Â Â Â Â Â Â Â Â houseNumberId: string ;
-  Â Â Â Â Â Â Â Â number ?: string ;
-  Â Â Â Â Â Â Â Â point ?: Point ;
-  Â Â Â Â Â Â Â Â segmentId ?: number ;
-  Â Â Â Â } ,
+  args: {
+  fractionPoint ?: Point ;
+  houseNumberId: string ;
+  number ?: string ;
+  point ?: Point ;
+  segmentId ?: number ;
+} ,
   ) : void
 ```

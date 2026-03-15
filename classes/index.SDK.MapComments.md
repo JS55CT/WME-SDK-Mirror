@@ -1,7 +1,7 @@
 ---
 title: SDK.MapComments class
 source: classes/index.SDK.MapComments.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -10,12 +10,12 @@ notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 
 ```typescript
 addComment (
-  Â Â Â Â args: {
-  Â Â Â Â Â Â Â Â body: string ;
-  Â Â Â Â Â Â Â Â endDate: number ;
-  Â Â Â Â Â Â Â Â geometry: Point | Polygon ;
-  Â Â Â Â Â Â Â Â subject: string ;
-  Â Â Â Â } ,
+  args: {
+  body: string ;
+  endDate: number ;
+  geometry: Point | Polygon ;
+  subject: string ;
+} ,
   ) : MapComment
 ```
 Methods for dealing with MapComments.
@@ -24,12 +24,12 @@ Methods for dealing with MapComments.
 
 ```typescript
 addComment (
-  Â Â Â Â args: {
-  Â Â Â Â Â Â Â Â body: string ;
-  Â Â Â Â Â Â Â Â endDate: number ;
-  Â Â Â Â Â Â Â Â geometry: Point | Polygon ;
-  Â Â Â Â Â Â Â Â subject: string ;
-  Â Â Â Â } ,
+  args: {
+  body: string ;
+  endDate: number ;
+  geometry: Point | Polygon ;
+  subject: string ;
+} ,
   ) : MapComment
 ```
 the created map comment.
@@ -49,13 +49,13 @@ map comment with id, or null if not found in the WME data model
 
 ```typescript
 updateComment (
-  Â Â Â Â args: {
-  Â Â Â Â Â Â Â Â body ?: string ;
-  Â Â Â Â Â Â Â Â endDate ?: null | number ;
-  Â Â Â Â Â Â Â Â geometry ?: Point | Polygon ;
-  Â Â Â Â Â Â Â Â mapCommentId: string ;
-  Â Â Â Â Â Â Â Â subject ?: string ;
-  Â Â Â Â } ,
+  args: {
+  body ?: string ;
+  endDate ?: null | number ;
+  geometry ?: Point | Polygon ;
+  mapCommentId: string ;
+  subject ?: string ;
+} ,
   ) : MapComment
 ```
 the updated map comment.

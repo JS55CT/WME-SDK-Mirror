@@ -1,7 +1,7 @@
 ---
 title: SDK.UserProfile interface
 source: interfaces/index.SDK.UserProfile.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -10,16 +10,16 @@ notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 
 ```typescript
 interface UserProfile {
-  Â Â Â Â dailyEditCount: number [] ;
-  Â Â Â Â editCountByType: {
-  Â Â Â Â Â Â Â Â mapProblems: number ;
-  Â Â Â Â Â Â Â Â placeUpdateRequests: number ;
-  Â Â Â Â Â Â Â Â segmentHouseNumbers: number ;
-  Â Â Â Â Â Â Â Â segments: number ;
-  Â Â Â Â Â Â Â Â updateRequests: number ;
-  Â Â Â Â Â Â Â Â venues: number ;
-  Â Â Â Â } ;
-  Â Â Â Â totalEditCount: number ;
+  dailyEditCount: number [] ;
+  editCountByType: {
+  mapProblems: number ;
+  placeUpdateRequests: number ;
+  segmentHouseNumbers: number ;
+  segments: number ;
+  updateRequests: number ;
+  venues: number ;
+} ;
+  totalEditCount: number ;
 }
 ```
 ## Properties
@@ -32,12 +32,12 @@ dailyEditCount: number []
 
 ```typescript
 editCountByType: {
-  Â Â Â Â mapProblems: number ;
-  Â Â Â Â placeUpdateRequests: number ;
-  Â Â Â Â segmentHouseNumbers: number ;
-  Â Â Â Â segments: number ;
-  Â Â Â Â updateRequests: number ;
-  Â Â Â Â venues: number ;
+  mapProblems: number ;
+  placeUpdateRequests: number ;
+  segmentHouseNumbers: number ;
+  segments: number ;
+  updateRequests: number ;
+  venues: number ;
 }
 ```
 ### `totalEditCount`

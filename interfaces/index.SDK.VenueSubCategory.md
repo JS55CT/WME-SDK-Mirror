@@ -1,7 +1,7 @@
 ---
 title: SDK.VenueSubCategory interface
 source: interfaces/index.SDK.VenueSubCategory.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -10,9 +10,9 @@ notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 
 ```typescript
 interface VenueSubCategory {
-  Â Â Â Â categoryId: VenueCategoryId ;
-  Â Â Â Â localizedName: string ;
-  Â Â Â Â subCategoryId: VenueCategoryId ;
+  categoryId: VenueCategoryId ;
+  localizedName: string ;
+  subCategoryId: VenueCategoryId ;
 }
 ```
 ## Properties

@@ -1,7 +1,7 @@
 ---
 title: SDK.DataModel class
 source: classes/index.SDK.DataModel.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -128,7 +128,7 @@ Venues: Venues = ...
 
 ```typescript
 isDeletable (
-  Â Â Â Â args: { dataModelName: DataModelName ; objectId: string | number } ,
+  args: { dataModelName: DataModelName ; objectId: string | number } ,
   ) : boolean
 ```
 true if the object is deletable, false otherwise.
@@ -136,7 +136,7 @@ true if the object is deletable, false otherwise.
 
 ```typescript
 isDeleted (
-  Â Â Â Â args: { dataModelName: DataModelName ; objectId: string | number } ,
+  args: { dataModelName: DataModelName ; objectId: string | number } ,
   ) : boolean
 ```
 true if the object is deleted, false otherwise.
@@ -144,7 +144,7 @@ true if the object is deleted, false otherwise.
 
 ```typescript
 isNew (
-  Â Â Â Â args: { dataModelName: DataModelName ; objectId: string | number } ,
+  args: { dataModelName: DataModelName ; objectId: string | number } ,
   ) : boolean
 ```
 true if the object is new, false otherwise.

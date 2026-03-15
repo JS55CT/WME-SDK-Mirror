@@ -1,7 +1,7 @@
 ---
 title: SDK.ChangedIDsInfo interface
 source: interfaces/index.SDK.ChangedIDsInfo.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -10,8 +10,8 @@ notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 
 ```typescript
 interface ChangedIDsInfo {
-  Â Â Â Â newID: null | string | number ;
-  Â Â Â Â oldID: null | string | number ;
+  newID: null | string | number ;
+  oldID: null | string | number ;
 }
 ```
 ## Properties

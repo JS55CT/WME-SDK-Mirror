@@ -1,7 +1,7 @@
 ---
 title: SDK.RegionCode type
 source: types/index.SDK.RegionCode.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -10,7 +10,7 @@ notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 
 ```typescript
 RegionCode: 
-  Â Â Â Â | typeof REGION_CODE_USA
-  Â Â Â Â | typeof REGION_CODE_ROW
-  Â Â Â Â | typeof REGION_CODE_IL
+  | typeof REGION_CODE_USA
+  | typeof REGION_CODE_ROW
+  | typeof REGION_CODE_IL
 ```

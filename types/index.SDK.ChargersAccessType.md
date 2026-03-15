@@ -1,7 +1,7 @@
 ---
 title: SDK.ChargersAccessType type
 source: types/index.SDK.ChargersAccessType.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -10,8 +10,8 @@ notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 
 ```typescript
 ChargersAccessType: 
-  Â Â Â Â | "CHARGERS_ACCESS_TYPE_UNKNOWN"
-  Â Â Â Â | "PRIVATE"
-  Â Â Â Â | "PUBLIC"
-  Â Â Â Â | "RESTRICTED"
+  | "CHARGERS_ACCESS_TYPE_UNKNOWN"
+  | "PRIVATE"
+  | "PUBLIC"
+  | "RESTRICTED"
 ```

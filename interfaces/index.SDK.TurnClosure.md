@@ -1,7 +1,7 @@
 ---
 title: SDK.TurnClosure interface
 source: interfaces/index.SDK.TurnClosure.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -10,15 +10,15 @@ notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 
 ```typescript
 interface TurnClosure {
-  Â Â Â Â description: null | string ;
-  Â Â Â Â endDate: null | string ;
-  Â Â Â Â fromSegmentId: number ;
-  Â Â Â Â id: string ;
-  Â Â Â Â majorTrafficEventId: null | string ;
-  Â Â Â Â modificationData: ModificationMetadata ;
-  Â Â Â Â startDate: null | string ;
-  Â Â Â Â status: ClosureStatus ;
-  Â Â Â Â toSegmentId: number ;
+  description: null | string ;
+  endDate: null | string ;
+  fromSegmentId: number ;
+  id: string ;
+  majorTrafficEventId: null | string ;
+  modificationData: ModificationMetadata ;
+  startDate: null | string ;
+  status: ClosureStatus ;
+  toSegmentId: number ;
 }
 ```
 ## Properties

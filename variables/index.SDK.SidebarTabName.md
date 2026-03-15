@@ -1,7 +1,7 @@
 ---
 title: SDK.SidebarTabName variable
 source: variables/index.SDK.SidebarTabName.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -10,14 +10,14 @@ notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 
 ```typescript
 SidebarTabName: {
-  Â Â Â Â AREAS: "areas" ;
-  Â Â Â Â DRIVES: "drives" ;
-  Â Â Â Â FEATURE_EDITOR: "feature_editor" ;
-  Â Â Â Â GOOGLE_PLACES: "google_places" ;
-  Â Â Â Â ISSUE_TRACKER: "issue_tracker" ;
-  Â Â Â Â MTES: "mtes" ;
-  Â Â Â Â PREFS: "prefs" ;
-  Â Â Â Â USERSCRIPT_TAB: "userscript_tab" ;
+  AREAS: "areas" ;
+  DRIVES: "drives" ;
+  FEATURE_EDITOR: "feature_editor" ;
+  GOOGLE_PLACES: "google_places" ;
+  ISSUE_TRACKER: "issue_tracker" ;
+  MTES: "mtes" ;
+  PREFS: "prefs" ;
+  USERSCRIPT_TAB: "userscript_tab" ;
 } = ...
 ```
 #### Members

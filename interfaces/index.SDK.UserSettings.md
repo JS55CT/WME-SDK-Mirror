@@ -1,7 +1,7 @@
 ---
 title: SDK.UserSettings interface
 source: interfaces/index.SDK.UserSettings.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -10,13 +10,13 @@ notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 
 ```typescript
 interface UserSettings {
-  Â Â Â Â isCompactMode: boolean ;
-  Â Â Â Â isCreateRoadsAsTwoWay: boolean ;
-  Â Â Â Â isCreateRoadsWithAllTurnsAllowed: boolean ;
-  Â Â Â Â isDisplayTransparentTurnArrows: boolean ;
-  Â Â Â Â isImperial ?: boolean ;
-  Â Â Â Â isSelectOnlyOnEmptySelection: boolean ;
-  Â Â Â Â isSpreadOverlappingTurnArrows: boolean ;
+  isCompactMode: boolean ;
+  isCreateRoadsAsTwoWay: boolean ;
+  isCreateRoadsWithAllTurnsAllowed: boolean ;
+  isDisplayTransparentTurnArrows: boolean ;
+  isImperial ?: boolean ;
+  isSelectOnlyOnEmptySelection: boolean ;
+  isSpreadOverlappingTurnArrows: boolean ;
 }
 ```
 User settings set in the settings tab of the WME UI

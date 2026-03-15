@@ -84,8 +84,8 @@ def download(url, local_path, session, dry_run=False, force=False):
     try:
         resp = session.get(url, timeout=30, verify=VERIFY_SSL)
         resp.raise_for_status()
-        with open(local_path, "w", encoding="utf-8") as f:
-            f.write(resp.text)
+        with open(local_path, "wb") as f:
+            f.write(resp.content)
         return "downloaded"
     except requests.HTTPError as e:
         print(f"  [HTTP {e.response.status_code}] {url}")

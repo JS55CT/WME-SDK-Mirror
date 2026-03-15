@@ -19,7 +19,7 @@ def prettify_signature(sig_div):
     line_parts = []
     for elem in sig_div.children:
         if isinstance(elem, bs4.element.NavigableString):
-            text = str(elem).strip()
+            text = str(elem).replace('\u00a0', ' ').strip()
             if text:
                 line_parts.append(text)
         elif isinstance(elem, bs4.element.Tag):
@@ -28,7 +28,7 @@ def prettify_signature(sig_div):
                     lines.append(" ".join(line_parts))
                     line_parts = []
             else:
-                text = elem.get_text(strip=True)
+                text = elem.get_text(strip=True).replace('\u00a0', ' ')
                 if text:
                     line_parts.append(text)
     if line_parts:
@@ -188,12 +188,12 @@ def extract_typedoc_code_block(code_tag):
     current = []
     for elem in code_tag.children:
         if isinstance(elem, bs4.element.NavigableString):
-            txt = str(elem)
+            txt = str(elem).replace('\u00a0', ' ')
             if txt:
                 current.append(txt)
         elif isinstance(elem, bs4.element.Tag):
             if elem.name == "span":
-                current.append(elem.get_text())
+                current.append(elem.get_text().replace('\u00a0', ' '))
             elif elem.name == "br":
                 if current:
                     lines.append(''.join(current))

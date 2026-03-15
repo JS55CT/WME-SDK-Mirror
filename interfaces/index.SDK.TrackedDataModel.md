@@ -1,7 +1,7 @@
 ---
 title: SDK.TrackedDataModel interface
 source: interfaces/index.SDK.TrackedDataModel.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -10,24 +10,24 @@ notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 
 ```typescript
 interface TrackedDataModel {
-  Â Â Â Â events: {
-  Â Â Â Â Â Â Â Â "objects-state-deleted": (
-  Â Â Â Â Â Â Â Â Â Â Â Â objects: DataModelObject < ObjectId , FeatureVectorAttributes < ObjectId > > [] ,
-  Â Â Â Â Â Â Â Â ) = > void ;
-  Â Â Â Â Â Â Â Â objectsadded: (
-  Â Â Â Â Â Â Â Â Â Â Â Â objects: DataModelObject < ObjectId , FeatureVectorAttributes < ObjectId > > [] ,
-  Â Â Â Â Â Â Â Â ) = > void ;
-  Â Â Â Â Â Â Â Â objectschanged: (
-  Â Â Â Â Â Â Â Â Â Â Â Â objects: DataModelObject < ObjectId , FeatureVectorAttributes < ObjectId > > [] ,
-  Â Â Â Â Â Â Â Â ) = > void ;
-  Â Â Â Â Â Â Â Â "objectschanged-id": ( changedIds: ChangedIDsInfo ) = > void ;
-  Â Â Â Â Â Â Â Â objectsremoved: (
-  Â Â Â Â Â Â Â Â Â Â Â Â objects: DataModelObject < ObjectId , FeatureVectorAttributes < ObjectId > > [] ,
-  Â Â Â Â Â Â Â Â ) = > void ;
-  Â Â Â Â Â Â Â Â objectssynced: (
-  Â Â Â Â Â Â Â Â Â Â Â Â objects: DataModelObject < ObjectId , FeatureVectorAttributes < ObjectId > > [] ,
-  Â Â Â Â Â Â Â Â ) = > void ;
-  Â Â Â Â } ;
+  events: {
+  "objects-state-deleted": (
+  objects: DataModelObject < ObjectId , FeatureVectorAttributes < ObjectId > > [] ,
+  ) = > void ;
+  objectsadded: (
+  objects: DataModelObject < ObjectId , FeatureVectorAttributes < ObjectId > > [] ,
+  ) = > void ;
+  objectschanged: (
+  objects: DataModelObject < ObjectId , FeatureVectorAttributes < ObjectId > > [] ,
+  ) = > void ;
+  "objectschanged-id": ( changedIds: ChangedIDsInfo ) = > void ;
+  objectsremoved: (
+  objects: DataModelObject < ObjectId , FeatureVectorAttributes < ObjectId > > [] ,
+  ) = > void ;
+  objectssynced: (
+  objects: DataModelObject < ObjectId , FeatureVectorAttributes < ObjectId > > [] ,
+  ) = > void ;
+} ;
 }
 ```
 ## Properties
@@ -35,21 +35,21 @@ interface TrackedDataModel {
 
 ```typescript
 events: {
-  Â Â Â Â "objects-state-deleted": (
-  Â Â Â Â Â Â Â Â objects: DataModelObject < ObjectId , FeatureVectorAttributes < ObjectId > > [] ,
-  Â Â Â Â ) = > void ;
-  Â Â Â Â objectsadded: (
-  Â Â Â Â Â Â Â Â objects: DataModelObject < ObjectId , FeatureVectorAttributes < ObjectId > > [] ,
-  Â Â Â Â ) = > void ;
-  Â Â Â Â objectschanged: (
-  Â Â Â Â Â Â Â Â objects: DataModelObject < ObjectId , FeatureVectorAttributes < ObjectId > > [] ,
-  Â Â Â Â ) = > void ;
-  Â Â Â Â "objectschanged-id": ( changedIds: ChangedIDsInfo ) = > void ;
-  Â Â Â Â objectsremoved: (
-  Â Â Â Â Â Â Â Â objects: DataModelObject < ObjectId , FeatureVectorAttributes < ObjectId > > [] ,
-  Â Â Â Â ) = > void ;
-  Â Â Â Â objectssynced: (
-  Â Â Â Â Â Â Â Â objects: DataModelObject < ObjectId , FeatureVectorAttributes < ObjectId > > [] ,
-  Â Â Â Â ) = > void ;
+  "objects-state-deleted": (
+  objects: DataModelObject < ObjectId , FeatureVectorAttributes < ObjectId > > [] ,
+  ) = > void ;
+  objectsadded: (
+  objects: DataModelObject < ObjectId , FeatureVectorAttributes < ObjectId > > [] ,
+  ) = > void ;
+  objectschanged: (
+  objects: DataModelObject < ObjectId , FeatureVectorAttributes < ObjectId > > [] ,
+  ) = > void ;
+  "objectschanged-id": ( changedIds: ChangedIDsInfo ) = > void ;
+  objectsremoved: (
+  objects: DataModelObject < ObjectId , FeatureVectorAttributes < ObjectId > > [] ,
+  ) = > void ;
+  objectssynced: (
+  objects: DataModelObject < ObjectId , FeatureVectorAttributes < ObjectId > > [] ,
+  ) = > void ;
 }
 ```

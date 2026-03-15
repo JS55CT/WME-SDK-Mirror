@@ -1,7 +1,7 @@
 ---
 title: SDK.MapUpdateRequests class
 source: classes/index.SDK.MapUpdateRequests.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -10,7 +10,7 @@ notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 
 ```typescript
 addComment (
-  Â Â Â Â args: { mapUpdateRequestId: number ; text: string } ,
+  args: { mapUpdateRequestId: number ; text: string } ,
   ) : Promise < ConversationElement >
 ```
 Methods for dealing with MapUpdateRequests.
@@ -19,7 +19,7 @@ Methods for dealing with MapUpdateRequests.
 
 ```typescript
 addComment (
-  Â Â Â Â args: { mapUpdateRequestId: number ; text: string } ,
+  args: { mapUpdateRequestId: number ; text: string } ,
   ) : Promise < ConversationElement >
 ```
 A promise that resolves to a created conversation element representing the comment.
@@ -39,7 +39,7 @@ map update request with id, or null if not found in the WME data model
 
 ```typescript
 getUpdateRequestDetails (
-  Â Â Â Â args: { mapUpdateRequestId: number } ,
+  args: { mapUpdateRequestId: number } ,
   ) : Promise < null | UpdateRequestDetails >
 ```
 map update request details. If details are not present in the WME data model, they will be fetched.
@@ -48,9 +48,9 @@ Returns null if not found in the WME data model.
 
 ```typescript
 updateResolutionState (
-  Â Â Â Â args: {
-  Â Â Â Â Â Â Â Â mapUpdateRequestId: number ;
-  Â Â Â Â Â Â Â Â resolutionState: UpdateableMapProblemState ;
-  Â Â Â Â } ,
+  args: {
+  mapUpdateRequestId: number ;
+  resolutionState: UpdateableMapProblemState ;
+} ,
   ) : void
 ```

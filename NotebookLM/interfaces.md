@@ -3,7 +3,7 @@
 ---
 title: SDK.AffectedObject interface
 source: interfaces/index.SDK.AffectedObject.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -12,8 +12,8 @@ notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 
 ```typescript
 interface AffectedObject {
-  Â Â Â Â objectId: null | string | number ;
-  Â Â Â Â objectType: ObjectType ;
+  objectId: null | string | number ;
+  objectType: ObjectType ;
 }
 ```
 ## Properties
@@ -35,7 +35,7 @@ objectType: ObjectType
 ---
 title: SDK.BaseAddress interface
 source: interfaces/index.SDK.BaseAddress.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -44,11 +44,11 @@ notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 
 ```typescript
 interface BaseAddress {
-  Â Â Â Â city: null | City ;
-  Â Â Â Â country: null | Country ;
-  Â Â Â Â isEmpty: boolean ;
-  Â Â Â Â state: null | State ;
-  Â Â Â Â street: null | Street ;
+  city: null | City ;
+  country: null | Country ;
+  isEmpty: boolean ;
+  state: null | State ;
+  street: null | Street ;
 }
 ```
 ## Properties
@@ -85,7 +85,7 @@ street: null | Street
 ---
 title: SDK.BaseRestriction interface
 source: interfaces/index.SDK.BaseRestriction.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -94,8 +94,8 @@ notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 
 ```typescript
 interface BaseRestriction {
-  Â Â Â Â driveProfiles: DriveProfiles ;
-  Â Â Â Â isExpired: boolean ;
+  driveProfiles: DriveProfiles ;
+  isExpired: boolean ;
 }
 ```
 ## Properties
@@ -117,7 +117,7 @@ isExpired: boolean
 ---
 title: SDK.BigJunction interface
 source: interfaces/index.SDK.BigJunction.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -126,12 +126,12 @@ notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 
 ```typescript
 interface BigJunction {
-  Â Â Â Â cityId: null | number ;
-  Â Â Â Â geometry: Polygon ;
-  Â Â Â Â id: number ;
-  Â Â Â Â modificationData: ModificationMetadata ;
-  Â Â Â Â name: null | string ;
-  Â Â Â Â segmentIds: number [] ;
+  cityId: null | number ;
+  geometry: Polygon ;
+  id: number ;
+  modificationData: ModificationMetadata ;
+  name: null | string ;
+  segmentIds: number [] ;
 }
 ```
 ## Properties
@@ -173,7 +173,7 @@ segmentIds: number []
 ---
 title: SDK.CallSite interface
 source: interfaces/index.SDK.CallSite.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -182,27 +182,27 @@ notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 
 ```typescript
 interface CallSite {
-  Â Â Â Â getColumnNumber () : null | number ;
-  Â Â Â Â getEnclosingColumnNumber () : null | number ;
-  Â Â Â Â getEnclosingLineNumber () : null | number ;
-  Â Â Â Â getEvalOrigin () : undefined | string ;
-  Â Â Â Â getFileName () : null | string ;
-  Â Â Â Â getFunction () : undefined | Function ;
-  Â Â Â Â getFunctionName () : null | string ;
-  Â Â Â Â getLineNumber () : null | number ;
-  Â Â Â Â getMethodName () : null | string ;
-  Â Â Â Â getPosition () : number ;
-  Â Â Â Â getPromiseIndex () : null | number ;
-  Â Â Â Â getScriptHash () : string ;
-  Â Â Â Â getScriptNameOrSourceURL () : null | string ;
-  Â Â Â Â getThis () : unknown ;
-  Â Â Â Â getTypeName () : null | string ;
-  Â Â Â Â isAsync () : boolean ;
-  Â Â Â Â isConstructor () : boolean ;
-  Â Â Â Â isEval () : boolean ;
-  Â Â Â Â isNative () : boolean ;
-  Â Â Â Â isPromiseAll () : boolean ;
-  Â Â Â Â isToplevel () : boolean ;
+  getColumnNumber () : null | number ;
+  getEnclosingColumnNumber () : null | number ;
+  getEnclosingLineNumber () : null | number ;
+  getEvalOrigin () : undefined | string ;
+  getFileName () : null | string ;
+  getFunction () : undefined | Function ;
+  getFunctionName () : null | string ;
+  getLineNumber () : null | number ;
+  getMethodName () : null | string ;
+  getPosition () : number ;
+  getPromiseIndex () : null | number ;
+  getScriptHash () : string ;
+  getScriptNameOrSourceURL () : null | string ;
+  getThis () : unknown ;
+  getTypeName () : null | string ;
+  isAsync () : boolean ;
+  isConstructor () : boolean ;
+  isEval () : boolean ;
+  isNative () : boolean ;
+  isPromiseAll () : boolean ;
+  isToplevel () : boolean ;
 }
 ```
 ## Methods
@@ -214,7 +214,7 @@ interface CallSite {
 ---
 title: SDK.Camera interface
 source: interfaces/index.SDK.Camera.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -223,13 +223,13 @@ notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 
 ```typescript
 interface Camera {
-  Â Â Â Â direction: null | RestrictionSegmentDirection ;
-  Â Â Â Â geometry: Point ;
-  Â Â Â Â id: number ;
-  Â Â Â Â lockRank: null | number ;
-  Â Â Â Â modificationData: ModificationMetadata ;
-  Â Â Â Â segmentId: null | number ;
-  Â Â Â Â types: CameraType [] ;
+  direction: null | RestrictionSegmentDirection ;
+  geometry: Point ;
+  id: number ;
+  lockRank: null | number ;
+  modificationData: ModificationMetadata ;
+  segmentId: null | number ;
+  types: CameraType [] ;
 }
 ```
 ## Properties
@@ -276,7 +276,7 @@ types: CameraType []
 ---
 title: SDK.ChangedField interface
 source: interfaces/index.SDK.ChangedField.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -285,7 +285,7 @@ notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 
 ```typescript
 interface ChangedField {
-  Â Â Â Â fieldName: undefined | string ;
+  fieldName: undefined | string ;
 }
 ```
 ## Properties
@@ -302,7 +302,7 @@ fieldName: undefined | string
 ---
 title: SDK.ChangedIDsInfo interface
 source: interfaces/index.SDK.ChangedIDsInfo.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -311,8 +311,8 @@ notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 
 ```typescript
 interface ChangedIDsInfo {
-  Â Â Â Â newID: null | string | number ;
-  Â Â Â Â oldID: null | string | number ;
+  newID: null | string | number ;
+  oldID: null | string | number ;
 }
 ```
 ## Properties
@@ -334,7 +334,7 @@ oldID: null | string | number
 ---
 title: SDK.City interface
 source: interfaces/index.SDK.City.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -343,13 +343,13 @@ notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 
 ```typescript
 interface City {
-  Â Â Â Â countryId: null | number ;
-  Â Â Â Â geometry: Point ;
-  Â Â Â Â id: number ;
-  Â Â Â Â isEmpty: boolean ;
-  Â Â Â Â modificationData: ModificationMetadata ;
-  Â Â Â Â name: null | string ;
-  Â Â Â Â stateId: null | number ;
+  countryId: null | number ;
+  geometry: Point ;
+  id: number ;
+  isEmpty: boolean ;
+  modificationData: ModificationMetadata ;
+  name: null | string ;
+  stateId: null | number ;
 }
 ```
 ## Properties
@@ -396,7 +396,7 @@ stateId: null | number
 ---
 title: SDK.ConversationElement interface
 source: interfaces/index.SDK.ConversationElement.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -405,9 +405,9 @@ notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 
 ```typescript
 interface ConversationElement {
-  Â Â Â Â createdOn: number ;
-  Â Â Â Â text: string ;
-  Â Â Â Â userName: null | string ;
+  createdOn: number ;
+  text: string ;
+  userName: null | string ;
 }
 ```
 ## Properties
@@ -434,7 +434,7 @@ userName: null | string
 ---
 title: SDK.Country interface
 source: interfaces/index.SDK.Country.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -443,37 +443,37 @@ notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 
 ```typescript
 interface Country {
-  Â Â Â Â abbr: string ;
-  Â Â Â Â defaultLaneWidthPerRoadType: 
-  Â Â Â Â Â Â Â Â | null
-  Â Â Â Â Â Â Â Â | Partial <
-  Â Â Â Â Â Â Â Â Â Â Â Â {
-  Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â "1": number ;
-  Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â "10": number ;
-  Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â "15": number ;
-  Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â "16": number ;
-  Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â "17": number ;
-  Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â "18": number ;
-  Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â "19": number ;
-  Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â "2": number ;
-  Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â "20": number ;
-  Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â "22": number ;
-  Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â "3": number ;
-  Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â "4": number ;
-  Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â "5": number ;
-  Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â "6": number ;
-  Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â "7": number ;
-  Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â "8": number ;
-  Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â "9": number ;
-  Â Â Â Â Â Â Â Â Â Â Â Â } ,
-  Â Â Â Â Â Â Â Â > ;
-  Â Â Â Â id: number ;
-  Â Â Â Â isLeftHandTraffic: boolean ;
-  Â Â Â Â modificationData: ModificationMetadata ;
-  Â Â Â Â name: string ;
-  Â Â Â Â regionCode: null
-  Â Â Â Â | RegionCode ;
-  Â Â Â Â restrictionSubscriptions: Subscription [] ;
+  abbr: string ;
+  defaultLaneWidthPerRoadType: 
+  | null
+  | Partial <
+  {
+  "1": number ;
+  "10": number ;
+  "15": number ;
+  "16": number ;
+  "17": number ;
+  "18": number ;
+  "19": number ;
+  "2": number ;
+  "20": number ;
+  "22": number ;
+  "3": number ;
+  "4": number ;
+  "5": number ;
+  "6": number ;
+  "7": number ;
+  "8": number ;
+  "9": number ;
+} ,
+  > ;
+  id: number ;
+  isLeftHandTraffic: boolean ;
+  modificationData: ModificationMetadata ;
+  name: string ;
+  regionCode: null
+  | RegionCode ;
+  restrictionSubscriptions: Subscription [] ;
 }
 ```
 ## Properties
@@ -486,28 +486,28 @@ abbr: string
 
 ```typescript
 defaultLaneWidthPerRoadType: 
-  Â Â Â Â | null
-  Â Â Â Â | Partial <
-  Â Â Â Â Â Â Â Â {
-  Â Â Â Â Â Â Â Â Â Â Â Â "1": number ;
-  Â Â Â Â Â Â Â Â Â Â Â Â "10": number ;
-  Â Â Â Â Â Â Â Â Â Â Â Â "15": number ;
-  Â Â Â Â Â Â Â Â Â Â Â Â "16": number ;
-  Â Â Â Â Â Â Â Â Â Â Â Â "17": number ;
-  Â Â Â Â Â Â Â Â Â Â Â Â "18": number ;
-  Â Â Â Â Â Â Â Â Â Â Â Â "19": number ;
-  Â Â Â Â Â Â Â Â Â Â Â Â "2": number ;
-  Â Â Â Â Â Â Â Â Â Â Â Â "20": number ;
-  Â Â Â Â Â Â Â Â Â Â Â Â "22": number ;
-  Â Â Â Â Â Â Â Â Â Â Â Â "3": number ;
-  Â Â Â Â Â Â Â Â Â Â Â Â "4": number ;
-  Â Â Â Â Â Â Â Â Â Â Â Â "5": number ;
-  Â Â Â Â Â Â Â Â Â Â Â Â "6": number ;
-  Â Â Â Â Â Â Â Â Â Â Â Â "7": number ;
-  Â Â Â Â Â Â Â Â Â Â Â Â "8": number ;
-  Â Â Â Â Â Â Â Â Â Â Â Â "9": number ;
-  Â Â Â Â Â Â Â Â } ,
-  Â Â Â Â >
+  | null
+  | Partial <
+  {
+  "1": number ;
+  "10": number ;
+  "15": number ;
+  "16": number ;
+  "17": number ;
+  "18": number ;
+  "19": number ;
+  "2": number ;
+  "20": number ;
+  "22": number ;
+  "3": number ;
+  "4": number ;
+  "5": number ;
+  "6": number ;
+  "7": number ;
+  "8": number ;
+  "9": number ;
+} ,
+  >
 ```
 ### `id`
 
@@ -547,7 +547,7 @@ restrictionSubscriptions: Subscription []
 ---
 title: SDK.DriveProfile interface
 source: interfaces/index.SDK.DriveProfile.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -556,10 +556,10 @@ notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 
 ```typescript
 interface DriveProfile {
-  Â Â Â Â licensePlateNumber: string ;
-  Â Â Â Â numPassengers: number ;
-  Â Â Â Â subscriptions: string [] ;
-  Â Â Â Â vehicleTypes: VehicleType [] ;
+  licensePlateNumber: string ;
+  numPassengers: number ;
+  subscriptions: string [] ;
+  vehicleTypes: VehicleType [] ;
 }
 ```
 ## Properties
@@ -591,7 +591,7 @@ vehicleTypes: VehicleType []
 ---
 title: SDK.EditSuggestion interface
 source: interfaces/index.SDK.EditSuggestion.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -600,14 +600,14 @@ notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 
 ```typescript
 interface EditSuggestion {
-  Â Â Â Â bbox: BBox ;
-  Â Â Â Â id: string ;
-  Â Â Â Â isRead: boolean ;
-  Â Â Â Â isStarred: boolean ;
-  Â Â Â Â modificationData: ModificationMetadata ;
-  Â Â Â Â source: EditSuggestionSource ;
-  Â Â Â Â status: EditSuggestionStatus ;
-  Â Â Â Â suggestions: Suggestion [] ;
+  bbox: BBox ;
+  id: string ;
+  isRead: boolean ;
+  isStarred: boolean ;
+  modificationData: ModificationMetadata ;
+  source: EditSuggestionSource ;
+  status: EditSuggestionStatus ;
+  suggestions: Suggestion [] ;
 }
 ```
 Represents an edit suggestion, potentially containing multiple individual suggestions.
@@ -660,7 +660,7 @@ suggestions: Suggestion []
 ---
 title: SDK.EditSuggestionChange interface
 source: interfaces/index.SDK.EditSuggestionChange.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -669,11 +669,11 @@ notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 
 ```typescript
 interface EditSuggestionChange {
-  Â Â Â Â attributeChanges: SuggestionAttributeChange < unknown > [] ;
-  Â Â Â Â createdOn: null | number ;
-  Â Â Â Â rejectionReason: null | SuggestionResolutionRejectionReason ;
-  Â Â Â Â status: SuggestionResolutionStatus ;
-  Â Â Â Â suggestionId: string ;
+  attributeChanges: SuggestionAttributeChange < unknown > [] ;
+  createdOn: null | number ;
+  rejectionReason: null | SuggestionResolutionRejectionReason ;
+  status: SuggestionResolutionStatus ;
+  suggestionId: string ;
 }
 ```
 Represents a change suggested in an edit suggestion, containing an attribute change per each changed attribute.
@@ -711,7 +711,7 @@ suggestionId: string
 ---
 title: SDK.ErrorOptions interface
 source: interfaces/index.SDK.ErrorOptions.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -720,7 +720,7 @@ notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 
 ```typescript
 interface ErrorOptions {
-  Â Â Â Â cause ?: unknown ;
+  cause ?: unknown ;
 }
 ```
 ## Properties
@@ -732,7 +732,7 @@ interface ErrorOptions {
 ---
 title: SDK.FeatureStyle interface
 source: interfaces/index.SDK.FeatureStyle.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -741,65 +741,65 @@ notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 
 ```typescript
 interface FeatureStyle {
-  Â Â Â Â backgroundGraphic ?: string ;
-  Â Â Â Â backgroundGraphicZIndex ?: number ;
-  Â Â Â Â backgroundHeight ?: string | number ;
-  Â Â Â Â backgroundWidth ?: string | number ;
-  Â Â Â Â backgroundXOffset ?: string | number ;
-  Â Â Â Â backgroundYOffset ?: string | number ;
-  Â Â Â Â cursor ?: string ;
-  Â Â Â Â display ?: string ;
-  Â Â Â Â externalGraphic ?: null | string ;
-  Â Â Â Â fill ?: boolean ;
-  Â Â Â Â fillColor ?: string ;
-  Â Â Â Â fillOpacity ?: number ;
-  Â Â Â Â fontColor ?: string ;
-  Â Â Â Â fontFamily ?: string ;
-  Â Â Â Â fontOpacity ?: number ;
-  Â Â Â Â fontSize ?: string ;
-  Â Â Â Â fontStyle ?: string ;
-  Â Â Â Â fontWeight ?: string ;
-  Â Â Â Â graphic ?: boolean ;
-  Â Â Â Â graphicHeight ?: string | number ;
-  Â Â Â Â graphicName ?: string ;
-  Â Â Â Â graphicOpacity ?: string | number ;
-  Â Â Â Â graphicWidth ?: string | number ;
-  Â Â Â Â graphicXOffset ?: number ;
-  Â Â Â Â graphicYOffset ?: string | number ;
-  Â Â Â Â graphicZIndex ?: string | number ;
-  Â Â Â Â hoverFillColor ?: string ;
-  Â Â Â Â hoverFillOpacity ?: number ;
-  Â Â Â Â hoverPointRadius ?: number ;
-  Â Â Â Â hoverPointUnit ?: string ;
-  Â Â Â Â hoverStrokeColor ?: string ;
-  Â Â Â Â hoverStrokeOpacity ?: number ;
-  Â Â Â Â hoverStrokeWidth ?: number ;
-  Â Â Â Â label ?: string ;
-  Â Â Â Â labelAlign ?: string ;
-  Â Â Â Â labelOutlineColor ?: string ;
-  Â Â Â Â labelOutlineOpacity ?: number ;
-  Â Â Â Â labelOutlineWidth ?: number ;
-  Â Â Â Â labelSelect ?: boolean ;
-  Â Â Â Â labelXOffset ?: number ;
-  Â Â Â Â labelYOffset ?: number ;
-  Â Â Â Â pointerEvents ?: string ;
-  Â Â Â Â pointRadius ?: string | number ;
-  Â Â Â Â rotation ?: string | number ;
-  Â Â Â Â stroke ?: boolean ;
-  Â Â Â Â strokeColor ?: string ;
-  Â Â Â Â strokeDashstyle ?:
-  Â Â Â Â Â Â Â Â | "solid"
-  Â Â Â Â Â Â Â Â | "dot"
-  Â Â Â Â Â Â Â Â | "dash"
-  Â Â Â Â Â Â Â Â | "dashdot"
-  Â Â Â Â Â Â Â Â | "longdash"
-  Â Â Â Â Â Â Â Â | "longdashdot" ;
-  Â Â Â Â strokeLinecap ?: "butt"
-  Â Â Â Â | "round"
-  Â Â Â Â | "square" ;
-  Â Â Â Â strokeOpacity ?: string | number ;
-  Â Â Â Â strokeWidth ?: string | number ;
-  Â Â Â Â title ?: string ;
+  backgroundGraphic ?: string ;
+  backgroundGraphicZIndex ?: number ;
+  backgroundHeight ?: string | number ;
+  backgroundWidth ?: string | number ;
+  backgroundXOffset ?: string | number ;
+  backgroundYOffset ?: string | number ;
+  cursor ?: string ;
+  display ?: string ;
+  externalGraphic ?: null | string ;
+  fill ?: boolean ;
+  fillColor ?: string ;
+  fillOpacity ?: number ;
+  fontColor ?: string ;
+  fontFamily ?: string ;
+  fontOpacity ?: number ;
+  fontSize ?: string ;
+  fontStyle ?: string ;
+  fontWeight ?: string ;
+  graphic ?: boolean ;
+  graphicHeight ?: string | number ;
+  graphicName ?: string ;
+  graphicOpacity ?: string | number ;
+  graphicWidth ?: string | number ;
+  graphicXOffset ?: number ;
+  graphicYOffset ?: string | number ;
+  graphicZIndex ?: string | number ;
+  hoverFillColor ?: string ;
+  hoverFillOpacity ?: number ;
+  hoverPointRadius ?: number ;
+  hoverPointUnit ?: string ;
+  hoverStrokeColor ?: string ;
+  hoverStrokeOpacity ?: number ;
+  hoverStrokeWidth ?: number ;
+  label ?: string ;
+  labelAlign ?: string ;
+  labelOutlineColor ?: string ;
+  labelOutlineOpacity ?: number ;
+  labelOutlineWidth ?: number ;
+  labelSelect ?: boolean ;
+  labelXOffset ?: number ;
+  labelYOffset ?: number ;
+  pointerEvents ?: string ;
+  pointRadius ?: string | number ;
+  rotation ?: string | number ;
+  stroke ?: boolean ;
+  strokeColor ?: string ;
+  strokeDashstyle ?:
+  | "solid"
+  | "dot"
+  | "dash"
+  | "dashdot"
+  | "longdash"
+  | "longdashdot" ;
+  strokeLinecap ?: "butt"
+  | "round"
+  | "square" ;
+  strokeOpacity ?: string | number ;
+  strokeWidth ?: string | number ;
+  title ?: string ;
 }
 ```
 List of OpenLayers supported styles taken from OL 2 docs
@@ -816,7 +816,7 @@ alignment: "t"=top, "m"=middle, "b"=bottom. Example values: "lt", "cm", "rb". De
 ---
 title: SDK.GeoJsonObject interface
 source: interfaces/index.SDK.GeoJsonObject.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -825,17 +825,17 @@ notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 
 ```typescript
 interface GeoJsonObject {
-  Â Â Â Â bbox ?: BBox ;
-  Â Â Â Â type: 
-  Â Â Â Â Â Â Â Â | "Point"
-  Â Â Â Â Â Â Â Â | "LineString"
-  Â Â Â Â Â Â Â Â | "Polygon"
-  Â Â Â Â Â Â Â Â | "MultiPolygon"
-  Â Â Â Â Â Â Â Â | "MultiLineString"
-  Â Â Â Â Â Â Â Â | "GeometryCollection"
-  Â Â Â Â Â Â Â Â | "FeatureCollection"
-  Â Â Â Â Â Â Â Â | "Feature"
-  Â Â Â Â Â Â Â Â | "MultiPoint" ;
+  bbox ?: BBox ;
+  type: 
+  | "Point"
+  | "LineString"
+  | "Polygon"
+  | "MultiPolygon"
+  | "MultiLineString"
+  | "GeometryCollection"
+  | "FeatureCollection"
+  | "Feature"
+  | "MultiPoint" ;
 }
 ```
 The base GeoJSON object.https://tools.ietf.org/html/rfc7946#section-3The GeoJSON specification also allows foreign members
@@ -851,7 +851,7 @@ to add these foreign members.
 ---
 title: SDK.HouseNumber interface
 source: interfaces/index.SDK.HouseNumber.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -860,13 +860,13 @@ notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 
 ```typescript
 interface HouseNumber {
-  Â Â Â Â fractionPoint: null | Point ;
-  Â Â Â Â geometry: Point ;
-  Â Â Â Â id: string ;
-  Â Â Â Â isForced: boolean ;
-  Â Â Â Â number: string ;
-  Â Â Â Â segmentId: number ;
-  Â Â Â Â updatedBy: null | string ;
+  fractionPoint: null | Point ;
+  geometry: Point ;
+  id: string ;
+  isForced: boolean ;
+  number: string ;
+  segmentId: number ;
+  updatedBy: null | string ;
 }
 ```
 Represents a house number associated with a segment.
@@ -915,7 +915,7 @@ updatedBy: null | string
 ---
 title: SDK.Junction interface
 source: interfaces/index.SDK.Junction.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -924,10 +924,10 @@ notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 
 ```typescript
 interface Junction {
-  Â Â Â Â geometry: Point ;
-  Â Â Â Â id: number ;
-  Â Â Â Â modificationData: ModificationMetadata ;
-  Â Â Â Â segmentIds: number [] ;
+  geometry: Point ;
+  id: number ;
+  modificationData: ModificationMetadata ;
+  segmentIds: number [] ;
 }
 ```
 ## Properties
@@ -959,7 +959,7 @@ segmentIds: number []
 ---
 title: SDK.KeyboardShortcut interface
 source: interfaces/index.SDK.KeyboardShortcut.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -968,10 +968,10 @@ notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 
 ```typescript
 interface KeyboardShortcut {
-  Â Â Â Â callback: () = > void ;
-  Â Â Â Â description: string ;
-  Â Â Â Â shortcutId: string ;
-  Â Â Â Â shortcutKeys: null | string ;
+  callback: () = > void ;
+  description: string ;
+  shortcutId: string ;
+  shortcutKeys: null | string ;
 }
 ```
 A keyboard shortcut for userscript action.
@@ -1004,7 +1004,7 @@ shortcutKeys: null | string
 ---
 title: SDK.LineString interface
 source: interfaces/index.SDK.LineString.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -1013,9 +1013,9 @@ notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 
 ```typescript
 interface LineString {
-  Â Â Â Â bbox ?: BBox ;
-  Â Â Â Â coordinates: Position [] ;
-  Â Â Â Â type: "LineString" ;
+  bbox ?: BBox ;
+  coordinates: Position [] ;
+  type: "LineString" ;
 }
 ```
 LineString geometry object.https://tools.ietf.org/html/rfc7946#section-3.1.4
@@ -1028,7 +1028,7 @@ LineString geometry object.https://tools.ietf.org/html/rfc7946#section-3.1.4
 ---
 title: SDK.LocalizedString interface
 source: interfaces/index.SDK.LocalizedString.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -1037,8 +1037,8 @@ notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 
 ```typescript
 interface LocalizedString {
-  Â Â Â Â locale: string ;
-  Â Â Â Â value: string ;
+  locale: string ;
+  value: string ;
 }
 ```
 ## Properties
@@ -1060,7 +1060,7 @@ value: string
 ---
 title: SDK.LonLat interface
 source: interfaces/index.SDK.LonLat.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -1069,8 +1069,8 @@ notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 
 ```typescript
 interface LonLat {
-  Â Â Â Â lat: number ;
-  Â Â Â Â lon: number ;
+  lat: number ;
+  lon: number ;
 }
 ```
 ## Properties
@@ -1092,7 +1092,7 @@ lon: number
 ---
 title: SDK.MajorTrafficEvent interface
 source: interfaces/index.SDK.MajorTrafficEvent.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -1101,16 +1101,16 @@ notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 
 ```typescript
 interface MajorTrafficEvent {
-  Â Â Â Â category: null | MajorTrafficEventCategory ;
-  Â Â Â Â cityId: null | number ;
-  Â Â Â Â endDate: null | string ;
-  Â Â Â Â id: string ;
-  Â Â Â Â isPublished: boolean ;
-  Â Â Â Â isReady: boolean ;
-  Â Â Â Â lockRank: null | UserRank ;
-  Â Â Â Â modificationData: ModificationMetadata ;
-  Â Â Â Â names: LocalizedString [] ;
-  Â Â Â Â startDate: null | string ;
+  category: null | MajorTrafficEventCategory ;
+  cityId: null | number ;
+  endDate: null | string ;
+  id: string ;
+  isPublished: boolean ;
+  isReady: boolean ;
+  lockRank: null | UserRank ;
+  modificationData: ModificationMetadata ;
+  names: LocalizedString [] ;
+  startDate: null | string ;
 }
 ```
 ## Properties
@@ -1172,7 +1172,7 @@ startDate: null | string
 ---
 title: SDK.ManagedArea interface
 source: interfaces/index.SDK.ManagedArea.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -1181,9 +1181,9 @@ notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 
 ```typescript
 interface ManagedArea {
-  Â Â Â Â geometry: Polygon ;
-  Â Â Â Â id: string ;
-  Â Â Â Â userName: string ;
+  geometry: Polygon ;
+  id: string ;
+  userName: string ;
 }
 ```
 ## Properties
@@ -1210,7 +1210,7 @@ userName: string
 ---
 title: SDK.ManagedAreaShort interface
 source: interfaces/index.SDK.ManagedAreaShort.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -1219,8 +1219,8 @@ notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 
 ```typescript
 interface ManagedAreaShort {
-  Â Â Â Â id: number ;
-  Â Â Â Â name: string ;
+  id: number ;
+  name: string ;
 }
 ```
 ## Properties
@@ -1242,7 +1242,7 @@ name: string
 ---
 title: SDK.MapComment interface
 source: interfaces/index.SDK.MapComment.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -1251,16 +1251,16 @@ notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 
 ```typescript
 interface MapComment {
-  Â Â Â Â body: string ;
-  Â Â Â Â conversation: ConversationElement [] ;
-  Â Â Â Â endDate: null | string ;
-  Â Â Â Â geometry: Point | Polygon ;
-  Â Â Â Â id: string ;
-  Â Â Â Â isFollowing: boolean ;
-  Â Â Â Â isPoint: boolean ;
-  Â Â Â Â lockRank: UserRank ;
-  Â Â Â Â modificationData: ModificationMetadata ;
-  Â Â Â Â subject: string ;
+  body: string ;
+  conversation: ConversationElement [] ;
+  endDate: null | string ;
+  geometry: Point | Polygon ;
+  id: string ;
+  isFollowing: boolean ;
+  isPoint: boolean ;
+  lockRank: UserRank ;
+  modificationData: ModificationMetadata ;
+  subject: string ;
 }
 ```
 ## Properties
@@ -1322,7 +1322,7 @@ subject: string
 ---
 title: SDK.MapProblem interface
 source: interfaces/index.SDK.MapProblem.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -1331,15 +1331,15 @@ notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 
 ```typescript
 interface MapProblem {
-  Â Â Â Â geometry: Point ;
-  Â Â Â Â id: string ;
-  Â Â Â Â isEditable: boolean ;
-  Â Â Â Â isOpen: boolean ;
-  Â Â Â Â isRead: boolean ;
-  Â Â Â Â isStarred: boolean ;
-  Â Â Â Â problemType: MapProblemType ;
-  Â Â Â Â resolvedOn: null | number ;
-  Â Â Â Â severity: IssueSeverity ;
+  geometry: Point ;
+  id: string ;
+  isEditable: boolean ;
+  isOpen: boolean ;
+  isRead: boolean ;
+  isStarred: boolean ;
+  problemType: MapProblemType ;
+  resolvedOn: null | number ;
+  severity: IssueSeverity ;
 }
 ```
 ## Properties
@@ -1396,7 +1396,7 @@ severity: IssueSeverity
 ---
 title: SDK.MapUpdateRequest interface
 source: interfaces/index.SDK.MapUpdateRequest.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -1405,19 +1405,19 @@ notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 
 ```typescript
 interface MapUpdateRequest {
-  Â Â Â Â geometry: Point ;
-  Â Â Â Â id: number ;
-  Â Â Â Â isEditable: boolean ;
-  Â Â Â Â isOpen: boolean ;
-  Â Â Â Â isRead: boolean ;
-  Â Â Â Â isStarred: boolean ;
-  Â Â Â Â reportedOn: number ;
-  Â Â Â Â resolutionState: null | string ;
-  Â Â Â Â resolvedOn: null | number ;
-  Â Â Â Â severity: IssueSeverity ;
-  Â Â Â Â source: UpdateRequestSource ;
-  Â Â Â Â updateRequestType: UpdateRequestType ;
-  Â Â Â Â userPreferences: UpdateRequestUserPreferences ;
+  geometry: Point ;
+  id: number ;
+  isEditable: boolean ;
+  isOpen: boolean ;
+  isRead: boolean ;
+  isStarred: boolean ;
+  reportedOn: number ;
+  resolutionState: null | string ;
+  resolvedOn: null | number ;
+  severity: IssueSeverity ;
+  source: UpdateRequestSource ;
+  updateRequestType: UpdateRequestType ;
+  userPreferences: UpdateRequestUserPreferences ;
 }
 ```
 ## Properties
@@ -1494,7 +1494,7 @@ userPreferences: UpdateRequestUserPreferences
 ---
 title: SDK.ModificationMetadata interface
 source: interfaces/index.SDK.ModificationMetadata.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -1503,10 +1503,10 @@ notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 
 ```typescript
 interface ModificationMetadata {
-  Â Â Â Â createdBy: null | string ;
-  Â Â Â Â createdOn: null | number ;
-  Â Â Â Â updatedBy: null | string ;
-  Â Â Â Â updatedOn: null | number ;
+  createdBy: null | string ;
+  createdOn: null | number ;
+  updatedBy: null | string ;
+  updatedOn: null | number ;
 }
 ```
 ## Properties
@@ -1538,7 +1538,7 @@ updatedOn: null | number
 ---
 title: SDK.MultiLineString interface
 source: interfaces/index.SDK.MultiLineString.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -1547,9 +1547,9 @@ notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 
 ```typescript
 interface MultiLineString {
-  Â Â Â Â bbox ?: BBox ;
-  Â Â Â Â coordinates: Position [] [] ;
-  Â Â Â Â type: "MultiLineString" ;
+  bbox ?: BBox ;
+  coordinates: Position [] [] ;
+  type: "MultiLineString" ;
 }
 ```
 MultiLineString geometry object.https://tools.ietf.org/html/rfc7946#section-3.1.5
@@ -1562,7 +1562,7 @@ MultiLineString geometry object.https://tools.ietf.org/html/rfc7946#section-3.1.
 ---
 title: SDK.MultiPolygon interface
 source: interfaces/index.SDK.MultiPolygon.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -1571,9 +1571,9 @@ notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 
 ```typescript
 interface MultiPolygon {
-  Â Â Â Â bbox ?: BBox ;
-  Â Â Â Â coordinates: Position [] [] [] ;
-  Â Â Â Â type: "MultiPolygon" ;
+  bbox ?: BBox ;
+  coordinates: Position [] [] [] ;
+  type: "MultiPolygon" ;
 }
 ```
 MultiPolygon geometry object.https://tools.ietf.org/html/rfc7946#section-3.1.7
@@ -1586,7 +1586,7 @@ MultiPolygon geometry object.https://tools.ietf.org/html/rfc7946#section-3.1.7
 ---
 title: SDK.NavigationPoint interface
 source: interfaces/index.SDK.NavigationPoint.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -1595,11 +1595,11 @@ notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 
 ```typescript
 interface NavigationPoint {
-  Â Â Â Â isEntry: boolean ;
-  Â Â Â Â isExit: boolean ;
-  Â Â Â Â isPrimary: boolean ;
-  Â Â Â Â name: string ;
-  Â Â Â Â point: Point ;
+  isEntry: boolean ;
+  isExit: boolean ;
+  isPrimary: boolean ;
+  name: string ;
+  point: Point ;
 }
 ```
 ## Properties
@@ -1636,7 +1636,7 @@ point: Point
 ---
 title: SDK.Node interface
 source: interfaces/index.SDK.Node.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -1645,9 +1645,9 @@ notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 
 ```typescript
 interface Node {
-  Â Â Â Â connectedSegmentIds: number [] ;
-  Â Â Â Â geometry: Point ;
-  Â Â Â Â id: number ;
+  connectedSegmentIds: number [] ;
+  geometry: Point ;
+  id: number ;
 }
 ```
 ## Properties
@@ -1674,7 +1674,7 @@ id: number
 ---
 title: SDK.OpeningHour interface
 source: interfaces/index.SDK.OpeningHour.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -1683,9 +1683,9 @@ notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 
 ```typescript
 interface OpeningHour {
-  Â Â Â Â days: number [] ;
-  Â Â Â Â fromHour: string ;
-  Â Â Â Â toHour: string ;
+  days: number [] ;
+  fromHour: string ;
+  toHour: string ;
 }
 ```
 ## Properties
@@ -1712,7 +1712,7 @@ toHour: string
 ---
 title: SDK.Pixel interface
 source: interfaces/index.SDK.Pixel.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -1721,8 +1721,8 @@ notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 
 ```typescript
 interface Pixel {
-  Â Â Â Â x: number ;
-  Â Â Â Â y: number ;
+  x: number ;
+  y: number ;
 }
 ```
 ## Properties
@@ -1744,7 +1744,7 @@ y: number
 ---
 title: SDK.Point interface
 source: interfaces/index.SDK.Point.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -1753,9 +1753,9 @@ notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 
 ```typescript
 interface Point {
-  Â Â Â Â bbox ?: BBox ;
-  Â Â Â Â coordinates: Position ;
-  Â Â Â Â type: "Point" ;
+  bbox ?: BBox ;
+  coordinates: Position ;
+  type: "Point" ;
 }
 ```
 Point geometry object.https://tools.ietf.org/html/rfc7946#section-3.1.2
@@ -1768,7 +1768,7 @@ Point geometry object.https://tools.ietf.org/html/rfc7946#section-3.1.2
 ---
 title: SDK.Polygon interface
 source: interfaces/index.SDK.Polygon.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -1777,9 +1777,9 @@ notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 
 ```typescript
 interface Polygon {
-  Â Â Â Â bbox ?: BBox ;
-  Â Â Â Â coordinates: Position [] [] ;
-  Â Â Â Â type: "Polygon" ;
+  bbox ?: BBox ;
+  coordinates: Position [] [] ;
+  type: "Polygon" ;
 }
 ```
 Polygon geometry object.https://tools.ietf.org/html/rfc7946#section-3.1.6
@@ -1792,7 +1792,7 @@ Polygon geometry object.https://tools.ietf.org/html/rfc7946#section-3.1.6
 ---
 title: SDK.RegisterSidebarTabResult interface
 source: interfaces/index.SDK.RegisterSidebarTabResult.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -1801,8 +1801,8 @@ notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 
 ```typescript
 interface RegisterSidebarTabResult {
-  Â Â Â Â tabLabel: HTMLElement ;
-  Â Â Â Â tabPane: HTMLElement ;
+  tabLabel: HTMLElement ;
+  tabPane: HTMLElement ;
 }
 ```
 ## Properties
@@ -1824,7 +1824,7 @@ tabPane: HTMLElement
 ---
 title: SDK.RestrictedDrivingArea interface
 source: interfaces/index.SDK.RestrictedDrivingArea.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -1833,12 +1833,12 @@ notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 
 ```typescript
 interface RestrictedDrivingArea {
-  Â Â Â Â center: Point ;
-  Â Â Â Â geometry: Polygon ;
-  Â Â Â Â id: number ;
-  Â Â Â Â modificationData: ModificationMetadata ;
-  Â Â Â Â name: string ;
-  Â Â Â Â restrictionName: string ;
+  center: Point ;
+  geometry: Polygon ;
+  id: number ;
+  modificationData: ModificationMetadata ;
+  name: string ;
+  restrictionName: string ;
 }
 ```
 ## Properties
@@ -1880,7 +1880,7 @@ restrictionName: string
 ---
 title: SDK.RoadClosure interface
 source: interfaces/index.SDK.RoadClosure.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -1889,16 +1889,16 @@ notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 
 ```typescript
 interface RoadClosure {
-  Â Â Â Â description: null | string ;
-  Â Â Â Â endDate: null | string ;
-  Â Â Â Â id: string ;
-  Â Â Â Â isForward: boolean ;
-  Â Â Â Â isPermanent: boolean ;
-  Â Â Â Â modificationData: ModificationMetadata ;
-  Â Â Â Â segmentId: number ;
-  Â Â Â Â startDate: null | string ;
-  Â Â Â Â status: ClosureStatus ;
-  Â Â Â Â trafficEventId: null | string ;
+  description: null | string ;
+  endDate: null | string ;
+  id: string ;
+  isForward: boolean ;
+  isPermanent: boolean ;
+  modificationData: ModificationMetadata ;
+  segmentId: number ;
+  startDate: null | string ;
+  status: ClosureStatus ;
+  trafficEventId: null | string ;
 }
 ```
 ## Properties
@@ -1960,7 +1960,7 @@ trafficEventId: null | string
 ---
 title: SDK.RoadType interface
 source: interfaces/index.SDK.RoadType.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -1969,9 +1969,9 @@ notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 
 ```typescript
 interface RoadType {
-  Â Â Â Â id: RoadTypeId ;
-  Â Â Â Â localizedName: string ;
-  Â Â Â Â name: string ;
+  id: RoadTypeId ;
+  localizedName: string ;
+  name: string ;
 }
 ```
 ## Properties
@@ -1998,7 +1998,7 @@ name: string
 ---
 title: SDK.SdkEvents interface
 source: interfaces/index.SDK.SdkEvents.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -2007,94 +2007,94 @@ notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 
 ```typescript
 interface SdkEvents {
-  Â Â Â Â "wme-after-edit": { affectedObjects: AffectedObject [] } ;
-  Â Â Â Â "wme-after-redo-clear": undefined ;
-  Â Â Â Â "wme-after-undo": undefined ;
-  Â Â Â Â "wme-data-model-object-changed-id": {
-  Â Â Â Â Â Â Â Â dataModelName: DataModelName ;
-  Â Â Â Â Â Â Â Â objectIds: ChangedIDsInfo ;
-  Â Â Â Â } ;
-  Â Â Â Â "wme-data-model-object-state-deleted": {
-  Â Â Â Â Â Â Â Â dataModelName: DataModelName ;
-  Â Â Â Â Â Â Â Â objectIds: ( string | number ) [] ;
-  Â Â Â Â } ;
-  Â Â Â Â "wme-data-model-objects-added": {
-  Â Â Â Â Â Â Â Â dataModelName: DataModelName ;
-  Â Â Â Â Â Â Â Â objectIds: ( string | number ) [] ;
-  Â Â Â Â } ;
-  Â Â Â Â "wme-data-model-objects-changed": {
-  Â Â Â Â Â Â Â Â dataModelName: DataModelName ;
-  Â Â Â Â Â Â Â Â objectIds: ( string | number ) [] ;
-  Â Â Â Â } ;
-  Â Â Â Â "wme-data-model-objects-removed": {
-  Â Â Â Â Â Â Â Â dataModelName: DataModelName ;
-  Â Â Â Â Â Â Â Â objectIds: ( string | number ) [] ;
-  Â Â Â Â } ;
-  Â Â Â Â "wme-data-model-objects-saved": {
-  Â Â Â Â Â Â Â Â dataModelName: DataModelName ;
-  Â Â Â Â Â Â Â Â objectIds: ( string | number ) [] ;
-  Â Â Â Â } ;
-  Â Â Â Â "wme-editing-house-numbers": { isEditingHouseNumbers: false } ;
-  Â Â Â Â "wme-feature-editor-opened": {
-  Â Â Â Â Â Â Â Â featureType: 
-  Â Â Â Â Â Â Â Â Â Â Â Â | "bigJunction"
-  Â Â Â Â Â Â Â Â Â Â Â Â | "city"
-  Â Â Â Â Â Â Â Â Â Â Â Â | "mapComment"
-  Â Â Â Â Â Â Â Â Â Â Â Â | "node"
-  Â Â Â Â Â Â Â Â Â Â Â Â | "permanentHazard"
-  Â Â Â Â Â Â Â Â Â Â Â Â | "restrictedDrivingArea"
-  Â Â Â Â Â Â Â Â Â Â Â Â | "segment"
-  Â Â Â Â Â Â Â Â Â Â Â Â | "segmentSuggestion"
-  Â Â Â Â Â Â Â Â Â Â Â Â | "venue" ;
-  Â Â Â Â } ;
-  Â Â Â Â "wme-house-number-added": { houseNumberId: string } ;
-  Â Â Â Â "wme-house-number-deleted": { houseNumberId: string } ;
-  Â Â Â Â "wme-house-number-moved": { houseNumberId: string } ;
-  Â Â Â Â "wme-house-number-updated": { houseNumberId: string } ;
-  Â Â Â Â "wme-initialized": undefined ;
-  Â Â Â Â "wme-layer-checkbox-toggled": { checked: boolean ; name: string } ;
-  Â Â Â Â "wme-layer-feature-clicked": {
-  Â Â Â Â Â Â Â Â featureId: string | number ;
-  Â Â Â Â Â Â Â Â layerName: string ;
-  Â Â Â Â } ;
-  Â Â Â Â "wme-layer-feature-mouse-enter": {
-  Â Â Â Â Â Â Â Â featureId: string
-  Â Â Â Â Â Â Â Â | number ;
-  Â Â Â Â Â Â Â Â layerName: string ;
-  Â Â Â Â } ;
-  Â Â Â Â "wme-layer-feature-mouse-leave": {
-  Â Â Â Â Â Â Â Â featureId: string
-  Â Â Â Â Â Â Â Â | number ;
-  Â Â Â Â Â Â Â Â layerName: string ;
-  Â Â Â Â } ;
-  Â Â Â Â "wme-layer-visibility-changed": { layerName: string } ;
-  Â Â Â Â "wme-logged-in": undefined ;
-  Â Â Â Â "wme-logged-out": undefined ;
-  Â Â Â Â "wme-map-data-loaded": undefined ;
-  Â Â Â Â "wme-map-house-number-marker-added": undefined ;
-  Â Â Â Â "wme-map-initial-data-loaded": undefined ;
-  Â Â Â Â "wme-map-layer-added": { layerName: string } ;
-  Â Â Â Â "wme-map-layer-changed": { layerName: string } ;
-  Â Â Â Â "wme-map-layer-removed": { layerName: string } ;
-  Â Â Â Â "wme-map-mouse-click": SdkMouseEvent ;
-  Â Â Â Â "wme-map-mouse-down": SdkMouseEvent ;
-  Â Â Â Â "wme-map-mouse-move": SdkMouseEvent ;
-  Â Â Â Â "wme-map-mouse-out": SdkMouseEvent ;
-  Â Â Â Â "wme-map-mouse-up": SdkMouseEvent ;
-  Â Â Â Â "wme-map-move": undefined ;
-  Â Â Â Â "wme-map-move-end": undefined ;
-  Â Â Â Â "wme-map-zoom-changed": undefined ;
-  Â Â Â Â "wme-no-edits": undefined ;
-  Â Â Â Â "wme-ready": undefined ;
-  Â Â Â Â "wme-save-finished": { success: boolean } ;
-  Â Â Â Â "wme-save-mode-changed": { saveMode: SaveMode } ;
-  Â Â Â Â "wme-selection-changed": undefined ;
-  Â Â Â Â "wme-sidebar-tab-opened": { domId: string ; tabName: SidebarTabName } ;
-  Â Â Â Â "wme-street-view-button-activated": undefined ;
-  Â Â Â Â "wme-street-view-button-deactivated": undefined ;
-  Â Â Â Â "wme-street-view-panel-visibility-changed": { isVisible: boolean } ;
-  Â Â Â Â "wme-update-request-panel-opened": { updateRequestId: number } ;
-  Â Â Â Â "wme-user-settings-changed": undefined ;
+  "wme-after-edit": { affectedObjects: AffectedObject [] } ;
+  "wme-after-redo-clear": undefined ;
+  "wme-after-undo": undefined ;
+  "wme-data-model-object-changed-id": {
+  dataModelName: DataModelName ;
+  objectIds: ChangedIDsInfo ;
+} ;
+  "wme-data-model-object-state-deleted": {
+  dataModelName: DataModelName ;
+  objectIds: ( string | number ) [] ;
+} ;
+  "wme-data-model-objects-added": {
+  dataModelName: DataModelName ;
+  objectIds: ( string | number ) [] ;
+} ;
+  "wme-data-model-objects-changed": {
+  dataModelName: DataModelName ;
+  objectIds: ( string | number ) [] ;
+} ;
+  "wme-data-model-objects-removed": {
+  dataModelName: DataModelName ;
+  objectIds: ( string | number ) [] ;
+} ;
+  "wme-data-model-objects-saved": {
+  dataModelName: DataModelName ;
+  objectIds: ( string | number ) [] ;
+} ;
+  "wme-editing-house-numbers": { isEditingHouseNumbers: false } ;
+  "wme-feature-editor-opened": {
+  featureType: 
+  | "bigJunction"
+  | "city"
+  | "mapComment"
+  | "node"
+  | "permanentHazard"
+  | "restrictedDrivingArea"
+  | "segment"
+  | "segmentSuggestion"
+  | "venue" ;
+} ;
+  "wme-house-number-added": { houseNumberId: string } ;
+  "wme-house-number-deleted": { houseNumberId: string } ;
+  "wme-house-number-moved": { houseNumberId: string } ;
+  "wme-house-number-updated": { houseNumberId: string } ;
+  "wme-initialized": undefined ;
+  "wme-layer-checkbox-toggled": { checked: boolean ; name: string } ;
+  "wme-layer-feature-clicked": {
+  featureId: string | number ;
+  layerName: string ;
+} ;
+  "wme-layer-feature-mouse-enter": {
+  featureId: string
+  | number ;
+  layerName: string ;
+} ;
+  "wme-layer-feature-mouse-leave": {
+  featureId: string
+  | number ;
+  layerName: string ;
+} ;
+  "wme-layer-visibility-changed": { layerName: string } ;
+  "wme-logged-in": undefined ;
+  "wme-logged-out": undefined ;
+  "wme-map-data-loaded": undefined ;
+  "wme-map-house-number-marker-added": undefined ;
+  "wme-map-initial-data-loaded": undefined ;
+  "wme-map-layer-added": { layerName: string } ;
+  "wme-map-layer-changed": { layerName: string } ;
+  "wme-map-layer-removed": { layerName: string } ;
+  "wme-map-mouse-click": SdkMouseEvent ;
+  "wme-map-mouse-down": SdkMouseEvent ;
+  "wme-map-mouse-move": SdkMouseEvent ;
+  "wme-map-mouse-out": SdkMouseEvent ;
+  "wme-map-mouse-up": SdkMouseEvent ;
+  "wme-map-move": undefined ;
+  "wme-map-move-end": undefined ;
+  "wme-map-zoom-changed": undefined ;
+  "wme-no-edits": undefined ;
+  "wme-ready": undefined ;
+  "wme-save-finished": { success: boolean } ;
+  "wme-save-mode-changed": { saveMode: SaveMode } ;
+  "wme-selection-changed": undefined ;
+  "wme-sidebar-tab-opened": { domId: string ; tabName: SidebarTabName } ;
+  "wme-street-view-button-activated": undefined ;
+  "wme-street-view-button-deactivated": undefined ;
+  "wme-street-view-panel-visibility-changed": { isVisible: boolean } ;
+  "wme-update-request-panel-opened": { updateRequestId: number } ;
+  "wme-user-settings-changed": undefined ;
 }
 ```
 SDK events and their payload (if any).
@@ -2118,48 +2118,48 @@ SDK events and their payload (if any).
 
 ```typescript
 "wme-data-model-object-changed-id": {
-  Â Â Â Â dataModelName: DataModelName ;
-  Â Â Â Â objectIds: ChangedIDsInfo ;
+  dataModelName: DataModelName ;
+  objectIds: ChangedIDsInfo ;
 }
 ```
 ### `wme-data-model-object-state-deleted`
 
 ```typescript
 "wme-data-model-object-state-deleted": {
-  Â Â Â Â dataModelName: DataModelName ;
-  Â Â Â Â objectIds: ( string | number ) [] ;
+  dataModelName: DataModelName ;
+  objectIds: ( string | number ) [] ;
 }
 ```
 ### `wme-data-model-objects-added`
 
 ```typescript
 "wme-data-model-objects-added": {
-  Â Â Â Â dataModelName: DataModelName ;
-  Â Â Â Â objectIds: ( string | number ) [] ;
+  dataModelName: DataModelName ;
+  objectIds: ( string | number ) [] ;
 }
 ```
 ### `wme-data-model-objects-changed`
 
 ```typescript
 "wme-data-model-objects-changed": {
-  Â Â Â Â dataModelName: DataModelName ;
-  Â Â Â Â objectIds: ( string | number ) [] ;
+  dataModelName: DataModelName ;
+  objectIds: ( string | number ) [] ;
 }
 ```
 ### `wme-data-model-objects-removed`
 
 ```typescript
 "wme-data-model-objects-removed": {
-  Â Â Â Â dataModelName: DataModelName ;
-  Â Â Â Â objectIds: ( string | number ) [] ;
+  dataModelName: DataModelName ;
+  objectIds: ( string | number ) [] ;
 }
 ```
 ### `wme-data-model-objects-saved`
 
 ```typescript
 "wme-data-model-objects-saved": {
-  Â Â Â Â dataModelName: DataModelName ;
-  Â Â Â Â objectIds: ( string | number ) [] ;
+  dataModelName: DataModelName ;
+  objectIds: ( string | number ) [] ;
 }
 ```
 ### `wme-editing-house-numbers`
@@ -2171,16 +2171,16 @@ SDK events and their payload (if any).
 
 ```typescript
 "wme-feature-editor-opened": {
-  Â Â Â Â featureType: 
-  Â Â Â Â Â Â Â Â | "bigJunction"
-  Â Â Â Â Â Â Â Â | "city"
-  Â Â Â Â Â Â Â Â | "mapComment"
-  Â Â Â Â Â Â Â Â | "node"
-  Â Â Â Â Â Â Â Â | "permanentHazard"
-  Â Â Â Â Â Â Â Â | "restrictedDrivingArea"
-  Â Â Â Â Â Â Â Â | "segment"
-  Â Â Â Â Â Â Â Â | "segmentSuggestion"
-  Â Â Â Â Â Â Â Â | "venue" ;
+  featureType: 
+  | "bigJunction"
+  | "city"
+  | "mapComment"
+  | "node"
+  | "permanentHazard"
+  | "restrictedDrivingArea"
+  | "segment"
+  | "segmentSuggestion"
+  | "venue" ;
 }
 ```
 ### `wme-house-number-added`
@@ -2222,16 +2222,16 @@ SDK events and their payload (if any).
 
 ```typescript
 "wme-layer-feature-mouse-enter": {
-  Â Â Â Â featureId: string | number ;
-  Â Â Â Â layerName: string ;
+  featureId: string | number ;
+  layerName: string ;
 }
 ```
 ### `wme-layer-feature-mouse-leave`
 
 ```typescript
 "wme-layer-feature-mouse-leave": {
-  Â Â Â Â featureId: string | number ;
-  Â Â Â Â layerName: string ;
+  featureId: string | number ;
+  layerName: string ;
 }
 ```
 ### `wme-layer-visibility-changed`
@@ -2382,7 +2382,7 @@ SDK events and their payload (if any).
 ---
 title: SDK.SdkFeature interface
 source: interfaces/index.SDK.SdkFeature.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -2391,10 +2391,10 @@ notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 
 ```typescript
 interface SdkFeature < G extends SdkFeatureGeometry = SdkFeatureGeometry > {
-  Â Â Â Â geometry: G ;
-  Â Â Â Â id: string | number ;
-  Â Â Â Â properties ?: SdkFeatureProperties ;
-  Â Â Â Â type: "Feature" ;
+  geometry: G ;
+  id: string | number ;
+  properties ?: SdkFeatureProperties ;
+  type: "Feature" ;
 }
 ```
 ## Properties
@@ -2426,7 +2426,7 @@ type: "Feature"
 ---
 title: SDK.SdkFeatureStyleRule interface
 source: interfaces/index.SDK.SdkFeatureStyleRule.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -2435,8 +2435,8 @@ notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 
 ```typescript
 interface SdkFeatureStyleRule {
-  Â Â Â Â predicate ?: SdkFeatureStylePredicate ;
-  Â Â Â Â style: FeatureStyle ;
+  predicate ?: SdkFeatureStylePredicate ;
+  style: FeatureStyle ;
 }
 ```
 ## Properties
@@ -2458,7 +2458,7 @@ style: FeatureStyle
 ---
 title: SDK.SdkMouseEvent interface
 source: interfaces/index.SDK.SdkMouseEvent.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -2467,12 +2467,12 @@ notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 
 ```typescript
 interface SdkMouseEvent {
-  Â Â Â Â lat: number ;
-  Â Â Â Â lon: number ;
-  Â Â Â Â viewportX: number ;
-  Â Â Â Â viewportY: number ;
-  Â Â Â Â x: number ;
-  Â Â Â Â y: number ;
+  lat: number ;
+  lon: number ;
+  viewportX: number ;
+  viewportY: number ;
+  x: number ;
+  y: number ;
 }
 ```
 ## Properties
@@ -2514,7 +2514,7 @@ y: number
 ---
 title: SDK.SdkWazeFeature interface
 source: interfaces/index.SDK.SdkWazeFeature.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -2523,8 +2523,8 @@ notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 
 ```typescript
 interface SdkWazeFeature {
-  Â Â Â Â featureType: "SDKFeature" ;
-  Â Â Â Â properties: SdkFeatureProperties ;
+  featureType: "SDKFeature" ;
+  properties: SdkFeatureProperties ;
 }
 ```
 ## Properties
@@ -2546,7 +2546,7 @@ properties: SdkFeatureProperties
 ---
 title: SDK.Segment interface
 source: interfaces/index.SDK.Segment.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -2555,40 +2555,40 @@ notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 
 ```typescript
 interface Segment {
-  Â Â Â Â allowNoDirection: boolean ;
-  Â Â Â Â alternateStreetIds: number [] ;
-  Â Â Â Â areFwdTurnsVerified: boolean ;
-  Â Â Â Â areRevTurnsVerified: boolean ;
-  Â Â Â Â elevationLevel: null | number ;
-  Â Â Â Â flagAttributes: SegmentFlagAttributes ;
-  Â Â Â Â fromLanesInfo: null | SegmentLanesInfo ;
-  Â Â Â Â fromNodeId: null | number ;
-  Â Â Â Â fromNodeLanesCount: number ;
-  Â Â Â Â fwdSpeedLimit: null | number ;
-  Â Â Â Â geometry: LineString ;
-  Â Â Â Â hasClosures: boolean ;
-  Â Â Â Â hasHouseNumbers: boolean ;
-  Â Â Â Â hasRestrictions: boolean ;
-  Â Â Â Â hasSeparator: boolean ;
-  Â Â Â Â id: number ;
-  Â Â Â Â isAtoB: boolean ;
-  Â Â Â Â isBtoA: boolean ;
-  Â Â Â Â isFwdSpeedLimitVerified: boolean ;
-  Â Â Â Â isRevSpeedLimitVerified: boolean ;
-  Â Â Â Â isTwoWay: boolean ;
-  Â Â Â Â junctionId: null | number ;
-  Â Â Â Â length: number ;
-  Â Â Â Â lockRank: UserRank ;
-  Â Â Â Â modificationData: ModificationMetadata ;
-  Â Â Â Â primaryStreetId: null | number ;
-  Â Â Â Â rank: UserRank ;
-  Â Â Â Â restrictions: BaseRestriction [] ;
-  Â Â Â Â revSpeedLimit: null | number ;
-  Â Â Â Â roadType: RoadTypeId ;
-  Â Â Â Â routingRoadType: null | 1 | 2 | 3 | 6 | 7 ;
-  Â Â Â Â toLanesInfo: null | SegmentLanesInfo ;
-  Â Â Â Â toNodeId: null | number ;
-  Â Â Â Â toNodeLanesCount: number ;
+  allowNoDirection: boolean ;
+  alternateStreetIds: number [] ;
+  areFwdTurnsVerified: boolean ;
+  areRevTurnsVerified: boolean ;
+  elevationLevel: null | number ;
+  flagAttributes: SegmentFlagAttributes ;
+  fromLanesInfo: null | SegmentLanesInfo ;
+  fromNodeId: null | number ;
+  fromNodeLanesCount: number ;
+  fwdSpeedLimit: null | number ;
+  geometry: LineString ;
+  hasClosures: boolean ;
+  hasHouseNumbers: boolean ;
+  hasRestrictions: boolean ;
+  hasSeparator: boolean ;
+  id: number ;
+  isAtoB: boolean ;
+  isBtoA: boolean ;
+  isFwdSpeedLimitVerified: boolean ;
+  isRevSpeedLimitVerified: boolean ;
+  isTwoWay: boolean ;
+  junctionId: null | number ;
+  length: number ;
+  lockRank: UserRank ;
+  modificationData: ModificationMetadata ;
+  primaryStreetId: null | number ;
+  rank: UserRank ;
+  restrictions: BaseRestriction [] ;
+  revSpeedLimit: null | number ;
+  roadType: RoadTypeId ;
+  routingRoadType: null | 1 | 2 | 3 | 6 | 7 ;
+  toLanesInfo: null | SegmentLanesInfo ;
+  toNodeId: null | number ;
+  toNodeLanesCount: number ;
 }
 ```
 ## Properties
@@ -2770,7 +2770,7 @@ toNodeLanesCount: number
 ---
 title: SDK.SegmentAddress interface
 source: interfaces/index.SDK.SegmentAddress.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -2779,12 +2779,12 @@ notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 
 ```typescript
 interface SegmentAddress {
-  Â Â Â Â altStreets: SegmentAddress [] ;
-  Â Â Â Â city: null | City ;
-  Â Â Â Â country: null | Country ;
-  Â Â Â Â isEmpty: boolean ;
-  Â Â Â Â state: null | State ;
-  Â Â Â Â street: null | Street ;
+  altStreets: SegmentAddress [] ;
+  city: null | City ;
+  country: null | Country ;
+  isEmpty: boolean ;
+  state: null | State ;
+  street: null | Street ;
 }
 ```
 ## Properties
@@ -2801,7 +2801,7 @@ altStreets: SegmentAddress []
 ---
 title: SDK.SegmentFlagAttributes interface
 source: interfaces/index.SDK.SegmentFlagAttributes.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -2810,15 +2810,15 @@ notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 
 ```typescript
 interface SegmentFlagAttributes {
-  Â Â Â Â beacons: boolean ;
-  Â Â Â Â fwdLanesEnabled: boolean ;
-  Â Â Â Â fwdSpeedCamera: boolean ;
-  Â Â Â Â headlights: boolean ;
-  Â Â Â Â nearbyHOV: boolean ;
-  Â Â Â Â revLanesEnabled: boolean ;
-  Â Â Â Â revSpeedCamera: boolean ;
-  Â Â Â Â tunnel: boolean ;
-  Â Â Â Â unpaved: boolean ;
+  beacons: boolean ;
+  fwdLanesEnabled: boolean ;
+  fwdSpeedCamera: boolean ;
+  headlights: boolean ;
+  nearbyHOV: boolean ;
+  revLanesEnabled: boolean ;
+  revSpeedCamera: boolean ;
+  tunnel: boolean ;
+  unpaved: boolean ;
 }
 ```
 ## Properties
@@ -2875,7 +2875,7 @@ unpaved: boolean
 ---
 title: SDK.SegmentLanesInfo interface
 source: interfaces/index.SDK.SegmentLanesInfo.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -2884,8 +2884,8 @@ notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 
 ```typescript
 interface SegmentLanesInfo {
-  Â Â Â Â laneWidth: null | number ;
-  Â Â Â Â numberOfLanes: number ;
+  laneWidth: null | number ;
+  numberOfLanes: number ;
 }
 ```
 ## Properties
@@ -2907,7 +2907,7 @@ numberOfLanes: number
 ---
 title: SDK.State interface
 source: interfaces/index.SDK.State.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -2916,10 +2916,10 @@ notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 
 ```typescript
 interface State {
-  Â Â Â Â geometry: null | Polygon | MultiPolygon ;
-  Â Â Â Â id: number ;
-  Â Â Â Â modificationData: ModificationMetadata ;
-  Â Â Â Â name: string ;
+  geometry: null | Polygon | MultiPolygon ;
+  id: number ;
+  modificationData: ModificationMetadata ;
+  name: string ;
 }
 ```
 ## Properties
@@ -2951,7 +2951,7 @@ name: string
 ---
 title: SDK.Street interface
 source: interfaces/index.SDK.Street.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -2960,15 +2960,15 @@ notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 
 ```typescript
 interface Street {
-  Â Â Â Â cityId: null | number ;
-  Â Â Â Â direction: null | string ;
-  Â Â Â Â englishName: null | string ;
-  Â Â Â Â id: number ;
-  Â Â Â Â isEmpty: boolean ;
-  Â Â Â Â modificationData: ModificationMetadata ;
-  Â Â Â Â name: null | string ;
-  Â Â Â Â signText: null | string ;
-  Â Â Â Â signType: null | number ;
+  cityId: null | number ;
+  direction: null | string ;
+  englishName: null | string ;
+  id: number ;
+  isEmpty: boolean ;
+  modificationData: ModificationMetadata ;
+  name: null | string ;
+  signText: null | string ;
+  signType: null | number ;
 }
 ```
 ## Properties
@@ -3025,7 +3025,7 @@ signType: null | number
 ---
 title: SDK.Subscription interface
 source: interfaces/index.SDK.Subscription.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -3034,8 +3034,8 @@ notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 
 ```typescript
 interface Subscription {
-  Â Â Â Â id: string ;
-  Â Â Â Â name: string ;
+  id: string ;
+  name: string ;
 }
 ```
 ## Properties
@@ -3057,7 +3057,7 @@ name: string
 ---
 title: SDK.Suggestion interface
 source: interfaces/index.SDK.Suggestion.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -3066,10 +3066,10 @@ notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 
 ```typescript
 interface Suggestion {
-  Â Â Â Â createdOn: null | number ;
-  Â Â Â Â edits: SuggestionEntityEdit [] ;
-  Â Â Â Â id: string ;
-  Â Â Â Â resolutionData: SuggestionResolution [] ;
+  createdOn: null | number ;
+  edits: SuggestionEntityEdit [] ;
+  id: string ;
+  resolutionData: SuggestionResolution [] ;
 }
 ```
 Represents a suggestion for an edit.
@@ -3102,7 +3102,7 @@ resolutionData: SuggestionResolution []
 ---
 title: SDK.SuggestionAttributeChange interface
 source: interfaces/index.SDK.SuggestionAttributeChange.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -3111,12 +3111,12 @@ notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 
 ```typescript
 interface SuggestionAttributeChange < T = unknown > {
-  Â Â Â Â id: string ;
-  Â Â Â Â name: string ;
-  Â Â Â Â newValue: T ;
-  Â Â Â Â objectType: ObjectType ;
-  Â Â Â Â oldValue: T ;
-  Â Â Â Â timestamp: null | number ;
+  id: string ;
+  name: string ;
+  newValue: T ;
+  objectType: ObjectType ;
+  oldValue: T ;
+  timestamp: null | number ;
 }
 ```
 Represents a single attribute change in an edit suggestion change.
@@ -3159,7 +3159,7 @@ timestamp: null | number
 ---
 title: SDK.SuggestionEntityEdit interface
 source: interfaces/index.SDK.SuggestionEntityEdit.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -3168,9 +3168,9 @@ notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 
 ```typescript
 interface SuggestionEntityEdit {
-  Â Â Â Â actionType: SuggestibleActionType ;
-  Â Â Â Â objectId: null | string | number ;
-  Â Â Â Â objectType: ObjectType ;
+  actionType: SuggestibleActionType ;
+  objectId: null | string | number ;
+  objectType: ObjectType ;
 }
 ```
 Represents an edit to an entity within a suggestion.
@@ -3198,7 +3198,7 @@ objectType: ObjectType
 ---
 title: SDK.SuggestionResolution interface
 source: interfaces/index.SDK.SuggestionResolution.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -3207,10 +3207,10 @@ notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 
 ```typescript
 interface SuggestionResolution {
-  Â Â Â Â createdBy: null | string ;
-  Â Â Â Â createdOn: number ;
-  Â Â Â Â rejectionReason: null | SuggestionResolutionRejectionReason ;
-  Â Â Â Â resolution: SuggestionResolutionStatus ;
+  createdBy: null | string ;
+  createdOn: number ;
+  rejectionReason: null | SuggestionResolutionRejectionReason ;
+  resolution: SuggestionResolutionStatus ;
 }
 ```
 Represents the resolution details for a suggestion.
@@ -3243,7 +3243,7 @@ resolution: SuggestionResolutionStatus
 ---
 title: SDK.TileLayerOptions interface
 source: interfaces/index.SDK.TileLayerOptions.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -3252,13 +3252,13 @@ notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 
 ```typescript
 interface TileLayerOptions {
-  Â Â Â Â tileHeight: number ;
-  Â Â Â Â tileWidth: number ;
-  Â Â Â Â url: {
-  Â Â Â Â Â Â Â Â fileName: string ;
-  Â Â Â Â Â Â Â Â params ?: Record < string , unknown > ;
-  Â Â Â Â Â Â Â Â servers: string [] ;
-  Â Â Â Â } ;
+  tileHeight: number ;
+  tileWidth: number ;
+  url: {
+  fileName: string ;
+  params ?: Record < string , unknown > ;
+  servers: string [] ;
+} ;
 }
 ```
 #### Members
@@ -3291,7 +3291,7 @@ url: { fileName: string ; params ?: Record < string , unknown > ; servers: strin
 ---
 title: SDK.TrackedDataModel interface
 source: interfaces/index.SDK.TrackedDataModel.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -3300,24 +3300,24 @@ notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 
 ```typescript
 interface TrackedDataModel {
-  Â Â Â Â events: {
-  Â Â Â Â Â Â Â Â "objects-state-deleted": (
-  Â Â Â Â Â Â Â Â Â Â Â Â objects: DataModelObject < ObjectId , FeatureVectorAttributes < ObjectId > > [] ,
-  Â Â Â Â Â Â Â Â ) = > void ;
-  Â Â Â Â Â Â Â Â objectsadded: (
-  Â Â Â Â Â Â Â Â Â Â Â Â objects: DataModelObject < ObjectId , FeatureVectorAttributes < ObjectId > > [] ,
-  Â Â Â Â Â Â Â Â ) = > void ;
-  Â Â Â Â Â Â Â Â objectschanged: (
-  Â Â Â Â Â Â Â Â Â Â Â Â objects: DataModelObject < ObjectId , FeatureVectorAttributes < ObjectId > > [] ,
-  Â Â Â Â Â Â Â Â ) = > void ;
-  Â Â Â Â Â Â Â Â "objectschanged-id": ( changedIds: ChangedIDsInfo ) = > void ;
-  Â Â Â Â Â Â Â Â objectsremoved: (
-  Â Â Â Â Â Â Â Â Â Â Â Â objects: DataModelObject < ObjectId , FeatureVectorAttributes < ObjectId > > [] ,
-  Â Â Â Â Â Â Â Â ) = > void ;
-  Â Â Â Â Â Â Â Â objectssynced: (
-  Â Â Â Â Â Â Â Â Â Â Â Â objects: DataModelObject < ObjectId , FeatureVectorAttributes < ObjectId > > [] ,
-  Â Â Â Â Â Â Â Â ) = > void ;
-  Â Â Â Â } ;
+  events: {
+  "objects-state-deleted": (
+  objects: DataModelObject < ObjectId , FeatureVectorAttributes < ObjectId > > [] ,
+  ) = > void ;
+  objectsadded: (
+  objects: DataModelObject < ObjectId , FeatureVectorAttributes < ObjectId > > [] ,
+  ) = > void ;
+  objectschanged: (
+  objects: DataModelObject < ObjectId , FeatureVectorAttributes < ObjectId > > [] ,
+  ) = > void ;
+  "objectschanged-id": ( changedIds: ChangedIDsInfo ) = > void ;
+  objectsremoved: (
+  objects: DataModelObject < ObjectId , FeatureVectorAttributes < ObjectId > > [] ,
+  ) = > void ;
+  objectssynced: (
+  objects: DataModelObject < ObjectId , FeatureVectorAttributes < ObjectId > > [] ,
+  ) = > void ;
+} ;
 }
 ```
 ## Properties
@@ -3325,22 +3325,22 @@ interface TrackedDataModel {
 
 ```typescript
 events: {
-  Â Â Â Â "objects-state-deleted": (
-  Â Â Â Â Â Â Â Â objects: DataModelObject < ObjectId , FeatureVectorAttributes < ObjectId > > [] ,
-  Â Â Â Â ) = > void ;
-  Â Â Â Â objectsadded: (
-  Â Â Â Â Â Â Â Â objects: DataModelObject < ObjectId , FeatureVectorAttributes < ObjectId > > [] ,
-  Â Â Â Â ) = > void ;
-  Â Â Â Â objectschanged: (
-  Â Â Â Â Â Â Â Â objects: DataModelObject < ObjectId , FeatureVectorAttributes < ObjectId > > [] ,
-  Â Â Â Â ) = > void ;
-  Â Â Â Â "objectschanged-id": ( changedIds: ChangedIDsInfo ) = > void ;
-  Â Â Â Â objectsremoved: (
-  Â Â Â Â Â Â Â Â objects: DataModelObject < ObjectId , FeatureVectorAttributes < ObjectId > > [] ,
-  Â Â Â Â ) = > void ;
-  Â Â Â Â objectssynced: (
-  Â Â Â Â Â Â Â Â objects: DataModelObject < ObjectId , FeatureVectorAttributes < ObjectId > > [] ,
-  Â Â Â Â ) = > void ;
+  "objects-state-deleted": (
+  objects: DataModelObject < ObjectId , FeatureVectorAttributes < ObjectId > > [] ,
+  ) = > void ;
+  objectsadded: (
+  objects: DataModelObject < ObjectId , FeatureVectorAttributes < ObjectId > > [] ,
+  ) = > void ;
+  objectschanged: (
+  objects: DataModelObject < ObjectId , FeatureVectorAttributes < ObjectId > > [] ,
+  ) = > void ;
+  "objectschanged-id": ( changedIds: ChangedIDsInfo ) = > void ;
+  objectsremoved: (
+  objects: DataModelObject < ObjectId , FeatureVectorAttributes < ObjectId > > [] ,
+  ) = > void ;
+  objectssynced: (
+  objects: DataModelObject < ObjectId , FeatureVectorAttributes < ObjectId > > [] ,
+  ) = > void ;
 }
 ```
 
@@ -3351,7 +3351,7 @@ events: {
 ---
 title: SDK.TrackedLayer interface
 source: interfaces/index.SDK.TrackedLayer.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -3360,12 +3360,12 @@ notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 
 ```typescript
 interface TrackedLayer {
-  Â Â Â Â events: {
-  Â Â Â Â Â Â Â Â visibilitychanged: () = > void ;
-  Â Â Â Â Â Â Â Â "waze-feature-clicked": ( e: { feature: WMEFeature } ) = > void ;
-  Â Â Â Â Â Â Â Â "waze-feature-in": ( e: { feature: WMEFeature } ) = > void ;
-  Â Â Â Â Â Â Â Â "waze-feature-out": ( e: { feature: WMEFeature } ) = > void ;
-  Â Â Â Â } ;
+  events: {
+  visibilitychanged: () = > void ;
+  "waze-feature-clicked": ( e: { feature: WMEFeature } ) = > void ;
+  "waze-feature-in": ( e: { feature: WMEFeature } ) = > void ;
+  "waze-feature-out": ( e: { feature: WMEFeature } ) = > void ;
+} ;
 }
 ```
 ## Properties
@@ -3373,10 +3373,10 @@ interface TrackedLayer {
 
 ```typescript
 events: {
-  Â Â Â Â visibilitychanged: () = > void ;
-  Â Â Â Â "waze-feature-clicked": ( e: { feature: WMEFeature } ) = > void ;
-  Â Â Â Â "waze-feature-in": ( e: { feature: WMEFeature } ) = > void ;
-  Â Â Â Â "waze-feature-out": ( e: { feature: WMEFeature } ) = > void ;
+  visibilitychanged: () = > void ;
+  "waze-feature-clicked": ( e: { feature: WMEFeature } ) = > void ;
+  "waze-feature-in": ( e: { feature: WMEFeature } ) = > void ;
+  "waze-feature-out": ( e: { feature: WMEFeature } ) = > void ;
 }
 ```
 
@@ -3387,7 +3387,7 @@ events: {
 ---
 title: SDK.Turn interface
 source: interfaces/index.SDK.Turn.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -3396,24 +3396,24 @@ notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 
 ```typescript
 interface Turn {
-  Â Â Â Â fromSegmentFwd: boolean ;
-  Â Â Â Â fromSegmentId: number ;
-  Â Â Â Â hasCustomTTS: boolean ;
-  Â Â Â Â hasShieldsPopulated: boolean ;
-  Â Â Â Â hasTowardsGuidance: boolean ;
-  Â Â Â Â hasTurnGuidance: boolean ;
-  Â Â Â Â hasVisualInstruction: boolean ;
-  Â Â Â Â id: string ;
-  Â Â Â Â instructionOpCode: null | InstructionOpCode ;
-  Â Â Â Â isAllowed: boolean ;
-  Â Â Â Â isJunctionBoxTurn: boolean ;
-  Â Â Â Â isPathTurn: boolean ;
-  Â Â Â Â isUTurn: boolean ;
-  Â Â Â Â lanes: null | TurnLanes ;
-  Â Â Â Â restrictions: BaseRestriction [] ;
-  Â Â Â Â segmentPath: number [] ;
-  Â Â Â Â toSegmentFwd: boolean ;
-  Â Â Â Â toSegmentId: number ;
+  fromSegmentFwd: boolean ;
+  fromSegmentId: number ;
+  hasCustomTTS: boolean ;
+  hasShieldsPopulated: boolean ;
+  hasTowardsGuidance: boolean ;
+  hasTurnGuidance: boolean ;
+  hasVisualInstruction: boolean ;
+  id: string ;
+  instructionOpCode: null | InstructionOpCode ;
+  isAllowed: boolean ;
+  isJunctionBoxTurn: boolean ;
+  isPathTurn: boolean ;
+  isUTurn: boolean ;
+  lanes: null | TurnLanes ;
+  restrictions: BaseRestriction [] ;
+  segmentPath: number [] ;
+  toSegmentFwd: boolean ;
+  toSegmentId: number ;
 }
 ```
 ## Properties
@@ -3515,7 +3515,7 @@ toSegmentId: number
 ---
 title: SDK.TurnClosure interface
 source: interfaces/index.SDK.TurnClosure.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -3524,15 +3524,15 @@ notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 
 ```typescript
 interface TurnClosure {
-  Â Â Â Â description: null | string ;
-  Â Â Â Â endDate: null | string ;
-  Â Â Â Â fromSegmentId: number ;
-  Â Â Â Â id: string ;
-  Â Â Â Â majorTrafficEventId: null | string ;
-  Â Â Â Â modificationData: ModificationMetadata ;
-  Â Â Â Â startDate: null | string ;
-  Â Â Â Â status: ClosureStatus ;
-  Â Â Â Â toSegmentId: number ;
+  description: null | string ;
+  endDate: null | string ;
+  fromSegmentId: number ;
+  id: string ;
+  majorTrafficEventId: null | string ;
+  modificationData: ModificationMetadata ;
+  startDate: null | string ;
+  status: ClosureStatus ;
+  toSegmentId: number ;
 }
 ```
 ## Properties
@@ -3589,7 +3589,7 @@ toSegmentId: number
 ---
 title: SDK.TurnLanes interface
 source: interfaces/index.SDK.TurnLanes.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -3598,12 +3598,12 @@ notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 
 ```typescript
 interface TurnLanes {
-  Â Â Â Â angleOverride: null | number ;
-  Â Â Â Â arrowAngle: null | number ;
-  Â Â Â Â fromLaneIndex: number ;
-  Â Â Â Â guidanceMode: LaneGuidanceMode ;
-  Â Â Â Â instructionStrategy: LaneInstructionStrategy ;
-  Â Â Â Â toLaneIndex: number ;
+  angleOverride: null | number ;
+  arrowAngle: null | number ;
+  fromLaneIndex: number ;
+  guidanceMode: LaneGuidanceMode ;
+  instructionStrategy: LaneInstructionStrategy ;
+  toLaneIndex: number ;
 }
 ```
 ## Properties
@@ -3640,34 +3640,12 @@ toLaneIndex: number
 
 ---
 
-# index.SDK.TurnRestriction
-
----
-title: SDK.TurnRestriction interface
-source: interfaces/index.SDK.TurnRestriction.html
-created: 2026-03-08
-tool: extract-to-md.py
-notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
----
-
-# Interface TurnRestriction
-
-```typescript
-interface TurnRestriction {
-  driveProfiles: DriveProfiles ;
-  isExpired: boolean ;
-}
-```
-## Properties
-
----
-
 # index.SDK.UpdateRequestDetails
 
 ---
 title: SDK.UpdateRequestDetails interface
 source: interfaces/index.SDK.UpdateRequestDetails.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -3676,9 +3654,9 @@ notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 
 ```typescript
 interface UpdateRequestDetails {
-  Â Â Â Â comments: ConversationElement [] ;
-  Â Â Â Â driveGeometry: null | MultiLineString ;
-  Â Â Â Â id: number ;
+  comments: ConversationElement [] ;
+  driveGeometry: null | MultiLineString ;
+  id: number ;
 }
 ```
 ## Properties
@@ -3705,7 +3683,7 @@ id: number
 ---
 title: SDK.UpdateRequestUserPreferences interface
 source: interfaces/index.SDK.UpdateRequestUserPreferences.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -3714,18 +3692,18 @@ notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 
 ```typescript
 interface UpdateRequestUserPreferences {
-  Â Â Â Â activeHovSubscriptions: string [] ;
-  Â Â Â Â avoidDangerousTurns: null | boolean ;
-  Â Â Â Â avoidFerries: null | boolean ;
-  Â Â Â Â avoidPrimaryRoads: null | boolean ;
-  Â Â Â Â avoidTollRoads: null | boolean ;
-  Â Â Â Â hasEv: null | boolean ;
-  Â Â Â Â isEmailVerified: null | boolean ;
-  Â Â Â Â language: null | string ;
-  Â Â Â Â licensePlateSuffix: null | string ;
-  Â Â Â Â os: null | string ;
-  Â Â Â Â unpavedRoads: null | UnpavedRoadsSetting ;
-  Â Â Â Â vehicleType: null | VehicleType ;
+  activeHovSubscriptions: string [] ;
+  avoidDangerousTurns: null | boolean ;
+  avoidFerries: null | boolean ;
+  avoidPrimaryRoads: null | boolean ;
+  avoidTollRoads: null | boolean ;
+  hasEv: null | boolean ;
+  isEmailVerified: null | boolean ;
+  language: null | string ;
+  licensePlateSuffix: null | string ;
+  os: null | string ;
+  unpavedRoads: null | UnpavedRoadsSetting ;
+  vehicleType: null | VehicleType ;
 }
 ```
 ## Properties
@@ -3797,7 +3775,7 @@ vehicleType: null | VehicleType
 ---
 title: SDK.UserProfile interface
 source: interfaces/index.SDK.UserProfile.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -3806,16 +3784,16 @@ notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 
 ```typescript
 interface UserProfile {
-  Â Â Â Â dailyEditCount: number [] ;
-  Â Â Â Â editCountByType: {
-  Â Â Â Â Â Â Â Â mapProblems: number ;
-  Â Â Â Â Â Â Â Â placeUpdateRequests: number ;
-  Â Â Â Â Â Â Â Â segmentHouseNumbers: number ;
-  Â Â Â Â Â Â Â Â segments: number ;
-  Â Â Â Â Â Â Â Â updateRequests: number ;
-  Â Â Â Â Â Â Â Â venues: number ;
-  Â Â Â Â } ;
-  Â Â Â Â totalEditCount: number ;
+  dailyEditCount: number [] ;
+  editCountByType: {
+  mapProblems: number ;
+  placeUpdateRequests: number ;
+  segmentHouseNumbers: number ;
+  segments: number ;
+  updateRequests: number ;
+  venues: number ;
+} ;
+  totalEditCount: number ;
 }
 ```
 ## Properties
@@ -3828,12 +3806,12 @@ dailyEditCount: number []
 
 ```typescript
 editCountByType: {
-  Â Â Â Â mapProblems: number ;
-  Â Â Â Â placeUpdateRequests: number ;
-  Â Â Â Â segmentHouseNumbers: number ;
-  Â Â Â Â segments: number ;
-  Â Â Â Â updateRequests: number ;
-  Â Â Â Â venues: number ;
+  mapProblems: number ;
+  placeUpdateRequests: number ;
+  segmentHouseNumbers: number ;
+  segments: number ;
+  updateRequests: number ;
+  venues: number ;
 }
 ```
 ### `totalEditCount`
@@ -3849,7 +3827,7 @@ totalEditCount: number
 ---
 title: SDK.UserSession interface
 source: interfaces/index.SDK.UserSession.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -3858,11 +3836,11 @@ notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 
 ```typescript
 interface UserSession {
-  Â Â Â Â isAreaManager: boolean ;
-  Â Â Â Â isCountryManager: boolean ;
-  Â Â Â Â managedAreas: ManagedAreaShort [] ;
-  Â Â Â Â rank: UserRank ;
-  Â Â Â Â userName: string ;
+  isAreaManager: boolean ;
+  isCountryManager: boolean ;
+  managedAreas: ManagedAreaShort [] ;
+  rank: UserRank ;
+  userName: string ;
 }
 ```
 ## Properties
@@ -3899,7 +3877,7 @@ userName: string
 ---
 title: SDK.UserSettings interface
 source: interfaces/index.SDK.UserSettings.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -3908,13 +3886,13 @@ notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 
 ```typescript
 interface UserSettings {
-  Â Â Â Â isCompactMode: boolean ;
-  Â Â Â Â isCreateRoadsAsTwoWay: boolean ;
-  Â Â Â Â isCreateRoadsWithAllTurnsAllowed: boolean ;
-  Â Â Â Â isDisplayTransparentTurnArrows: boolean ;
-  Â Â Â Â isImperial ?: boolean ;
-  Â Â Â Â isSelectOnlyOnEmptySelection: boolean ;
-  Â Â Â Â isSpreadOverlappingTurnArrows: boolean ;
+  isCompactMode: boolean ;
+  isCreateRoadsAsTwoWay: boolean ;
+  isCreateRoadsWithAllTurnsAllowed: boolean ;
+  isDisplayTransparentTurnArrows: boolean ;
+  isImperial ?: boolean ;
+  isSelectOnlyOnEmptySelection: boolean ;
+  isSpreadOverlappingTurnArrows: boolean ;
 }
 ```
 User settings set in the settings tab of the WME UI
@@ -3962,7 +3940,7 @@ isSpreadOverlappingTurnArrows: boolean
 ---
 title: SDK.Venue interface
 source: interfaces/index.SDK.Venue.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -3971,25 +3949,25 @@ notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 
 ```typescript
 interface Venue {
-  Â Â Â Â aliases: string [] ;
-  Â Â Â Â approved: boolean ;
-  Â Â Â Â brand: null | string ;
-  Â Â Â Â categories: VenueCategoryId [] ;
-  Â Â Â Â externalProviderIds: string [] ;
-  Â Â Â Â geometry: Point | Polygon ;
-  Â Â Â Â id: string ;
-  Â Â Â Â images: VenueImage [] ;
-  Â Â Â Â isAdLocked: boolean ;
-  Â Â Â Â isResidential: boolean ;
-  Â Â Â Â lockRank: number ;
-  Â Â Â Â modificationData: ModificationMetadata ;
-  Â Â Â Â name: string ;
-  Â Â Â Â navigationPoints: NavigationPoint [] ;
-  Â Â Â Â openingHours: OpeningHour [] ;
-  Â Â Â Â phone: string ;
-  Â Â Â Â services: ServiceType [] ;
-  Â Â Â Â url: string ;
-  Â Â Â Â venueUpdateRequests: VenueUpdateRequest [] ;
+  aliases: string [] ;
+  approved: boolean ;
+  brand: null | string ;
+  categories: VenueCategoryId [] ;
+  externalProviderIds: string [] ;
+  geometry: Point | Polygon ;
+  id: string ;
+  images: VenueImage [] ;
+  isAdLocked: boolean ;
+  isResidential: boolean ;
+  lockRank: number ;
+  modificationData: ModificationMetadata ;
+  name: string ;
+  navigationPoints: NavigationPoint [] ;
+  openingHours: OpeningHour [] ;
+  phone: string ;
+  services: ServiceType [] ;
+  url: string ;
+  venueUpdateRequests: VenueUpdateRequest [] ;
 }
 ```
 ## Properties
@@ -4096,7 +4074,7 @@ venueUpdateRequests: VenueUpdateRequest []
 ---
 title: SDK.VenueAddress interface
 source: interfaces/index.SDK.VenueAddress.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -4105,12 +4083,12 @@ notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 
 ```typescript
 interface VenueAddress {
-  Â Â Â Â city: null | City ;
-  Â Â Â Â country: null | Country ;
-  Â Â Â Â houseNumber: null | string ;
-  Â Â Â Â isEmpty: boolean ;
-  Â Â Â Â state: null | State ;
-  Â Â Â Â street: null | Street ;
+  city: null | City ;
+  country: null | Country ;
+  houseNumber: null | string ;
+  isEmpty: boolean ;
+  state: null | State ;
+  street: null | Street ;
 }
 ```
 ## Properties
@@ -4127,7 +4105,7 @@ houseNumber: null | string
 ---
 title: SDK.VenueCategory interface
 source: interfaces/index.SDK.VenueCategory.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -4136,8 +4114,8 @@ notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 
 ```typescript
 interface VenueCategory {
-  Â Â Â Â id: VenueCategoryId ;
-  Â Â Â Â localizedName: string ;
+  id: VenueCategoryId ;
+  localizedName: string ;
 }
 ```
 ## Properties
@@ -4159,7 +4137,7 @@ localizedName: string
 ---
 title: SDK.VenueImage interface
 source: interfaces/index.SDK.VenueImage.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -4168,10 +4146,10 @@ notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 
 ```typescript
 interface VenueImage {
-  Â Â Â Â creationDate: number ;
-  Â Â Â Â id: string ;
-  Â Â Â Â isApproved: boolean ;
-  Â Â Â Â url: string ;
+  creationDate: number ;
+  id: string ;
+  isApproved: boolean ;
+  url: string ;
 }
 ```
 ## Properties
@@ -4203,7 +4181,7 @@ url: string
 ---
 title: SDK.VenueSubCategory interface
 source: interfaces/index.SDK.VenueSubCategory.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -4212,9 +4190,9 @@ notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 
 ```typescript
 interface VenueSubCategory {
-  Â Â Â Â categoryId: VenueCategoryId ;
-  Â Â Â Â localizedName: string ;
-  Â Â Â Â subCategoryId: VenueCategoryId ;
+  categoryId: VenueCategoryId ;
+  localizedName: string ;
+  subCategoryId: VenueCategoryId ;
 }
 ```
 ## Properties
@@ -4241,7 +4219,7 @@ subCategoryId: VenueCategoryId
 ---
 title: SDK.VenueUpdateRequest interface
 source: interfaces/index.SDK.VenueUpdateRequest.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -4250,12 +4228,12 @@ notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 
 ```typescript
 interface VenueUpdateRequest {
-  Â Â Â Â changedFields ?: ChangedField [] ;
-  Â Â Â Â createdBy: null | string ;
-  Â Â Â Â dateAdded: number ;
-  Â Â Â Â id: null | string | number ;
-  Â Â Â Â subject: PLACE_UPDATE_SUBJECT ;
-  Â Â Â Â updateType: PlaceUpdateType ;
+  changedFields ?: ChangedField [] ;
+  createdBy: null | string ;
+  dateAdded: number ;
+  id: null | string | number ;
+  subject: PLACE_UPDATE_SUBJECT ;
+  updateType: PlaceUpdateType ;
 }
 ```
 ## Properties

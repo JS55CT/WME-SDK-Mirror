@@ -1,7 +1,7 @@
 ---
 title: SDK.Country interface
 source: interfaces/index.SDK.Country.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -10,37 +10,37 @@ notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 
 ```typescript
 interface Country {
-  Â Â Â Â abbr: string ;
-  Â Â Â Â defaultLaneWidthPerRoadType: 
-  Â Â Â Â Â Â Â Â | null
-  Â Â Â Â Â Â Â Â | Partial <
-  Â Â Â Â Â Â Â Â Â Â Â Â {
-  Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â "1": number ;
-  Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â "10": number ;
-  Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â "15": number ;
-  Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â "16": number ;
-  Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â "17": number ;
-  Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â "18": number ;
-  Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â "19": number ;
-  Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â "2": number ;
-  Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â "20": number ;
-  Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â "22": number ;
-  Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â "3": number ;
-  Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â "4": number ;
-  Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â "5": number ;
-  Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â "6": number ;
-  Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â "7": number ;
-  Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â "8": number ;
-  Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â "9": number ;
-  Â Â Â Â Â Â Â Â Â Â Â Â } ,
-  Â Â Â Â Â Â Â Â > ;
-  Â Â Â Â id: number ;
-  Â Â Â Â isLeftHandTraffic: boolean ;
-  Â Â Â Â modificationData: ModificationMetadata ;
-  Â Â Â Â name: string ;
-  Â Â Â Â regionCode: null
-  Â Â Â Â | RegionCode ;
-  Â Â Â Â restrictionSubscriptions: Subscription [] ;
+  abbr: string ;
+  defaultLaneWidthPerRoadType: 
+  | null
+  | Partial <
+  {
+  "1": number ;
+  "10": number ;
+  "15": number ;
+  "16": number ;
+  "17": number ;
+  "18": number ;
+  "19": number ;
+  "2": number ;
+  "20": number ;
+  "22": number ;
+  "3": number ;
+  "4": number ;
+  "5": number ;
+  "6": number ;
+  "7": number ;
+  "8": number ;
+  "9": number ;
+} ,
+  > ;
+  id: number ;
+  isLeftHandTraffic: boolean ;
+  modificationData: ModificationMetadata ;
+  name: string ;
+  regionCode: null
+  | RegionCode ;
+  restrictionSubscriptions: Subscription [] ;
 }
 ```
 ## Properties
@@ -53,28 +53,28 @@ abbr: string
 
 ```typescript
 defaultLaneWidthPerRoadType: 
-  Â Â Â Â | null
-  Â Â Â Â | Partial <
-  Â Â Â Â Â Â Â Â {
-  Â Â Â Â Â Â Â Â Â Â Â Â "1": number ;
-  Â Â Â Â Â Â Â Â Â Â Â Â "10": number ;
-  Â Â Â Â Â Â Â Â Â Â Â Â "15": number ;
-  Â Â Â Â Â Â Â Â Â Â Â Â "16": number ;
-  Â Â Â Â Â Â Â Â Â Â Â Â "17": number ;
-  Â Â Â Â Â Â Â Â Â Â Â Â "18": number ;
-  Â Â Â Â Â Â Â Â Â Â Â Â "19": number ;
-  Â Â Â Â Â Â Â Â Â Â Â Â "2": number ;
-  Â Â Â Â Â Â Â Â Â Â Â Â "20": number ;
-  Â Â Â Â Â Â Â Â Â Â Â Â "22": number ;
-  Â Â Â Â Â Â Â Â Â Â Â Â "3": number ;
-  Â Â Â Â Â Â Â Â Â Â Â Â "4": number ;
-  Â Â Â Â Â Â Â Â Â Â Â Â "5": number ;
-  Â Â Â Â Â Â Â Â Â Â Â Â "6": number ;
-  Â Â Â Â Â Â Â Â Â Â Â Â "7": number ;
-  Â Â Â Â Â Â Â Â Â Â Â Â "8": number ;
-  Â Â Â Â Â Â Â Â Â Â Â Â "9": number ;
-  Â Â Â Â Â Â Â Â } ,
-  Â Â Â Â >
+  | null
+  | Partial <
+  {
+  "1": number ;
+  "10": number ;
+  "15": number ;
+  "16": number ;
+  "17": number ;
+  "18": number ;
+  "19": number ;
+  "2": number ;
+  "20": number ;
+  "22": number ;
+  "3": number ;
+  "4": number ;
+  "5": number ;
+  "6": number ;
+  "7": number ;
+  "8": number ;
+  "9": number ;
+} ,
+  >
 ```
 ### `id`
 

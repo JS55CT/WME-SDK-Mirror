@@ -1,7 +1,7 @@
 ---
 title: SDK.RegisterSidebarTabResult interface
 source: interfaces/index.SDK.RegisterSidebarTabResult.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -10,8 +10,8 @@ notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 
 ```typescript
 interface RegisterSidebarTabResult {
-  Â Â Â Â tabLabel: HTMLElement ;
-  Â Â Â Â tabPane: HTMLElement ;
+  tabLabel: HTMLElement ;
+  tabPane: HTMLElement ;
 }
 ```
 ## Properties

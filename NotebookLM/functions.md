@@ -3,7 +3,7 @@
 ---
 title: getWmeSdk function
 source: functions/index.getWmeSdk.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -12,7 +12,7 @@ notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 
 ```typescript
 getWmeSdk (
-  Â Â Â Â options: { scriptId: string ; scriptName: string ; version ?: string } ,
+  options: { scriptId: string ; scriptName: string ; version ?: string } ,
   ) : WmeSDK
 ```
 

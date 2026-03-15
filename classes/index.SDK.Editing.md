@@ -1,7 +1,7 @@
 ---
 title: SDK.Editing class
 source: classes/index.SDK.Editing.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -73,7 +73,7 @@ true if user is editing as a guest in "practice mode"
 ```typescript
 isSnapshotModeOn () : boolean
 ```
-true if user is in "snapshot mode", viewing whatâs currently live
+true if user is in "snapshot mode", viewing what’s currently live
 in the Waze app.
 ### `lockEditing`
 

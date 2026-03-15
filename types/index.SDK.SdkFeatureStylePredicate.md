@@ -1,7 +1,7 @@
 ---
 title: SDK.SdkFeatureStylePredicate type
 source: types/index.SDK.SdkFeatureStylePredicate.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -10,7 +10,7 @@ notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 
 ```typescript
 SdkFeatureStylePredicate: (
-  Â Â Â Â properties: SdkFeatureProperties ,
-  Â Â Â Â zoomLevel: number ,
+  properties: SdkFeatureProperties ,
+  zoomLevel: number ,
   ) = > boolean
 ```

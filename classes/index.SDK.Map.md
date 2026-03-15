@@ -1,7 +1,7 @@
 ---
 title: SDK.Map class
 source: classes/index.SDK.Map.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -28,7 +28,7 @@ MIN_ZOOM_LEVEL: ZoomLevel = MIN_ZOOM_LEVEL
 
 ```typescript
 addFeaturesToLayer (
-  Â Â Â Â args: { features: SdkFeature < SdkFeatureGeometry > [] ; layerName: string } ,
+  args: { features: SdkFeature < SdkFeatureGeometry > [] ; layerName: string } ,
   ) : void
 ```
 
@@ -42,12 +42,12 @@ addFeatureToLayer ( args: { feature: SdkFeature ; layerName: string } ) : void
 
 ```typescript
 addLayer (
-  Â Â Â Â args: {
-  Â Â Â Â Â Â Â Â layerName: string ;
-  Â Â Â Â Â Â Â Â styleContext ?: SdkFeatureStyleContext ;
-  Â Â Â Â Â Â Â Â styleRules ?: SdkFeatureStyleRule [] ;
-  Â Â Â Â Â Â Â Â zIndexing ?: boolean ;
-  Â Â Â Â } ,
+  args: {
+  layerName: string ;
+  styleContext ?: SdkFeatureStyleContext ;
+  styleRules ?: SdkFeatureStyleRule [] ;
+  zIndexing ?: boolean ;
+} ,
   ) : void
 ```
 **Example: Basic layer with no styling**
@@ -135,7 +135,7 @@ sdk.Map.addFeatureToLayer({
 
 ```typescript
 addStyleRuleToLayer (
-  Â Â Â Â args: { layerName: WME_LAYER_NAMES ; styleRules: SdkFeatureStyleRule [] } ,
+  args: { layerName: WME_LAYER_NAMES ; styleRules: SdkFeatureStyleRule [] } ,
   ) : void
 ```
 
@@ -155,7 +155,7 @@ centerMapOnGeometry ( args: { geometry: Point | Polygon | LineString } ) : void
 
 ```typescript
 dangerouslyAddFeaturesToLayerWithoutValidation (
-  Â Â Â Â args: { features: object [] ; layerName: string } ,
+  args: { features: object [] ; layerName: string } ,
   ) : void
 ```
 
@@ -226,7 +226,7 @@ enableSelectionToggling () : void
 
 ```typescript
 getFeatureDomElement (
-  Â Â Â Â args: { featureId: string | number ; layerName: string } ,
+  args: { featureId: string | number ; layerName: string } ,
   ) : null | HTMLElement | SVGElement
 ```
 a DOM element of a feature on the map within the given layer.
@@ -340,7 +340,7 @@ removeAllFeaturesFromLayer ( args: { layerName: string } ) : void
 
 ```typescript
 removeFeatureFromLayer (
-  Â Â Â Â args: { featureId: string | number ; layerName: string } ,
+  args: { featureId: string | number ; layerName: string } ,
   ) : void
 ```
 
@@ -348,7 +348,7 @@ removeFeatureFromLayer (
 
 ```typescript
 removeFeaturesFromLayer (
-  Â Â Â Â args: { featureIds: ( string | number ) [] ; layerName: string } ,
+  args: { featureIds: ( string | number ) [] ; layerName: string } ,
   ) : void
 ```
 

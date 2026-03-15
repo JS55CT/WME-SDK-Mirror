@@ -1,7 +1,7 @@
 ---
 title: SDK.ManagedAreaShort interface
 source: interfaces/index.SDK.ManagedAreaShort.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -10,8 +10,8 @@ notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 
 ```typescript
 interface ManagedAreaShort {
-  Â Â Â Â id: number ;
-  Â Â Â Â name: string ;
+  id: number ;
+  name: string ;
 }
 ```
 ## Properties

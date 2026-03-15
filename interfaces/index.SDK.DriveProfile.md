@@ -1,7 +1,7 @@
 ---
 title: SDK.DriveProfile interface
 source: interfaces/index.SDK.DriveProfile.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -10,10 +10,10 @@ notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 
 ```typescript
 interface DriveProfile {
-  Â Â Â Â licensePlateNumber: string ;
-  Â Â Â Â numPassengers: number ;
-  Â Â Â Â subscriptions: string [] ;
-  Â Â Â Â vehicleTypes: VehicleType [] ;
+  licensePlateNumber: string ;
+  numPassengers: number ;
+  subscriptions: string [] ;
+  vehicleTypes: VehicleType [] ;
 }
 ```
 ## Properties

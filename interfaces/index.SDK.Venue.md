@@ -1,7 +1,7 @@
 ---
 title: SDK.Venue interface
 source: interfaces/index.SDK.Venue.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -10,25 +10,25 @@ notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 
 ```typescript
 interface Venue {
-  Â Â Â Â aliases: string [] ;
-  Â Â Â Â approved: boolean ;
-  Â Â Â Â brand: null | string ;
-  Â Â Â Â categories: VenueCategoryId [] ;
-  Â Â Â Â externalProviderIds: string [] ;
-  Â Â Â Â geometry: Point | Polygon ;
-  Â Â Â Â id: string ;
-  Â Â Â Â images: VenueImage [] ;
-  Â Â Â Â isAdLocked: boolean ;
-  Â Â Â Â isResidential: boolean ;
-  Â Â Â Â lockRank: number ;
-  Â Â Â Â modificationData: ModificationMetadata ;
-  Â Â Â Â name: string ;
-  Â Â Â Â navigationPoints: NavigationPoint [] ;
-  Â Â Â Â openingHours: OpeningHour [] ;
-  Â Â Â Â phone: string ;
-  Â Â Â Â services: ServiceType [] ;
-  Â Â Â Â url: string ;
-  Â Â Â Â venueUpdateRequests: VenueUpdateRequest [] ;
+  aliases: string [] ;
+  approved: boolean ;
+  brand: null | string ;
+  categories: VenueCategoryId [] ;
+  externalProviderIds: string [] ;
+  geometry: Point | Polygon ;
+  id: string ;
+  images: VenueImage [] ;
+  isAdLocked: boolean ;
+  isResidential: boolean ;
+  lockRank: number ;
+  modificationData: ModificationMetadata ;
+  name: string ;
+  navigationPoints: NavigationPoint [] ;
+  openingHours: OpeningHour [] ;
+  phone: string ;
+  services: ServiceType [] ;
+  url: string ;
+  venueUpdateRequests: VenueUpdateRequest [] ;
 }
 ```
 ## Properties

@@ -1,7 +1,7 @@
 ---
 title: SDK.EditSuggestionStatus variable
 source: variables/index.SDK.EditSuggestionStatus.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -10,13 +10,13 @@ notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 
 ```typescript
 EditSuggestionStatus: {
-  Â Â Â Â ACCEPTED: "ACCEPTED" ;
-  Â Â Â Â AWAITING_REMOVAL: "AWAITING_REMOVAL" ;
-  Â Â Â Â CLOSED_MIXED: "CLOSED_MIXED" ;
-  Â Â Â Â OPEN: "OPEN" ;
-  Â Â Â Â OPEN_AND_CLOSED: "OPEN_AND_CLOSED" ;
-  Â Â Â Â REJECTED: "REJECTED" ;
-  Â Â Â Â REJECTED_APPEALABLE: "REJECTED_APPEALABLE" ;
+  ACCEPTED: "ACCEPTED" ;
+  AWAITING_REMOVAL: "AWAITING_REMOVAL" ;
+  CLOSED_MIXED: "CLOSED_MIXED" ;
+  OPEN: "OPEN" ;
+  OPEN_AND_CLOSED: "OPEN_AND_CLOSED" ;
+  REJECTED: "REJECTED" ;
+  REJECTED_APPEALABLE: "REJECTED_APPEALABLE" ;
 } = ...
 ```
 #### Members

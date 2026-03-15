@@ -1,7 +1,7 @@
 ---
 title: SDK.UpdateRequestUserPreferences interface
 source: interfaces/index.SDK.UpdateRequestUserPreferences.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -10,18 +10,18 @@ notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 
 ```typescript
 interface UpdateRequestUserPreferences {
-  Â Â Â Â activeHovSubscriptions: string [] ;
-  Â Â Â Â avoidDangerousTurns: null | boolean ;
-  Â Â Â Â avoidFerries: null | boolean ;
-  Â Â Â Â avoidPrimaryRoads: null | boolean ;
-  Â Â Â Â avoidTollRoads: null | boolean ;
-  Â Â Â Â hasEv: null | boolean ;
-  Â Â Â Â isEmailVerified: null | boolean ;
-  Â Â Â Â language: null | string ;
-  Â Â Â Â licensePlateSuffix: null | string ;
-  Â Â Â Â os: null | string ;
-  Â Â Â Â unpavedRoads: null | UnpavedRoadsSetting ;
-  Â Â Â Â vehicleType: null | VehicleType ;
+  activeHovSubscriptions: string [] ;
+  avoidDangerousTurns: null | boolean ;
+  avoidFerries: null | boolean ;
+  avoidPrimaryRoads: null | boolean ;
+  avoidTollRoads: null | boolean ;
+  hasEv: null | boolean ;
+  isEmailVerified: null | boolean ;
+  language: null | string ;
+  licensePlateSuffix: null | string ;
+  os: null | string ;
+  unpavedRoads: null | UnpavedRoadsSetting ;
+  vehicleType: null | VehicleType ;
 }
 ```
 ## Properties

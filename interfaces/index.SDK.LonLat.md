@@ -1,7 +1,7 @@
 ---
 title: SDK.LonLat interface
 source: interfaces/index.SDK.LonLat.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -10,8 +10,8 @@ notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 
 ```typescript
 interface LonLat {
-  Â Â Â Â lat: number ;
-  Â Â Â Â lon: number ;
+  lat: number ;
+  lon: number ;
 }
 ```
 ## Properties

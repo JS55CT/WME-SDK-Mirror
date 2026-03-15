@@ -1,7 +1,7 @@
 ---
 title: SDK.SdkEventBus class
 source: classes/index.SDK.SdkEventBus.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -23,10 +23,10 @@ clear () : void
 
 ```typescript
 off < EventName extends keyof SdkEvents > (
-  Â Â Â Â args: {
-  Â Â Â Â Â Â Â Â eventHandler: EventHandler < SdkEvents [ EventName ] > ;
-  Â Â Â Â Â Â Â Â eventName: EventName ;
-  Â Â Â Â } ,
+  args: {
+  eventHandler: EventHandler < SdkEvents [ EventName ] > ;
+  eventName: EventName ;
+} ,
   ) : void
 ```
 
@@ -34,10 +34,10 @@ off < EventName extends keyof SdkEvents > (
 
 ```typescript
 on < EventName extends keyof SdkEvents > (
-  Â Â Â Â args: {
-  Â Â Â Â Â Â Â Â eventHandler: EventHandler < SdkEvents [ EventName ] > ;
-  Â Â Â Â Â Â Â Â eventName: EventName ;
-  Â Â Â Â } ,
+  args: {
+  eventHandler: EventHandler < SdkEvents [ EventName ] > ;
+  eventName: EventName ;
+} ,
   ) : () = > void
 ```
 a cleanup function that will unregister the handler from the event.
@@ -45,7 +45,7 @@ a cleanup function that will unregister the handler from the event.
 
 ```typescript
 once < EventName extends keyof SdkEvents > (
-  Â Â Â Â args: { eventName: EventName } ,
+  args: { eventName: EventName } ,
   ) : Promise < SdkEvents [ EventName ] >
 ```
 a promise that gets resolved once the event happens.

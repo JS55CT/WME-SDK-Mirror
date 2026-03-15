@@ -1,7 +1,7 @@
 ---
 title: SDK.Turns class
 source: classes/index.SDK.Turns.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -23,7 +23,7 @@ true if all the segments going through the node allow connections to be edited.
 
 ```typescript
 createPathTurn (
-  Â Â Â Â args: { fromSegmentId: number ; isForward: boolean ; toSegmentId: number } ,
+  args: { fromSegmentId: number ; isForward: boolean ; toSegmentId: number } ,
   ) : Turn
 ```
 created path turn from the source segment to the target segment.
@@ -61,7 +61,7 @@ all turns to the segment
 
 ```typescript
 isTurnAllowed (
-  Â Â Â Â args: { fromSegmentId: number ; nodeId: number ; toSegmentId: number } ,
+  args: { fromSegmentId: number ; nodeId: number ; toSegmentId: number } ,
   ) : boolean
 ```
 true if a turn is allowed
@@ -69,7 +69,7 @@ true if a turn is allowed
 
 ```typescript
 isTurnAllowedBySegmentDirections (
-  Â Â Â Â args: { fromSegmentId: number ; nodeId: number ; toSegmentId: number } ,
+  args: { fromSegmentId: number ; nodeId: number ; toSegmentId: number } ,
   ) : boolean
 ```
 true if a turn is allowed
@@ -77,11 +77,11 @@ true if a turn is allowed
 
 ```typescript
 setSegmentTurnsLaneCount (
-  Â Â Â Â args: {
-  Â Â Â Â Â Â Â Â laneCount: number ;
-  Â Â Â Â Â Â Â Â laneDirection: SegmentLaneGuidanceDirection ;
-  Â Â Â Â Â Â Â Â segmentId: number ;
-  Â Â Â Â } ,
+  args: {
+  laneCount: number ;
+  laneDirection: SegmentLaneGuidanceDirection ;
+  segmentId: number ;
+} ,
   ) : void
 ```
 

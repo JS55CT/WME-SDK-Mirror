@@ -1,7 +1,7 @@
 ---
 title: SDK.TurnClosures class
 source: classes/index.SDK.TurnClosures.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -10,13 +10,13 @@ notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 
 ```typescript
 addClosure (
-  Â Â Â Â args: {
-  Â Â Â Â Â Â Â Â description: string ;
-  Â Â Â Â Â Â Â Â endDate: number ;
-  Â Â Â Â Â Â Â Â majorTrafficEventId ?: string ;
-  Â Â Â Â Â Â Â Â startDate: number ;
-  Â Â Â Â Â Â Â Â turnId: string ;
-  Â Â Â Â } ,
+  args: {
+  description: string ;
+  endDate: number ;
+  majorTrafficEventId ?: string ;
+  startDate: number ;
+  turnId: string ;
+} ,
   ) : TurnClosure
 ```
 Methods for dealing with TurnClosures.
@@ -25,13 +25,13 @@ Methods for dealing with TurnClosures.
 
 ```typescript
 addClosure (
-  Â Â Â Â args: {
-  Â Â Â Â Â Â Â Â description: string ;
-  Â Â Â Â Â Â Â Â endDate: number ;
-  Â Â Â Â Â Â Â Â majorTrafficEventId ?: string ;
-  Â Â Â Â Â Â Â Â startDate: number ;
-  Â Â Â Â Â Â Â Â turnId: string ;
-  Â Â Â Â } ,
+  args: {
+  description: string ;
+  endDate: number ;
+  majorTrafficEventId ?: string ;
+  startDate: number ;
+  turnId: string ;
+} ,
   ) : TurnClosure
 ```
 The newly created turn closure object.

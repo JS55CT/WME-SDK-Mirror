@@ -1,7 +1,7 @@
 ---
 title: SDK.Suggestion interface
 source: interfaces/index.SDK.Suggestion.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -10,10 +10,10 @@ notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 
 ```typescript
 interface Suggestion {
-  Â Â Â Â createdOn: null | number ;
-  Â Â Â Â edits: SuggestionEntityEdit [] ;
-  Â Â Â Â id: string ;
-  Â Â Â Â resolutionData: SuggestionResolution [] ;
+  createdOn: null | number ;
+  edits: SuggestionEntityEdit [] ;
+  id: string ;
+  resolutionData: SuggestionResolution [] ;
 }
 ```
 Represents a suggestion for an edit.

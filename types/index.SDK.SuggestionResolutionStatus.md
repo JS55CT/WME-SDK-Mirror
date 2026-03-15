@@ -1,7 +1,7 @@
 ---
 title: SDK.SuggestionResolutionStatus type
 source: types/index.SDK.SuggestionResolutionStatus.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -10,8 +10,8 @@ notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 
 ```typescript
 SuggestionResolutionStatus: 
-  Â Â Â Â | "ACCEPTED"
-  Â Â Â Â | "OPEN"
-  Â Â Â Â | "REJECTED"
-  Â Â Â Â | "REJECTED_APPEALABLE"
+  | "ACCEPTED"
+  | "OPEN"
+  | "REJECTED"
+  | "REJECTED_APPEALABLE"
 ```

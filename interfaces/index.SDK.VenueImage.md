@@ -1,7 +1,7 @@
 ---
 title: SDK.VenueImage interface
 source: interfaces/index.SDK.VenueImage.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -10,10 +10,10 @@ notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 
 ```typescript
 interface VenueImage {
-  Â Â Â Â creationDate: number ;
-  Â Â Â Â id: string ;
-  Â Â Â Â isApproved: boolean ;
-  Â Â Â Â url: string ;
+  creationDate: number ;
+  id: string ;
+  isApproved: boolean ;
+  url: string ;
 }
 ```
 ## Properties

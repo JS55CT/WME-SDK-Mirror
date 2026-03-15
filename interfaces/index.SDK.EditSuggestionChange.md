@@ -1,7 +1,7 @@
 ---
 title: SDK.EditSuggestionChange interface
 source: interfaces/index.SDK.EditSuggestionChange.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -10,11 +10,11 @@ notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 
 ```typescript
 interface EditSuggestionChange {
-  Â Â Â Â attributeChanges: SuggestionAttributeChange < unknown > [] ;
-  Â Â Â Â createdOn: null | number ;
-  Â Â Â Â rejectionReason: null | SuggestionResolutionRejectionReason ;
-  Â Â Â Â status: SuggestionResolutionStatus ;
-  Â Â Â Â suggestionId: string ;
+  attributeChanges: SuggestionAttributeChange < unknown > [] ;
+  createdOn: null | number ;
+  rejectionReason: null | SuggestionResolutionRejectionReason ;
+  status: SuggestionResolutionStatus ;
+  suggestionId: string ;
 }
 ```
 Represents a change suggested in an edit suggestion, containing an attribute change per each changed attribute.

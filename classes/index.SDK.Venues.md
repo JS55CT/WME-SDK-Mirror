@@ -1,7 +1,7 @@
 ---
 title: SDK.Venues class
 source: classes/index.SDK.Venues.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -113,7 +113,7 @@ whether the current user has a permission for this venue or not.
 
 ```typescript
 replaceNavigationPoints (
-  Â Â Â Â args: { navigationPoints: Partial < NavigationPoint > [] ; venueId: string } ,
+  args: { navigationPoints: Partial < NavigationPoint > [] ; venueId: string } ,
   ) : void
 ```
 
@@ -127,7 +127,7 @@ showVenueUpdateRequestDialog ( args: { venueId: string } ) : void
 
 ```typescript
 updateAddress (
-  Â Â Â Â args: { houseNumber ?: string ; streetId ?: number ; venueId: string } ,
+  args: { houseNumber ?: string ; streetId ?: number ; venueId: string } ,
   ) : void
 ```
 
@@ -135,20 +135,20 @@ updateAddress (
 
 ```typescript
 updateVenue (
-  Â Â Â Â args: {
-  Â Â Â Â Â Â Â Â aliases ?: string [] ;
-  Â Â Â Â Â Â Â Â brand ?: string ;
-  Â Â Â Â Â Â Â Â categories ?: VenueCategoryId [] ;
-  Â Â Â Â Â Â Â Â description ?: string ;
-  Â Â Â Â Â Â Â Â geometry ?: Point | Polygon ;
-  Â Â Â Â Â Â Â Â lockRank ?: number ;
-  Â Â Â Â Â Â Â Â name ?: string ;
-  Â Â Â Â Â Â Â Â openingHours ?: OpeningHour [] ;
-  Â Â Â Â Â Â Â Â phone ?: string ;
-  Â Â Â Â Â Â Â Â services ?: ServiceType [] ;
-  Â Â Â Â Â Â Â Â url ?: string ;
-  Â Â Â Â Â Â Â Â venueId: string ;
-  Â Â Â Â } ,
+  args: {
+  aliases ?: string [] ;
+  brand ?: string ;
+  categories ?: VenueCategoryId [] ;
+  description ?: string ;
+  geometry ?: Point | Polygon ;
+  lockRank ?: number ;
+  name ?: string ;
+  openingHours ?: OpeningHour [] ;
+  phone ?: string ;
+  services ?: ServiceType [] ;
+  url ?: string ;
+  venueId: string ;
+} ,
   ) : void
 ```
 
@@ -156,7 +156,7 @@ updateVenue (
 
 ```typescript
 updateVenueIsResidential (
-  Â Â Â Â args: { isResidential: boolean ; venueId: string } ,
+  args: { isResidential: boolean ; venueId: string } ,
   ) : void
 ```
 
@@ -164,10 +164,10 @@ updateVenueIsResidential (
 
 ```typescript
 updateVenueUpdateRequest (
-  Â Â Â Â args: {
-  Â Â Â Â Â Â Â Â isApproved: boolean ;
-  Â Â Â Â Â Â Â Â venueId: string ;
-  Â Â Â Â Â Â Â Â venueUpdateRequestId: string ;
-  Â Â Â Â } ,
+  args: {
+  isApproved: boolean ;
+  venueId: string ;
+  venueUpdateRequestId: string ;
+} ,
   ) : void
 ```

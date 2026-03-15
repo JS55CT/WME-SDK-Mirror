@@ -1,7 +1,7 @@
 ---
 title: SDK.Pixel interface
 source: interfaces/index.SDK.Pixel.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -10,8 +10,8 @@ notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 
 ```typescript
 interface Pixel {
-  Â Â Â Â x: number ;
-  Â Â Â Â y: number ;
+  x: number ;
+  y: number ;
 }
 ```
 ## Properties

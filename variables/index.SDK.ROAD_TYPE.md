@@ -1,7 +1,7 @@
 ---
 title: SDK.ROAD_TYPE variable
 source: variables/index.SDK.ROAD_TYPE.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -10,23 +10,23 @@ notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 
 ```typescript
 ROAD_TYPE: {
-  Â Â Â Â ALLEY: 22 ;
-  Â Â Â Â FERRY: 15 ;
-  Â Â Â Â FREEWAY: 3 ;
-  Â Â Â Â MAJOR_HIGHWAY: 6 ;
-  Â Â Â Â MINOR_HIGHWAY: 7 ;
-  Â Â Â Â OFF_ROAD: 8 ;
-  Â Â Â Â PARKING_LOT_ROAD: 20 ;
-  Â Â Â Â PEDESTRIAN_BOARDWALK: 10 ;
-  Â Â Â Â PRIMARY_STREET: 2 ;
-  Â Â Â Â PRIVATE_ROAD: 17 ;
-  Â Â Â Â RAILROAD: 18 ;
-  Â Â Â Â RAMP: 4 ;
-  Â Â Â Â RUNWAY_TAXIWAY: 19 ;
-  Â Â Â Â STAIRWAY: 16 ;
-  Â Â Â Â STREET: 1 ;
-  Â Â Â Â WALKING_TRAIL: 5 ;
-  Â Â Â Â WALKWAY: 9 ;
+  ALLEY: 22 ;
+  FERRY: 15 ;
+  FREEWAY: 3 ;
+  MAJOR_HIGHWAY: 6 ;
+  MINOR_HIGHWAY: 7 ;
+  OFF_ROAD: 8 ;
+  PARKING_LOT_ROAD: 20 ;
+  PEDESTRIAN_BOARDWALK: 10 ;
+  PRIMARY_STREET: 2 ;
+  PRIVATE_ROAD: 17 ;
+  RAILROAD: 18 ;
+  RAMP: 4 ;
+  RUNWAY_TAXIWAY: 19 ;
+  STAIRWAY: 16 ;
+  STREET: 1 ;
+  WALKING_TRAIL: 5 ;
+  WALKWAY: 9 ;
 } = ...
 ```
 #### Members

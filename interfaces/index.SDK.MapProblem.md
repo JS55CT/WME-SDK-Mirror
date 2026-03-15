@@ -1,7 +1,7 @@
 ---
 title: SDK.MapProblem interface
 source: interfaces/index.SDK.MapProblem.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -10,15 +10,15 @@ notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 
 ```typescript
 interface MapProblem {
-  Â Â Â Â geometry: Point ;
-  Â Â Â Â id: string ;
-  Â Â Â Â isEditable: boolean ;
-  Â Â Â Â isOpen: boolean ;
-  Â Â Â Â isRead: boolean ;
-  Â Â Â Â isStarred: boolean ;
-  Â Â Â Â problemType: MapProblemType ;
-  Â Â Â Â resolvedOn: null | number ;
-  Â Â Â Â severity: IssueSeverity ;
+  geometry: Point ;
+  id: string ;
+  isEditable: boolean ;
+  isOpen: boolean ;
+  isRead: boolean ;
+  isStarred: boolean ;
+  problemType: MapProblemType ;
+  resolvedOn: null | number ;
+  severity: IssueSeverity ;
 }
 ```
 ## Properties

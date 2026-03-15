@@ -1,7 +1,7 @@
 ---
 title: SDK.VENUE_MAIN_CATEGORY variable
 source: variables/index.SDK.VENUE_MAIN_CATEGORY.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -10,18 +10,18 @@ notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 
 ```typescript
 VENUE_MAIN_CATEGORY: {
-  Â Â Â Â CAR_SERVICES: "CAR_SERVICES" ;
-  Â Â Â Â CRISIS_LOCATIONS: "CRISIS_LOCATIONS" ;
-  Â Â Â Â CULTURE_AND_ENTERTAINEMENT: "CULTURE_AND_ENTERTAINEMENT" ;
-  Â Â Â Â FOOD_AND_DRINK: "FOOD_AND_DRINK" ;
-  Â Â Â Â LODGING: "LODGING" ;
-  Â Â Â Â NATURAL_FEATURES: "NATURAL_FEATURES" ;
-  Â Â Â Â OTHER: "OTHER" ;
-  Â Â Â Â OUTDOORS: "OUTDOORS" ;
-  Â Â Â Â PARKING_LOT: "PARKING_LOT" ;
-  Â Â Â Â PROFESSIONAL_AND_PUBLIC: "PROFESSIONAL_AND_PUBLIC" ;
-  Â Â Â Â SHOPPING_AND_SERVICES: "SHOPPING_AND_SERVICES" ;
-  Â Â Â Â TRANSPORTATION: "TRANSPORTATION" ;
+  CAR_SERVICES: "CAR_SERVICES" ;
+  CRISIS_LOCATIONS: "CRISIS_LOCATIONS" ;
+  CULTURE_AND_ENTERTAINEMENT: "CULTURE_AND_ENTERTAINEMENT" ;
+  FOOD_AND_DRINK: "FOOD_AND_DRINK" ;
+  LODGING: "LODGING" ;
+  NATURAL_FEATURES: "NATURAL_FEATURES" ;
+  OTHER: "OTHER" ;
+  OUTDOORS: "OUTDOORS" ;
+  PARKING_LOT: "PARKING_LOT" ;
+  PROFESSIONAL_AND_PUBLIC: "PROFESSIONAL_AND_PUBLIC" ;
+  SHOPPING_AND_SERVICES: "SHOPPING_AND_SERVICES" ;
+  TRANSPORTATION: "TRANSPORTATION" ;
 } = ...
 ```
 #### Members

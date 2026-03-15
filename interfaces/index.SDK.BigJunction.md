@@ -1,7 +1,7 @@
 ---
 title: SDK.BigJunction interface
 source: interfaces/index.SDK.BigJunction.html
-created: 2026-03-11
+created: 2026-03-15
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -10,12 +10,12 @@ notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 
 ```typescript
 interface BigJunction {
-  Â Â Â Â cityId: null | number ;
-  Â Â Â Â geometry: Polygon ;
-  Â Â Â Â id: number ;
-  Â Â Â Â modificationData: ModificationMetadata ;
-  Â Â Â Â name: null | string ;
-  Â Â Â Â segmentIds: number [] ;
+  cityId: null | number ;
+  geometry: Polygon ;
+  id: number ;
+  modificationData: ModificationMetadata ;
+  name: null | string ;
+  segmentIds: number [] ;
 }
 ```
 ## Properties
