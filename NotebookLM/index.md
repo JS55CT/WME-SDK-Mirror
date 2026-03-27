@@ -1,7 +1,7 @@
 ---
 sdk: WME
 version: v2.343
-generated: 2026-03-15
+generated: 2026-03-27
 sections:
   classes: classes.md
   modules: modules.md
@@ -47,7 +47,7 @@ docs:
 > For searching SDK entities, refer to the Source Guide below, then navigate to the relevant section.
 
 > **SDK Version:** v2.343
-> **Docs generated:** 2026-03-15
+> **Docs generated:** 2026-03-27
 
 > Each section below lists the source file and the entities it contains.
 

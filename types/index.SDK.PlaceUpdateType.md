@@ -1,7 +1,7 @@
 ---
 title: SDK.PlaceUpdateType type
 source: types/index.SDK.PlaceUpdateType.html
-created: 2026-03-15
+created: 2026-03-27
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
