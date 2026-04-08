@@ -13,7 +13,7 @@ There are **6 scripts**, run in this order every time you update the SDK mirror:
 6. update-skill.py         <- pull latest WME SDK skill from Claude Code
 ```
 
-> All scripts must be run from the **`latest/`** folder as your working directory.
+> All scripts must be run from the **`production/latest/scripts/`** folder as your working directory.
 > **Why not HTTrack?** The Waze SDK docs site is a Single-Page App (SPA) — all navigation is built by JavaScript at runtime, so traditional crawlers like HTTrack can only download `index.html` and nothing else. These scripts bypass that by reading TypeDoc's embedded `navigationData` JS bundle directly.
 
 ---
@@ -31,7 +31,7 @@ py -m pip install requests beautifulsoup4 lxml
 ## Step 1 — `cleanup.py` (Reset old output)
 
 **What it does:** Deletes all `.md` files and `-clean.html` files from these subfolders:
-`classes`, `documents`, `functions`, `interfaces`, `modules`, `types`, `variables`, `NotebookLM`
+`classes`, `documents`, `functions`, `interfaces`, `modules`, `types`, `variables`, `docs`
 
 **When to run it:** Every time before you re-process new HTML. Skipping this risks mixing stale `.md` files from a previous run with new ones.
 
@@ -124,7 +124,7 @@ py extract-to-md.py
 ## Step 5 — `create-grouped-md-files.py` (Bundle for LLM)
 
 **What it does:** Takes all the individual `.md` files from Step 4 and assembles them
-into the `NotebookLM/` folder.
+into the `docs/` folder.
 
 | Output file       | Source                                                       |
 | ----------------- | ------------------------------------------------------------ |
@@ -146,17 +146,22 @@ py create-grouped-md-files.py
 
 ---
 
-## Step 6 — `update-skill.py` (Sync WME SDK Skill)
+## Step 6 — `update-skill.py` (Sync WME SDK Skill with Fallback Chain)
 
 **What it does:** Pulls the latest WME SDK skill from your Claude Code skills directory
 (`~/.claude/skills/wme-sdk/SKILL.md`) and saves a copy to the local `skills/` folder.
 
-This keeps your skill versioned alongside the SDK documentation it references, so skill updates
-are tracked in git and always available offline.
+**Also injects a fallback chain** for documentation discovery:
+
+- **Primary:** Local docs at `../../docs/` (works if repo is cloned, offline-friendly)
+- **Fallback:** GitHub Pages at `https://js55ct.github.io/WME-SDK-Mirror/docs/` (works anywhere with internet)
+
+This keeps your skill versioned alongside the SDK documentation it references. The skill will reference
+local docs first, but gracefully fall back to GitHub Pages if the repo isn't cloned.
 
 **Output:**
 
-- `skills/SKILL.md` — Copy of your WME SDK skill from Claude Code
+- `skills/SKILL.md` — Copy of your WME SDK skill with fallback chain injected
 
 The script compares content before writing — if the skill hasn't changed, it skips the write
 and reports `[OK]`.
@@ -171,6 +176,16 @@ py update-skill.py
 py update-skill.py --skill-path C:\custom\path\to\SKILL.md  # custom skill location
 ```
 
+**Fallback Chain Details:**
+
+When the skill runs:
+
+- **With repo cloned:** Uses local `../../docs/` paths (no internet needed)
+- **Without repo cloned:** References `https://js55ct.github.io/WME-SDK-Mirror/docs/` (works online)
+
+This approach ensures the skill always has access to documentation, whether you're working with
+a local clone or using it standalone.
+
 > **Note:** If the skill is not found at the default location (`~/.claude/skills/wme-sdk/SKILL.md`),
 > the script reports an error. Verify the skill exists or use `--skill-path` to specify a custom location.
 
@@ -179,7 +194,7 @@ py update-skill.py --skill-path C:\custom\path\to\SKILL.md  # custom skill locat
 ## Full Run (Copy-Paste)
 
 ```powershell
-cd "c:/Users/Jstrand/OneDrive - FactSet/Personal/waze stuff/WAZE SDK Mirror/WME SDK/web-assets.waze.com/wme_sdk_docs/production/latest"
+cd production/latest/scripts
 py cleanup.py; py build-url-list.py; py download-pages.py; py extract-to-md.py; py create-grouped-md-files.py; py update-skill.py
 ```
 
@@ -189,7 +204,7 @@ py cleanup.py; py build-url-list.py; py download-pages.py; py extract-to-md.py; 
 
 After the run, you'll have:
 
-**Documentation (in `NotebookLM/`):**
+**Documentation (in `docs/`):**
 
 - `index.md` — start here; has the TOC and source guide
 - `classes.md`, `interfaces.md`, `types.md`, `functions.md`, `variables.md`, `modules.md`
@@ -201,6 +216,6 @@ After the run, you'll have:
 
 - `SKILL.md` — Your WME SDK skill, ready to use with Claude Code
 
-Load the documentation files into your LLM context (NotebookLM, Claude, etc.) for complete,
+Load the documentation files into your LLM context (docs, Claude, etc.) for complete,
 up-to-date SDK reference. The skill is automatically available in your `~/.claude/skills/`
 when you develop WME scripts.

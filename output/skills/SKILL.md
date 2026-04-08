@@ -8,10 +8,29 @@ compatibility: Requires access to local WME SDK documentation and Tampermonkey u
 
 You're working with Waze Map Editor (WME) scripts in a Tampermonkey context. This skill provides structured guidance for **migrating legacy code to the WME SDK** and **building new features using modern SDK patterns**.
 
+## ⚙️ Configuration: Local Documentation Path
+
+**If you have cloned the WME-SDK-Mirror repository**, set your local path below for faster offline access:
+
+```
+/path/to/your/WME-SDK-Mirror/production/latest/output/docs
+```
+
+To customize for your local setup, replace the path above with your own clone location. Examples:
+- Mac: `/Users/username/projects/WME-SDK-Mirror/production/latest/output/docs`
+- Windows: `C:\repos\WME-SDK-Mirror\production\latest\output\docs`
+
+If not set, the skill will reference GitHub Pages: `https://js55ct.github.io/WME-SDK-Mirror/docs/`
+
+---
+
 ## Your Context
 
 - **Role**: Front-end developer building/maintaining WME userscripts
-- **SDK Documentation**: Local mirror at `../NotebookLM/`
+- **SDK Documentation**: 
+  - Local (if configured above): Check your configured path
+  - GitHub Pages: `https://js55ct.github.io/WME-SDK-Mirror/docs/`
+  - Repo: [WME-SDK-Mirror](https://github.com/JS55CT/WME-SDK-Mirror)
 - **Legacy Patterns to Replace**: `W` namespace (global Waze object), OpenLayers APIs
 - **Modern Stack**: WME SDK + Turf.js for geometry, proper initialization/auth
 

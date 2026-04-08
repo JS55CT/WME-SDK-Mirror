@@ -3,7 +3,8 @@ from glob import glob
 import re
 
 BASE = os.path.dirname(os.path.abspath(__file__))
-NOTEBOOK_LM_FOLDER = os.path.join(BASE, "NotebookLM")
+# Output to ../output/docs/ (production/latest/output/docs/)
+NOTEBOOK_LM_FOLDER = os.path.abspath(os.path.join(BASE, "../output/docs"))
 os.makedirs(NOTEBOOK_LM_FOLDER, exist_ok=True)
 
 GROUPS = {
@@ -16,7 +17,7 @@ GROUPS = {
 }
 INDEX_FILE = os.path.join(NOTEBOOK_LM_FOLDER, "index.md")
 CHANGELOG_FILE = os.path.join(NOTEBOOK_LM_FOLDER, "changelog.md")
-GUIDES_FOLDER = os.path.join(BASE, "guides")
+GUIDES_FOLDER = os.path.join(BASE, "../source/guides")
 
 # Map external doc file names to web URLs if wanted
 EXTERNAL_DOC_LINKS = {
@@ -92,7 +93,7 @@ def source_guide_section(external_md_files=None):
     return "\n".join(lines)
 
 def combine_group(group, outname):
-    folder = os.path.join(BASE, group)
+    folder = os.path.join(BASE, "../source", group)
     files = sorted(glob(os.path.join(folder, "*.md")))
     outpath = os.path.join(NOTEBOOK_LM_FOLDER, outname)
     found_titles = []
@@ -109,7 +110,7 @@ def combine_group(group, outname):
     return found_titles
 
 def make_changelog():
-    src = os.path.join(BASE, "documents", "CHANGELOG.md")
+    src = os.path.join(BASE, "../source/documents", "CHANGELOG.md")
     dst = CHANGELOG_FILE
     if os.path.exists(src):
         with open(src, encoding="utf8") as fin, open(dst, "w", encoding="utf8") as fout:
@@ -117,7 +118,7 @@ def make_changelog():
         print(f"Copied changelog to: {dst}")
 
 def copy_all_typedefs():
-    typedef_folder = os.path.join(BASE, "TypeDefs")
+    typedef_folder = os.path.join(BASE, "../source/TypeDefs")
     # Get all .d.ts files
     typedef_files = sorted(glob(os.path.join(typedef_folder, "*.d.ts")))
     typedef_output_files = []
@@ -135,7 +136,7 @@ def copy_all_typedefs():
     return typedef_output_files
 
 def copy_external_docs():
-    external_folder = os.path.join(BASE, "externalDocs")
+    external_folder = os.path.join(BASE, "../source/externalDocs")
     if not os.path.exists(external_folder):
         print(f"No externalDocs folder found at: {external_folder}")
         return []
