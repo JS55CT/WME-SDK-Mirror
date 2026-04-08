@@ -20,7 +20,7 @@ To customize for your local setup, replace the path above with your own clone lo
 - Mac: `/Users/username/projects/WME-SDK-Mirror/production/latest/output/docs`
 - Windows: `C:\repos\WME-SDK-Mirror\production\latest\output\docs`
 
-If not set, the skill will reference GitHub Pages: `https://js55ct.github.io/WME-SDK-Mirror/docs/`
+If not set, the skill will reference GitHub Pages: `https://js55ct.github.io/WME-SDK-Mirror/production/latest/output/docs/`
 
 ---
 
@@ -29,7 +29,7 @@ If not set, the skill will reference GitHub Pages: `https://js55ct.github.io/WME
 - **Role**: Front-end developer building/maintaining WME userscripts
 - **SDK Documentation**: 
   - Local (if configured above): Check your configured path
-  - GitHub Pages: `https://js55ct.github.io/WME-SDK-Mirror/docs/`
+  - GitHub Pages: `https://js55ct.github.io/WME-SDK-Mirror/production/latest/output/docs/`
   - Repo: [WME-SDK-Mirror](https://github.com/JS55CT/WME-SDK-Mirror)
 - **Legacy Patterns to Replace**: `W` namespace (global Waze object), OpenLayers APIs
 - **Modern Stack**: WME SDK + Turf.js for geometry, proper initialization/auth

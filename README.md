@@ -1,24 +1,44 @@
 # WME SDK Documentation Mirror
 
-A comprehensive, automated documentation mirror and processing system for the **Waze Map Editor (WME) SDK**. This repository maintains a local copy of the WME SDK TypeDoc documentation and provides a 6-step Python pipeline to keep it fresh, bundled, and ready for LLM consumption.
+**LLM-ready documentation for the Waze Map Editor SDK** — automatically kept fresh and optimized for Claude Code and AI consumption.
 
-> **Live Documentation:** 📖 [Start with index.md](https://raw.githubusercontent.com/JS55CT/WME-SDK-Mirror/master/production/latest/output/docs/index.md) • [Browse all files](https://github.com/JS55CT/WME-SDK-Mirror/tree/master/production/latest/output/docs)
+## 🚀 Quick Start: Use the WME SDK Skill
 
-## Quick Links
+The fastest way to work with WME SDK:
 
-### 📚 SDK Documentation (GitHub Pages)
+```
+/wme-sdk How do I query all venues on the map?
+```
 
-All documentation is available as bundled Markdown files, optimized for LLM context windows and code generation:
+**[View the complete skill →](https://js55ct.github.io/WME-SDK-Mirror/production/latest/output/skills/SKILL.md)**
+
+The skill includes:
+- Real-world WME scripting patterns
+- Complete SDK API reference with examples
+- Migration guide from legacy W object to modern SDK
+- Advanced patterns (layer styling, shortcuts, performance optimization, geometry handling)
+- Error handling strategies
+- Best practices for Tampermonkey scripts
+
+---
+
+## 📚 Documentation Access
+
+If you prefer raw documentation files, access them here:
+
+### 📖 SDK Documentation Files
+
+All documentation available as bundled Markdown files, optimized for LLM context windows:
 
 | Resource | Link | Purpose |
 |----------|------|---------|
-| **Master Index** | [index.md](https://raw.githubusercontent.com/JS55CT/WME-SDK-Mirror/master/production/latest/output/docs/index.md) | Start here — table of contents and overview |
-| **Classes** | [classes.md](https://raw.githubusercontent.com/JS55CT/WME-SDK-Mirror/master/production/latest/output/docs/classes.md) | All SDK classes (DataModel, Map, Shortcuts, Sidebar, etc.) |
-| **Interfaces** | [interfaces.md](https://raw.githubusercontent.com/JS55CT/WME-SDK-Mirror/master/production/latest/output/docs/interfaces.md) | Data shapes and type definitions |
-| **Types** | [types.md](https://raw.githubusercontent.com/JS55CT/WME-SDK-Mirror/master/production/latest/output/docs/types.md) | Enums, unions, and custom types |
-| **Functions** | [functions.md](https://raw.githubusercontent.com/JS55CT/WME-SDK-Mirror/master/production/latest/output/docs/functions.md) | Top-level utility functions |
-| **Variables** | [variables.md](https://raw.githubusercontent.com/JS55CT/WME-SDK-Mirror/master/production/latest/output/docs/variables.md) | Module-level constants |
-| **Modules** | [modules.md](https://raw.githubusercontent.com/JS55CT/WME-SDK-Mirror/master/production/latest/output/docs/modules.md) | Namespace and module structure |
+| **Master Index** | [index.md](https://js55ct.github.io/WME-SDK-Mirror/production/latest/output/docs/index.md) | Start here — table of contents and overview |
+| **Classes** | [classes.md](https://js55ct.github.io/WME-SDK-Mirror/production/latest/output/docs/classes.md) | All SDK classes (DataModel, Map, Shortcuts, Sidebar, etc.) |
+| **Interfaces** | [interfaces.md](https://js55ct.github.io/WME-SDK-Mirror/production/latest/output/docs/interfaces.md) | Data shapes and type definitions |
+| **Types** | [types.md](https://js55ct.github.io/WME-SDK-Mirror/production/latest/output/docs/types.md) | Enums, unions, and custom types |
+| **Functions** | [functions.md](https://js55ct.github.io/WME-SDK-Mirror/production/latest/output/docs/functions.md) | Top-level utility functions |
+| **Variables** | [variables.md](https://js55ct.github.io/WME-SDK-Mirror/production/latest/output/docs/variables.md) | Module-level constants |
+| **Modules** | [modules.md](https://js55ct.github.io/WME-SDK-Mirror/production/latest/output/docs/modules.md) | Namespace and module structure |
 
 ### 🚀 Guides & Tutorials
 
@@ -26,11 +46,11 @@ Learn how to use the SDK with real-world examples:
 
 | Guide | Link | Topics |
 |-------|------|--------|
-| **Getting Started** | [how-to-get-started-with-the-wmeSDK.md](https://raw.githubusercontent.com/JS55CT/WME-SDK-Mirror/master/production/latest/output/docs/how-to-get-started-with-the-wmeSDK.md) | SDK initialization, authentication, first steps |
-| **Migration Guide** | [migration-guide.md](https://raw.githubusercontent.com/JS55CT/WME-SDK-Mirror/master/production/latest/output/docs/migration-guide.md) | Migrating from legacy W object to modern SDK |
-| **Script Examples** | [script-example-1.md](https://raw.githubusercontent.com/JS55CT/WME-SDK-Mirror/master/production/latest/output/docs/script-example-1.md) - [script-example-6.md](https://raw.githubusercontent.com/JS55CT/WME-SDK-Mirror/master/production/latest/output/docs/script-example-6.md) | Working Tampermonkey examples |
-| **Geometry Reference** | [geometry-file-converters.md](https://raw.githubusercontent.com/JS55CT/WME-SDK-Mirror/master/production/latest/output/docs/geometry-file-converters.md) | File format converters and geometry tools |
-| **Changelog** | [changelog.md](https://raw.githubusercontent.com/JS55CT/WME-SDK-Mirror/master/production/latest/output/docs/changelog.md) | SDK version history and breaking changes |
+| **Getting Started** | [how-to-get-started-with-the-wmeSDK.md](https://js55ct.github.io/WME-SDK-Mirror/production/latest/output/docs/how-to-get-started-with-the-wmeSDK.md) | SDK initialization, authentication, first steps |
+| **Migration Guide** | [migration-guide.md](https://js55ct.github.io/WME-SDK-Mirror/production/latest/output/docs/migration-guide.md) | Migrating from legacy W object to modern SDK |
+| **Script Examples** | [script-example-1.md](https://js55ct.github.io/WME-SDK-Mirror/production/latest/output/docs/script-example-1.md) - [script-example-6.md](https://js55ct.github.io/WME-SDK-Mirror/production/latest/output/docs/script-example-6.md) | Working Tampermonkey examples |
+| **Geometry Reference** | [geometry-file-converters.md](https://js55ct.github.io/WME-SDK-Mirror/production/latest/output/docs/geometry-file-converters.md) | File format converters and geometry tools |
+| **Changelog** | [changelog.md](https://js55ct.github.io/WME-SDK-Mirror/production/latest/output/docs/changelog.md) | SDK version history and breaking changes |
 
 ### 📋 Type Definitions & References
 
@@ -38,38 +58,26 @@ Complete TypeScript definitions and external documentation:
 
 | Resource | Link | Purpose |
 |----------|------|---------|
-| **WME SDK Types** | [wmeSDK_typedefs.d.md](https://raw.githubusercontent.com/JS55CT/WME-SDK-Mirror/master/production/latest/output/docs/wmeSDK_typedefs.d.md) | Full TypeScript definitions wrapped in markdown |
-| **GeoJSON Types** | [geojson_typeddefs.d.md](https://raw.githubusercontent.com/JS55CT/WME-SDK-Mirror/master/production/latest/output/docs/geojson_typeddefs.d.md) | GeoJSON type definitions |
-| **Turf.js Docs** | [Turf-Docs.md](https://raw.githubusercontent.com/JS55CT/WME-SDK-Mirror/master/production/latest/output/docs/Turf-Docs.md) | Geometry manipulation library (replaces OpenLayers) |
-| **GeoJSON RFC 7946** | [GeoJSON-Format-RFC-7946.md](https://raw.githubusercontent.com/JS55CT/WME-SDK-Mirror/master/production/latest/output/docs/GeoJSON-Format-RFC-7946.md) | Official GeoJSON specification |
+| **WME SDK Types** | [wmeSDK_typedefs.d.md](https://js55ct.github.io/WME-SDK-Mirror/production/latest/output/docs/wmeSDK_typedefs.d.md) | Full TypeScript definitions wrapped in markdown |
+| **GeoJSON Types** | [geojson_typeddefs.d.md](https://js55ct.github.io/WME-SDK-Mirror/production/latest/output/docs/geojson_typeddefs.d.md) | GeoJSON type definitions |
+| **Turf.js Docs** | [Turf-Docs.md](https://js55ct.github.io/WME-SDK-Mirror/production/latest/output/docs/Turf-Docs.md) | Geometry manipulation library (replaces OpenLayers) |
+| **GeoJSON RFC 7946** | [GeoJSON-Format-RFC-7946.md](https://js55ct.github.io/WME-SDK-Mirror/production/latest/output/docs/GeoJSON-Format-RFC-7946.md) | Official GeoJSON specification |
 
-## 🤖 Using with Claude
+## Alternative: Load Raw Documentation into Claude
 
-### Option 1: Use the WME SDK Skill (Recommended)
+If you prefer to paste documentation directly into Claude instead of using the skill:
 
-Load the pre-built **WME SDK skill** in Claude Code for instant context and guidance:
+1. **Master Index** — [index.md](https://js55ct.github.io/WME-SDK-Mirror/production/latest/output/docs/index.md) (~50KB, complete overview)
+2. **Focused Reference** — [classes.md](https://js55ct.github.io/WME-SDK-Mirror/production/latest/output/docs/classes.md) (~30KB, classes only)
+3. **Individual Files** — Any specific doc linked above
 
-```
-@wme-sdk How do I query all venues on the map?
-```
+### Local Usage
 
-**View the skill:** [SKILL.md](https://raw.githubusercontent.com/JS55CT/WME-SDK-Mirror/master/production/latest/output/skills/SKILL.md)
+If you clone this repo:
 
-The skill includes:
-- Real-world patterns and best practices
-- Complete SDK API reference
-- Migration examples from legacy code
-- Performance optimization techniques
-- Error handling patterns
-
-**To use locally:** Clone this repo and update the skill path to your local clone location. The skill will reference `../../production/latest/output/docs/` for offline access.
-
-### Option 2: Load Individual Docs into Claude Context
-
-Paste any markdown file above directly into Claude's context window. Files are optimized for LLM token efficiency:
-- **`index.md`** — All docs in one file (~50KB, good starting point)
-- **`classes.md`** — Just the classes (~30KB, focused reference)
-- Individual topic files for targeted questions
+1. The skill will use local paths: `production/latest/output/docs/`
+2. No internet needed for documentation access
+3. Run the pipeline to keep docs fresh: `cd production/latest/scripts && python cleanup.py; python build-url-list.py; ...`
 
 ## 🛠️ Repository Structure
 
@@ -130,7 +138,7 @@ For detailed setup and options, see [production/latest/scripts/README.md](produc
    ```
 
 2. Or, load docs into context:
-   - Copy any file from [GitHub Pages](https://raw.githubusercontent.com/JS55CT/WME-SDK-Mirror/master/production/latest/output/docs/)
+   - Copy any file from [GitHub Pages](https://js55ct.github.io/WME-SDK-Mirror/production/latest/output/docs/)
    - Paste into Claude's context window
 
 ### For Developers
@@ -154,27 +162,27 @@ For detailed setup and options, see [production/latest/scripts/README.md](produc
 ## 📖 Documentation Index by Topic
 
 ### Getting Started
-- [SDK Initialization](https://raw.githubusercontent.com/JS55CT/WME-SDK-Mirror/master/production/latest/output/docs/how-to-get-started-with-the-wmeSDK.md)
-- [Migration from Legacy Code](https://raw.githubusercontent.com/JS55CT/WME-SDK-Mirror/master/production/latest/output/docs/migration-guide.md)
-- [Working Examples](https://raw.githubusercontent.com/JS55CT/WME-SDK-Mirror/master/production/latest/output/docs/script-example-1.md)
+- [SDK Initialization](https://js55ct.github.io/WME-SDK-Mirror/production/latest/output/docs/how-to-get-started-with-the-wmeSDK.md)
+- [Migration from Legacy Code](https://js55ct.github.io/WME-SDK-Mirror/production/latest/output/docs/migration-guide.md)
+- [Working Examples](https://js55ct.github.io/WME-SDK-Mirror/production/latest/output/docs/script-example-1.md)
 
 ### API Reference
-- [Classes & Main APIs](https://raw.githubusercontent.com/JS55CT/WME-SDK-Mirror/master/production/latest/output/docs/classes.md) — Map, DataModel, Shortcuts, Sidebar, Events, etc.
-- [Data Types & Interfaces](https://raw.githubusercontent.com/JS55CT/WME-SDK-Mirror/master/production/latest/output/docs/interfaces.md) — GeoJSON, Feature, Node, Segment, etc.
-- [Type Definitions](https://raw.githubusercontent.com/JS55CT/WME-SDK-Mirror/master/production/latest/output/docs/types.md) — Enums, unions, custom types
-- [Functions](https://raw.githubusercontent.com/JS55CT/WME-SDK-Mirror/master/production/latest/output/docs/functions.md) — Utility functions
+- [Classes & Main APIs](https://js55ct.github.io/WME-SDK-Mirror/production/latest/output/docs/classes.md) — Map, DataModel, Shortcuts, Sidebar, Events, etc.
+- [Data Types & Interfaces](https://js55ct.github.io/WME-SDK-Mirror/production/latest/output/docs/interfaces.md) — GeoJSON, Feature, Node, Segment, etc.
+- [Type Definitions](https://js55ct.github.io/WME-SDK-Mirror/production/latest/output/docs/types.md) — Enums, unions, custom types
+- [Functions](https://js55ct.github.io/WME-SDK-Mirror/production/latest/output/docs/functions.md) — Utility functions
 
 ### Advanced Topics
-- [Geometry & Turf.js](https://raw.githubusercontent.com/JS55CT/WME-SDK-Mirror/master/production/latest/output/docs/Turf-Docs.md) — Geometry operations (replaces OpenLayers)
-- [GeoJSON Format](https://raw.githubusercontent.com/JS55CT/WME-SDK-Mirror/master/production/latest/output/docs/GeoJSON-Format-RFC-7946.md) — Specification and examples
-- [Geometry File Converters](https://raw.githubusercontent.com/JS55CT/WME-SDK-Mirror/master/production/latest/output/docs/geometry-file-converters.md) — SHP, KML, GeoJSON tools
-- [Version Changelog](https://raw.githubusercontent.com/JS55CT/WME-SDK-Mirror/master/production/latest/output/docs/changelog.md) — SDK version history
+- [Geometry & Turf.js](https://js55ct.github.io/WME-SDK-Mirror/production/latest/output/docs/Turf-Docs.md) — Geometry operations (replaces OpenLayers)
+- [GeoJSON Format](https://js55ct.github.io/WME-SDK-Mirror/production/latest/output/docs/GeoJSON-Format-RFC-7946.md) — Specification and examples
+- [Geometry File Converters](https://js55ct.github.io/WME-SDK-Mirror/production/latest/output/docs/geometry-file-converters.md) — SHP, KML, GeoJSON tools
+- [Version Changelog](https://js55ct.github.io/WME-SDK-Mirror/production/latest/output/docs/changelog.md) — SDK version history
 
 ## 🔗 External Links
 
 - **Live SDK Docs** — https://www.waze.com/editor/sdk/
 - **GitHub Repository** — https://github.com/JS55CT/WME-SDK-Mirror
-- **Raw Markdown Files** — https://raw.githubusercontent.com/JS55CT/WME-SDK-Mirror/master/production/latest/output/docs/
+- **Raw Markdown Files** — https://js55ct.github.io/WME-SDK-Mirror/production/latest/output/docs/
 - **Browse Files on GitHub** — https://github.com/JS55CT/WME-SDK-Mirror/tree/master/production/latest/output/docs
 - **Waze Map Editor** — https://www.waze.com/editor
 
@@ -185,4 +193,4 @@ This is a documentation mirror of the Waze Map Editor SDK. See the original SDK 
 ---
 
 **Last Updated:** See git history in `production/latest/.git/`  
-**SDK Version:** Check [index.md](https://raw.githubusercontent.com/JS55CT/WME-SDK-Mirror/master/production/latest/output/docs/index.md) for current version
+**SDK Version:** Check [index.md](https://js55ct.github.io/WME-SDK-Mirror/production/latest/output/docs/index.md) for current version
