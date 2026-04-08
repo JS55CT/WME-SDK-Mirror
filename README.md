@@ -2,7 +2,7 @@
 
 A comprehensive, automated documentation mirror and processing system for the **Waze Map Editor (WME) SDK**. This repository maintains a local copy of the WME SDK TypeDoc documentation and provides a 6-step Python pipeline to keep it fresh, bundled, and ready for LLM consumption.
 
-> **Live Documentation:** 📖 [https://raw.githubusercontent.com/JS55CT/WME-SDK-Mirror/master/production/latest/output/docs/](https://raw.githubusercontent.com/JS55CT/WME-SDK-Mirror/master/production/latest/output/docs/)
+> **Live Documentation:** 📖 [Start with index.md](https://raw.githubusercontent.com/JS55CT/WME-SDK-Mirror/master/production/latest/output/docs/index.md) • [Browse all files](https://github.com/JS55CT/WME-SDK-Mirror/tree/master/production/latest/output/docs)
 
 ## Quick Links
 
@@ -172,7 +172,8 @@ For detailed setup and options, see [production/latest/scripts/README.md](produc
 
 - **Live SDK Docs** — https://www.waze.com/editor/sdk/
 - **GitHub Repository** — https://github.com/JS55CT/WME-SDK-Mirror
-- **GitHub Pages Site** — https://raw.githubusercontent.com/JS55CT/WME-SDK-Mirror/master/production/latest/output/docs/
+- **Raw Markdown Files** — https://raw.githubusercontent.com/JS55CT/WME-SDK-Mirror/master/production/latest/output/docs/
+- **Browse Files on GitHub** — https://github.com/JS55CT/WME-SDK-Mirror/tree/master/production/latest/output/docs
 - **Waze Map Editor** — https://www.waze.com/editor
 
 ## 📝 License
