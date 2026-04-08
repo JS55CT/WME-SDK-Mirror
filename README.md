@@ -53,6 +53,8 @@ Load the pre-built **WME SDK skill** in Claude Code for instant context and guid
 @wme-sdk How do I query all venues on the map?
 ```
 
+**View the skill:** [SKILL.md](https://raw.githubusercontent.com/JS55CT/WME-SDK-Mirror/master/production/latest/output/skills/SKILL.md)
+
 The skill includes:
 - Real-world patterns and best practices
 - Complete SDK API reference
