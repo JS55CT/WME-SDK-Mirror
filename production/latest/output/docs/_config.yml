@@ -1,0 +1,19 @@
+theme: jekyll-theme-minimal
+plugins:
+  - jekyll-titles-from-headings
+title: WME SDK Documentation
+description: Automated documentation mirror and processing system for the Waze Map Editor SDK
+
+# Markdown settings
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+
+# Build settings
+exclude:
+  - .gitignore
+  - README.md
+
+# Collections and includes
+collections_dir: .
