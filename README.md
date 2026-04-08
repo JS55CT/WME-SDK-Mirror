@@ -65,15 +65,17 @@ py build-url-list.py --out my-urls.txt                            # custom outpu
 
 ---
 
-## Step 3 — `download-pages.py` (Download fresh HTML)
+## Step 3 — `download-pages.py` (Download fresh HTML + TypeScript Definitions)
 
 **What it does:** Reads `url-list.txt` and downloads each HTML page into the correct
 local subfolder (`classes/`, `interfaces/`, `types/`, etc.) — exactly the structure
 that `extract-to-md.py` expects.
 
-Also downloads `wme-sdk-typings.tgz` from the live site and extracts
-`wmeSDK_typedefs.d.ts` into the `TypeDefs/` folder, keeping type definitions
-in sync with the HTML docs on every refresh.
+**Also downloads the latest TypeScript definitions:**
+
+- **Source:** `https://web-assets.waze.com/wme_sdk_docs/production/latest/wme-sdk-typings.tgz`
+- **Extracts:** `wmeSDK_typedefs.d.ts` → `TypeDefs/` folder
+- **Keeps in sync:** Type definitions are always refreshed with the HTML docs on every run
 
 By default runs **incrementally** — skips files that already exist locally. Use
 `--force` to re-download everything.
@@ -91,8 +93,10 @@ py download-pages.py --no-typedefs # skip the typings tarball download
 py download-pages.py --delay 0.5   # seconds between requests (default: 0.3)
 ```
 
-> **TypeDefs note:** `wmeSDK_typedefs.d.ts` comes from the tarball. `geojson_typeddefs.d.ts`
-> is sourced separately and is not updated by this script.
+**TypeDefs notes:**
+
+- `wmeSDK_typedefs.d.ts` — Extracted from the tarball above (kept up-to-date automatically)
+- `geojson_typeddefs.d.ts` — Sourced separately, not updated by this script
 
 ---
 
