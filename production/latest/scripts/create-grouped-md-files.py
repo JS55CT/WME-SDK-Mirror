@@ -25,10 +25,27 @@ EXTERNAL_DOC_LINKS = {
     "Turf-Docs.md": "https://turfjs.org/",
 }
 
+def get_sdk_version_from_index_html():
+    """Extract the full WME version string from the downloaded source/index.html."""
+    html_path = os.path.abspath(os.path.join(BASE, "../source/index.html"))
+    if not os.path.exists(html_path):
+        # Fallback: check scripts folder (some setups store it there)
+        html_path = os.path.join(BASE, "index.html")
+    if not os.path.exists(html_path):
+        return None
+    with open(html_path, encoding="utf8", errors="ignore") as fin:
+        content = fin.read()
+    m = re.search(r"WME version (v[\w.\-]+)", content)
+    return m.group(1) if m else None
+
+
 def get_sdk_version_and_date(changelog_path):
     # Extract version and date from special front matter
+    # Primary version source: source/index.html (WME version string)
+    html_version = get_sdk_version_from_index_html()
+
     if not os.path.exists(changelog_path):
-        return ("(unknown)", "(unknown)")
+        return (html_version or "(unknown)", "(unknown)")
     with open(changelog_path, encoding="utf8") as fin:
         text = fin.read()
     # Get created date from front matter
@@ -39,9 +56,12 @@ def get_sdk_version_and_date(changelog_path):
         created_match = re.search(r"created:\s*([0-9\-]+)", fm)
         if created_match:
             created = created_match.group(1)
-    # Get latest version from first ## vX.Y header after front matter
-    version_match = re.search(r"^##\s*(v[0-9.]+)", text, re.MULTILINE)
-    version = version_match.group(1) if version_match else "(unknown)"
+    # Version: prefer HTML-extracted full version; fall back to changelog heading
+    if html_version:
+        version = html_version
+    else:
+        version_match = re.search(r"^##\s*(v[\w.\-]+)", text, re.MULTILINE)
+        version = version_match.group(1) if version_match else "(unknown)"
     return (version, created)
 
 def copy_guides_and_scripts():
