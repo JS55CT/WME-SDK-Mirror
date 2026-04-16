@@ -20,31 +20,59 @@ This is a **documentation mirror and processing system** for the Waze Map Editor
 ├── CLAUDE.md                        # This file
 ├── .gitignore                       # Git configuration
 ├── .remember/, .claude/             # (ignored: local session state)
-└── production/latest/
-    ├── .git/                        # Version control (tracks SDK updates)
-    ├── .gitignore                   # Output files to ignore
-    ├── scripts/
-    │   ├── README.md                # Workflow guide for update pipeline
-    │   ├── *.py                     # 6 processing scripts (run from here)
-    │   └── (run scripts from here)
-    ├── source/
-    │   ├── classes/, interfaces/, types/    # Individual HTML/MD files (one per doc page)
-    │   ├── functions/, variables/, modules/ # (same structure)
-    │   ├── documents/, guides/, externalDocs/ # Static docs and content
-    │   ├── TypeDefs/                # TypeScript definitions
-    │   └── index.html               # Downloaded SPA homepage
-    └── output/
-        ├── docs/                    # Generated LLM-ready SDK docs (GitHub Pages: /docs/)
-        └── skills/                  # Generated WME SDK skill (synced from ~/.claude/skills/)
+├── production/
+│   ├── latest/
+│   │   ├── .git/                    # Version control (tracks SDK updates)
+│   │   ├── .gitignore               # Output files to ignore
+│   │   ├── scripts/
+│   │   │   ├── README.md            # Workflow guide for update pipeline
+│   │   │   ├── *.py                 # 6 processing scripts (run from here)
+│   │   │   └── (run scripts from here)
+│   │   ├── source/
+│   │   │   ├── classes/, interfaces/, types/    # Individual HTML/MD files
+│   │   │   ├── functions/, variables/, modules/ # (same structure)
+│   │   │   ├── documents/, guides/, externalDocs/ # Static docs/content
+│   │   │   ├── TypeDefs/            # TypeScript definitions
+│   │   │   └── index.html           # Downloaded SPA homepage
+│   │   └── output/
+│   │       ├── docs/                # Generated LLM-ready SDK docs
+│   │       └── skills/              # Generated WME SDK skill
+│   └── (production/latest is the stable release version)
+└── beta/
+    ├── latest/
+    │   ├── .git/                    # Version control (tracks beta SDK updates)
+    │   ├── .gitignore               # Output files to ignore
+    │   ├── scripts/
+    │   │   ├── README.md            # Workflow guide for update pipeline
+    │   │   ├── *.py                 # 6 processing scripts (modified for beta)
+    │   │   └── (run scripts from here)  # Uses https://beta.waze.com/editor/sdk/
+    │   ├── source/
+    │   │   ├── classes/, interfaces/, types/    # Individual HTML/MD files (beta)
+    │   │   ├── functions/, variables/, modules/ # (same structure)
+    │   │   ├── documents/, guides/, externalDocs/ # Static docs/content
+    │   │   ├── TypeDefs/            # TypeScript definitions (beta)
+    │   │   └── index.html           # Downloaded SPA homepage (beta)
+    │   └── output/
+    │       ├── docs/                # Generated LLM-ready SDK docs (beta)
+    │       └── skills/              # Generated WME SDK skill (beta)
+    └── (beta/latest is the pre-release testing version)
 ```
 
 **Organization:**
 
-- **`scripts/`** — Python processing scripts (run from here with `cd production/latest/scripts`)
-- **`source/`** — Downloaded HTML pages and static content
-- **`output/`** — Generated files:
-  - **`docs/`** → served via GitHub Pages at `https://js55ct.github.io/WME-SDK-Mirror/docs/`
-  - **`skills/`** → synced from your Claude Code skill via `update-skill.py`
+- **`production/latest/`** — Stable SDK documentation from https://www.waze.com/editor/sdk/
+  - Scripts run from: `cd production/latest/scripts`
+  - Outputs: `production/latest/output/docs/` and `production/latest/output/skills/`
+  
+- **`beta/latest/`** — Beta SDK documentation from https://beta.waze.com/editor/sdk/
+  - Scripts run from: `cd beta/latest/scripts`
+  - Outputs: `beta/latest/output/docs/` and `beta/latest/output/skills/`
+  - Use beta folder to test pre-release features
+  - When finalized, merge beta version to production/latest
+
+**Version Control:**
+- Each folder (`production/latest/` and `beta/latest/`) has its own `.git/` to track SDK version changes independently
+- When beta is ready for release, its changes can be promoted to production
 
 ## Development Workflow
 
@@ -62,21 +90,29 @@ This installs the three dependencies needed by all scripts:
 
 ### Running the Full Pipeline
 
-**All scripts must be run from the `production/latest/scripts/` folder as your working directory.**
+Scripts can be run from either **production/latest** or **beta/latest** independently.
 
-Full pipeline (copy-paste into PowerShell):
+**For Production (Stable Release):**
 ```powershell
 cd production/latest/scripts
 py cleanup.py; py build-url-list.py; py download-pages.py; py extract-to-md.py; py create-grouped-md-files.py; py update-skill.py
 ```
 
-Or run them individually:
+**For Beta (Pre-Release Testing):**
+```powershell
+cd beta/latest/scripts
+py cleanup.py; py build-url-list.py; py download-pages.py; py extract-to-md.py; py create-grouped-md-files.py; py update-skill.py
+```
+
+The beta scripts automatically use `https://beta.waze.com/editor/sdk/` and beta typings endpoint.
+
+Or run scripts individually from either location:
 
 | Script | Purpose | Output |
 |--------|---------|--------|
 | `cleanup.py` | Delete old `.md` and `-clean.html` files from output folders | Clears stale output |
 | `build-url-list.py` | Fetch live SDK docs SPA, decode TypeDoc navigation bundle, list all page URLs | `url-list.txt`, `url-list-paths.txt` |
-| `download-pages.py` | Download HTML pages + fetch latest TypeScript definitions from `https://web-assets.waze.com/wme_sdk_docs/production/latest/wme-sdk-typings.tgz`, extract to `TypeDefs/` | HTML files + `wmeSDK_typedefs.d.ts` |
+| `download-pages.py` | Download HTML pages + fetch latest TypeScript definitions. **Production:** `https://web-assets.waze.com/wme_sdk_docs/production/latest/wme-sdk-typings.tgz` **Beta:** `https://web-assets.waze.com/wme_sdk_docs/beta/latest/wme-sdk-typings.tgz` | HTML files + `wmeSDK_typedefs.d.ts` |
 | `extract-to-md.py` | Parse TypeDoc HTML structure, convert to Markdown with YAML frontmatter | `.md` files alongside HTML |
 | `create-grouped-md-files.py` | Bundle all individual `.md` files into topic-grouped outputs (e.g., `classes.md`, `index.md`) | `docs/` folder with LLM-ready bundles |
 | `update-skill.py` | Pull latest WME SDK skill from `~/.claude/skills/wme-sdk/SKILL.md` | `skills/SKILL.md` synced with your Claude Code skill |
@@ -134,7 +170,11 @@ This keeps your skill versioned alongside the SDK documentation it references. T
 - **SPA crawling** — `build-url-list.py` decodes `window.navigationData` from `assets/navigation.js` rather than crawling HTML links. This is the core innovation that makes the system work.
 - **Incremental downloads** — `download-pages.py` defaults to skipping existing files. Use `--force` only when you want to re-fetch everything.
 - **YAML frontmatter** — Each `.md` file gets `title`, `source`, `created`, `tool`, `notes` fields. This helps LLMs understand document metadata.
-- **Typings sync** — `wmeSDK_typedefs.d.ts` is downloaded from `https://web-assets.waze.com/wme_sdk_docs/production/latest/wme-sdk-typings.tgz`, extracted, and kept in sync with the HTML docs on every refresh (unless `--no-typedefs` is used).
+- **Typings sync** — TypeScript definitions are downloaded independently for each environment:
+  - **Production:** `https://web-assets.waze.com/wme_sdk_docs/production/latest/wme-sdk-typings.tgz`
+  - **Beta:** `https://web-assets.waze.com/wme_sdk_docs/beta/latest/wme-sdk-typings.tgz`
+  - Both are extracted to `TypeDefs/` and kept in sync with HTML docs on every refresh (unless `--no-typedefs` is used)
+- **Independent environments** — Production and beta are completely separate. Each has its own scripts, source files, output, and git tracking. Changes to one do not affect the other.
 
 ### Git Tracking
 
@@ -142,26 +182,68 @@ The `.git/` directory tracks updates over time. Recent commits show WME version 
 
 ## Common Tasks
 
-### Update the SDK docs (full refresh)
+### Update the Production SDK docs (full refresh)
 
 ```powershell
-cd latest/
+cd production/latest
 py cleanup.py; py build-url-list.py; py download-pages.py; py extract-to-md.py; py create-grouped-md-files.py; py update-skill.py
 git add -A && git commit -m "Updated for WME version v2.XXX"
 ```
 
-### Check what URLs have changed
+### Update the Beta SDK docs (full refresh)
 
 ```powershell
-cd latest/
+cd beta/latest
+py cleanup.py; py build-url-list.py; py download-pages.py; py extract-to-md.py; py create-grouped-md-files.py; py update-skill.py
+git add -A && git commit -m "Updated beta SDK docs"
+```
+
+### Promote Beta to Production (after testing)
+
+When the beta version is stable and ready for release:
+
+```powershell
+# Copy beta/latest contents to production/latest
+Copy-Item -Path beta/latest/source/* -Destination production/latest/source -Recurse -Force
+Copy-Item -Path beta/latest/output/* -Destination production/latest/output -Recurse -Force
+Copy-Item -Path beta/latest/scripts/url-list*.txt -Destination production/latest/scripts -Force
+
+# Commit to production
+cd production/latest
+git add -A && git commit -m "Promoted from beta - WME version v2.XXX"
+```
+
+### Check what URLs have changed
+
+**Production:**
+```powershell
+cd production/latest
+py build-url-list.py
+git diff url-list-paths.txt
+```
+
+**Beta:**
+```powershell
+cd beta/latest
 py build-url-list.py
 git diff url-list-paths.txt
 ```
 
 ### Re-download everything (force refresh)
 
+**Production:**
 ```powershell
-cd latest/
+cd production/latest
+py cleanup.py
+py download-pages.py --force
+py extract-to-md.py
+py create-grouped-md-files.py
+py update-skill.py
+```
+
+**Beta:**
+```powershell
+cd beta/latest
 py cleanup.py
 py download-pages.py --force
 py extract-to-md.py
@@ -171,8 +253,19 @@ py update-skill.py
 
 ### Incremental update (fast, only new/changed pages)
 
+**Production:**
 ```powershell
-cd latest/
+cd production/latest
+py build-url-list.py  # find any new pages
+py download-pages.py  # only fetch new/missing files
+py extract-to-md.py   # regenerate .md from all HTML
+py create-grouped-md-files.py  # rebundle
+py update-skill.py  # sync skill
+```
+
+**Beta:**
+```powershell
+cd beta/latest
 py build-url-list.py  # find any new pages
 py download-pages.py  # only fetch new/missing files
 py extract-to-md.py   # regenerate .md from all HTML
@@ -184,10 +277,18 @@ py update-skill.py  # sync skill
 
 If you've updated your skill in `~/.claude/skills/wme-sdk/SKILL.md` but the SDK itself hasn't changed:
 
+**Production:**
 ```powershell
-cd latest/
+cd production/latest
 py update-skill.py
 git add skills/SKILL.md && git commit -m "Updated WME SDK skill"
+```
+
+**Beta:**
+```powershell
+cd beta/latest
+py update-skill.py
+git add skills/SKILL.md && git commit -m "Updated beta WME SDK skill"
 ```
 
 ## Skill Integration & Documentation Fallback Chain
@@ -232,7 +333,10 @@ Each script is standalone — they communicate via files on disk (`url-list.txt`
 
 ### Working Directory Requirement
 
-**Always run scripts from `production/latest/scripts/`.** The scripts use `os.getcwd()` to determine where to read/write files. Running from a different directory will cause path resolution errors.
+**For Production:** Always run scripts from `production/latest/scripts/`
+**For Beta:** Always run scripts from `beta/latest/scripts/`
+
+The scripts use `os.getcwd()` to determine where to read/write files. Running from a different directory will cause path resolution errors.
 
 ### Proxy & SSL
 
