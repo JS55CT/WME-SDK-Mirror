@@ -71,7 +71,8 @@ This is a **documentation mirror and processing system** for the Waze Map Editor
   - When finalized, merge beta version to production/latest
 
 **Version Control:**
-- Each folder (`production/latest/` and `beta/latest/`) has its own `.git/` to track SDK version changes independently
+- `production/latest/` has its own `.git/` to track SDK version changes independently
+- `beta/latest/` has its own `.git/` to track beta SDK version changes independently
 - When beta is ready for release, its changes can be promoted to production
 
 ## Development Workflow
@@ -174,7 +175,7 @@ This keeps your skill versioned alongside the SDK documentation it references. T
   - **Production:** `https://web-assets.waze.com/wme_sdk_docs/production/latest/wme-sdk-typings.tgz`
   - **Beta:** `https://web-assets.waze.com/wme_sdk_docs/beta/latest/wme-sdk-typings.tgz`
   - Both are extracted to `TypeDefs/` and kept in sync with HTML docs on every refresh (unless `--no-typedefs` is used)
-- **Independent environments** — Production and beta are completely separate. Each has its own scripts, source files, output, and git tracking. Changes to one do not affect the other.
+- **Independent environments** — Production and beta are completely separate. Each has its own scripts, source files, output, and `.git/` tracking. Changes to one do not affect the other.
 
 ### Git Tracking
 
