@@ -17,7 +17,8 @@ GROUPS = {
 }
 INDEX_FILE = os.path.join(NOTEBOOK_LM_FOLDER, "index.md")
 CHANGELOG_FILE = os.path.join(NOTEBOOK_LM_FOLDER, "changelog.md")
-GUIDES_FOLDER = os.path.join(BASE, "../source/guides")
+GUIDES_FOLDER = os.path.join(BASE, "../source/guides")  # static content lives in source/
+GUIDES_FOLDER_SCRIPTS = os.path.join(BASE, "guides")  # fallback if in scripts/
 
 # Map external doc file names to web URLs if wanted
 EXTERNAL_DOC_LINKS = {
@@ -65,10 +66,11 @@ def get_sdk_version_and_date(changelog_path):
     return (version, created)
 
 def copy_guides_and_scripts():
-    if not os.path.exists(GUIDES_FOLDER):
-        print(f"No guides folder found at {GUIDES_FOLDER}")
+    folder = GUIDES_FOLDER if os.path.exists(GUIDES_FOLDER) else GUIDES_FOLDER_SCRIPTS
+    if not os.path.exists(folder):
+        print(f"No guides folder found at {GUIDES_FOLDER} or {GUIDES_FOLDER_SCRIPTS}")
         return []
-    guide_files = glob(os.path.join(GUIDES_FOLDER, "*.md"))
+    guide_files = glob(os.path.join(folder, "*.md"))
     out_names = []
     for src_path in guide_files:
         base_name = os.path.basename(src_path)
@@ -113,7 +115,7 @@ def source_guide_section(external_md_files=None):
     return "\n".join(lines)
 
 def combine_group(group, outname):
-    folder = os.path.join(BASE, "../source", group)
+    folder = os.path.join(BASE, group)
     files = sorted(glob(os.path.join(folder, "*.md")))
     outpath = os.path.join(NOTEBOOK_LM_FOLDER, outname)
     found_titles = []
@@ -130,7 +132,7 @@ def combine_group(group, outname):
     return found_titles
 
 def make_changelog():
-    src = os.path.join(BASE, "../source/documents", "CHANGELOG.md")
+    src = os.path.join(BASE, "documents", "CHANGELOG.md")
     dst = CHANGELOG_FILE
     if os.path.exists(src):
         with open(src, encoding="utf8") as fin, open(dst, "w", encoding="utf8") as fout:
@@ -138,7 +140,7 @@ def make_changelog():
         print(f"Copied changelog to: {dst}")
 
 def copy_all_typedefs():
-    typedef_folder = os.path.join(BASE, "../source/TypeDefs")
+    typedef_folder = os.path.join(BASE, "TypeDefs")
     # Get all .d.ts files
     typedef_files = sorted(glob(os.path.join(typedef_folder, "*.d.ts")))
     typedef_output_files = []
@@ -156,7 +158,7 @@ def copy_all_typedefs():
     return typedef_output_files
 
 def copy_external_docs():
-    external_folder = os.path.join(BASE, "../source/externalDocs")
+    external_folder = os.path.join(BASE, "externalDocs") if os.path.exists(os.path.join(BASE, "externalDocs")) else os.path.join(BASE, "../source/externalDocs")
     if not os.path.exists(external_folder):
         print(f"No externalDocs folder found at: {external_folder}")
         return []

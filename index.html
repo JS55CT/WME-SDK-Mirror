@@ -70,6 +70,14 @@
             transform: translateY(-2px);
             box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
         }
+        .version-badge {
+            display: block;
+            font-size: 0.75em;
+            font-weight: 400;
+            opacity: 0.85;
+            margin-top: 4px;
+            letter-spacing: 0.02em;
+        }
         .info {
             margin-top: 40px;
             padding-top: 30px;
@@ -90,11 +98,13 @@
             <a href="https://github.com/JS55CT/WME-SDK-Mirror" class="btn-github">
                 View on GitHub →
             </a>
-            <a href="https://js55ct.github.io/WME-SDK-Mirror/production/latest/output/docs/index.md" class="btn-docs">
+            <a href="https://js55ct.github.io/WME-SDK-Mirror/production/latest/output/docs/index.md" class="btn-docs" id="btn-production">
                 View Production Documentation →
+                <span class="version-badge" id="version-production">fetching version…</span>
             </a>
-            <a href="https://js55ct.github.io/WME-SDK-Mirror/beta/latest/output/docs/index.md" class="btn-docs">
+            <a href="https://js55ct.github.io/WME-SDK-Mirror/beta/latest/output/docs/index.md" class="btn-docs" id="btn-beta">
                 View Beta Documentation →
+                <span class="version-badge" id="version-beta">fetching version…</span>
             </a>
         </div>
 
@@ -104,5 +114,35 @@
             </p>
         </div>
     </div>
+    <script>
+        async function fetchVersion(mdUrl, badgeId) {
+            const badge = document.getElementById(badgeId);
+            try {
+                const res = await fetch(mdUrl);
+                if (!res.ok) throw new Error('fetch failed');
+                const text = await res.text();
+                const versionMatch = text.match(/^version:\s*(.+)$/m);
+                const dateMatch = text.match(/^generated:\s*(.+)$/m);
+                const version = versionMatch ? versionMatch[1].trim() : null;
+                const date = dateMatch ? dateMatch[1].trim() : null;
+                if (version) {
+                    badge.textContent = version + (date && date !== '(unknown)' ? '  ·  ' + date : '');
+                } else {
+                    badge.textContent = '(version unknown)';
+                }
+            } catch (e) {
+                badge.textContent = '(unavailable)';
+            }
+        }
+
+        fetchVersion(
+            'https://js55ct.github.io/WME-SDK-Mirror/production/latest/output/docs/index.md',
+            'version-production'
+        );
+        fetchVersion(
+            'https://js55ct.github.io/WME-SDK-Mirror/beta/latest/output/docs/index.md',
+            'version-beta'
+        );
+    </script>
 </body>
 </html>
