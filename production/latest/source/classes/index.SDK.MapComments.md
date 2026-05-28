@@ -1,7 +1,7 @@
 ---
 title: SDK.MapComments class
 source: classes/index.SDK.MapComments.html
-created: 2026-04-08
+created: 2026-05-28
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -33,6 +33,12 @@ addComment (
   ) : MapComment
 ```
 the created map comment.
+### `deleteComment`
+
+```typescript
+deleteComment ( args: { mapCommentId: string } ) : null
+```
+null.
 ### `getAll`
 
 ```typescript

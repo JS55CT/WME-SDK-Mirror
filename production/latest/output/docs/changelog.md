@@ -1,10 +1,50 @@
 ---
-title: # v2.343
+title: # v2.352
 source: documents/CHANGELOG.html
-created: 2026-04-08
+created: 2026-05-28
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
+
+## v2.352
+
+### Fix SDK scenario tests
+
+Wait for SDK initialization before asserting window.getWmeSdk is defined, aligning with documentation prerequisites.
+Match error by string instead of custom error instance in rejects.toThrow to handle serialization across the page.evaluate boundary.
+
+## v2.350
+
+### Add deleteComment method
+
+Added deleteComment method to MapComments SDK module.
+
+## v2.349
+
+### Unnecessary web-events
+
+Fixed sdk sending unnecessary web-events when panning the map.
+
+## v2.346
+
+### Fix error in SDK.Editing.Selection
+
+fix error raised from SDK.Editing.Selection when a google
+place is selected.
+
+## v2.345
+
+### Add connectsToBigJunction method
+
+Added DataModel.Segments.connectsToBigJunction method. It returns true for segments which are completely within or partially within(only "to" or "from" node) a big junction.
+
+### Add isFrom/isToNodeInBigJunction methods
+
+Added  the following methods:
+
+- DataModel.Segments.isFromNodeInBigJunction - returns true if the segment's "from" node is part of a big junction, indicating the segment leads away from it.
+
+- DataModel.Segments.isToNodeInBigJunction  - returns true if the segment's "to" node is part of a big junction, indicating the segment leads into it.
 
 ## v2.343
 

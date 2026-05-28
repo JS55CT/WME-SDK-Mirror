@@ -2,6 +2,21 @@
 url-list.txt
 url-list-paths.txt
 
+# Working directory (scripts/) - temporary processing files
+# These are synced to ../source/ for version control via copy-to-source.py
+scripts/*.html
+scripts/*.md
+scripts/classes/
+scripts/documents/
+scripts/functions/
+scripts/interfaces/
+scripts/modules/
+scripts/types/
+scripts/variables/
+
+# TypeScript definitions (synced to source/)
+scripts/TypeDefs/
+
 # Python cache
 __pycache__/
 *.pyc

@@ -13,6 +13,7 @@ The fastest way to work with WME SDK:
 **[View the complete skill →](https://js55ct.github.io/WME-SDK-Mirror/production/latest/output/skills/SKILL.md)**
 
 The skill includes:
+
 - Real-world WME scripting patterns
 - Complete SDK API reference with examples
 - Migration guide from legacy W object to modern SDK
@@ -30,38 +31,38 @@ If you prefer raw documentation files, access them here:
 
 All documentation available as bundled Markdown files, optimized for LLM context windows:
 
-| Resource | Link | Purpose |
-|----------|------|---------|
-| **Master Index** | [index.md](https://js55ct.github.io/WME-SDK-Mirror/production/latest/output/docs/index.md) | Start here — table of contents and overview |
-| **Classes** | [classes.md](https://js55ct.github.io/WME-SDK-Mirror/production/latest/output/docs/classes.md) | All SDK classes (DataModel, Map, Shortcuts, Sidebar, etc.) |
-| **Interfaces** | [interfaces.md](https://js55ct.github.io/WME-SDK-Mirror/production/latest/output/docs/interfaces.md) | Data shapes and type definitions |
-| **Types** | [types.md](https://js55ct.github.io/WME-SDK-Mirror/production/latest/output/docs/types.md) | Enums, unions, and custom types |
-| **Functions** | [functions.md](https://js55ct.github.io/WME-SDK-Mirror/production/latest/output/docs/functions.md) | Top-level utility functions |
-| **Variables** | [variables.md](https://js55ct.github.io/WME-SDK-Mirror/production/latest/output/docs/variables.md) | Module-level constants |
-| **Modules** | [modules.md](https://js55ct.github.io/WME-SDK-Mirror/production/latest/output/docs/modules.md) | Namespace and module structure |
+| Resource         | Link                                                                                                 | Purpose                                                    |
+| ---------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------- |
+| **Master Index** | [index.md](https://js55ct.github.io/WME-SDK-Mirror/production/latest/output/docs/index.md)           | Start here — table of contents and overview                |
+| **Classes**      | [classes.md](https://js55ct.github.io/WME-SDK-Mirror/production/latest/output/docs/classes.md)       | All SDK classes (DataModel, Map, Shortcuts, Sidebar, etc.) |
+| **Interfaces**   | [interfaces.md](https://js55ct.github.io/WME-SDK-Mirror/production/latest/output/docs/interfaces.md) | Data shapes and type definitions                           |
+| **Types**        | [types.md](https://js55ct.github.io/WME-SDK-Mirror/production/latest/output/docs/types.md)           | Enums, unions, and custom types                            |
+| **Functions**    | [functions.md](https://js55ct.github.io/WME-SDK-Mirror/production/latest/output/docs/functions.md)   | Top-level utility functions                                |
+| **Variables**    | [variables.md](https://js55ct.github.io/WME-SDK-Mirror/production/latest/output/docs/variables.md)   | Module-level constants                                     |
+| **Modules**      | [modules.md](https://js55ct.github.io/WME-SDK-Mirror/production/latest/output/docs/modules.md)       | Namespace and module structure                             |
 
 ### 🚀 Guides & Tutorials
 
 Learn how to use the SDK with real-world examples:
 
-| Guide | Link | Topics |
-|-------|------|--------|
-| **Getting Started** | [how-to-get-started-with-the-wmeSDK.md](https://js55ct.github.io/WME-SDK-Mirror/production/latest/output/docs/how-to-get-started-with-the-wmeSDK.md) | SDK initialization, authentication, first steps |
-| **Migration Guide** | [migration-guide.md](https://js55ct.github.io/WME-SDK-Mirror/production/latest/output/docs/migration-guide.md) | Migrating from legacy W object to modern SDK |
-| **Script Examples** | [script-example-1.md](https://js55ct.github.io/WME-SDK-Mirror/production/latest/output/docs/script-example-1.md) - [script-example-6.md](https://js55ct.github.io/WME-SDK-Mirror/production/latest/output/docs/script-example-6.md) | Working Tampermonkey examples |
-| **Geometry Reference** | [geometry-file-converters.md](https://js55ct.github.io/WME-SDK-Mirror/production/latest/output/docs/geometry-file-converters.md) | File format converters and geometry tools |
-| **Changelog** | [changelog.md](https://js55ct.github.io/WME-SDK-Mirror/production/latest/output/docs/changelog.md) | SDK version history and breaking changes |
+| Guide                  | Link                                                                                                                                                                                                                                | Topics                                          |
+| ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------- |
+| **Getting Started**    | [how-to-get-started-with-the-wmeSDK.md](https://js55ct.github.io/WME-SDK-Mirror/production/latest/output/docs/how-to-get-started-with-the-wmeSDK.md)                                                                                | SDK initialization, authentication, first steps |
+| **Migration Guide**    | [migration-guide.md](https://js55ct.github.io/WME-SDK-Mirror/production/latest/output/docs/migration-guide.md)                                                                                                                      | Migrating from legacy W object to modern SDK    |
+| **Script Examples**    | [script-example-1.md](https://js55ct.github.io/WME-SDK-Mirror/production/latest/output/docs/script-example-1.md) - [script-example-6.md](https://js55ct.github.io/WME-SDK-Mirror/production/latest/output/docs/script-example-6.md) | Working Tampermonkey examples                   |
+| **Geometry Reference** | [geometry-file-converters.md](https://js55ct.github.io/WME-SDK-Mirror/production/latest/output/docs/geometry-file-converters.md)                                                                                                    | File format converters and geometry tools       |
+| **Changelog**          | [changelog.md](https://js55ct.github.io/WME-SDK-Mirror/production/latest/output/docs/changelog.md)                                                                                                                                  | SDK version history and breaking changes        |
 
 ### 📋 Type Definitions & References
 
 Complete TypeScript definitions and external documentation:
 
-| Resource | Link | Purpose |
-|----------|------|---------|
-| **WME SDK Types** | [wmeSDK_typedefs.d.md](https://js55ct.github.io/WME-SDK-Mirror/production/latest/output/docs/wmeSDK_typedefs.d.md) | Full TypeScript definitions wrapped in markdown |
-| **GeoJSON Types** | [geojson_typeddefs.d.md](https://js55ct.github.io/WME-SDK-Mirror/production/latest/output/docs/geojson_typeddefs.d.md) | GeoJSON type definitions |
-| **Turf.js Docs** | [Turf-Docs.md](https://js55ct.github.io/WME-SDK-Mirror/production/latest/output/docs/Turf-Docs.md) | Geometry manipulation library (replaces OpenLayers) |
-| **GeoJSON RFC 7946** | [GeoJSON-Format-RFC-7946.md](https://js55ct.github.io/WME-SDK-Mirror/production/latest/output/docs/GeoJSON-Format-RFC-7946.md) | Official GeoJSON specification |
+| Resource             | Link                                                                                                                           | Purpose                                             |
+| -------------------- | ------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------- |
+| **WME SDK Types**    | [wmeSDK_typedefs.d.md](https://js55ct.github.io/WME-SDK-Mirror/production/latest/output/docs/wmeSDK_typedefs.d.md)             | Full TypeScript definitions wrapped in markdown     |
+| **GeoJSON Types**    | [geojson_typeddefs.d.md](https://js55ct.github.io/WME-SDK-Mirror/production/latest/output/docs/geojson_typeddefs.d.md)         | GeoJSON type definitions                            |
+| **Turf.js Docs**     | [Turf-Docs.md](https://js55ct.github.io/WME-SDK-Mirror/production/latest/output/docs/Turf-Docs.md)                             | Geometry manipulation library (replaces OpenLayers) |
+| **GeoJSON RFC 7946** | [GeoJSON-Format-RFC-7946.md](https://js55ct.github.io/WME-SDK-Mirror/production/latest/output/docs/GeoJSON-Format-RFC-7946.md) | Official GeoJSON specification                      |
 
 ## Alternative: Load Raw Documentation into Claude
 
@@ -133,6 +134,7 @@ For detailed setup and options, see [production/latest/scripts/README.md](produc
 ### For Claude Code Users
 
 1. Use the **WME SDK skill** directly:
+
    ```
    @wme-sdk Show me how to query venues
    ```
@@ -144,35 +146,42 @@ For detailed setup and options, see [production/latest/scripts/README.md](produc
 ### For Developers
 
 1. Clone the repo:
+
    ```bash
    git clone https://github.com/JS55CT/WME-SDK-Mirror.git
    cd WME-SDK-Mirror/production/latest/scripts
    ```
 
 2. Install Python dependencies:
+
    ```bash
    py -m pip install requests beautifulsoup4 lxml
    ```
 
 3. Run the pipeline:
-   ```bash
-   py cleanup.py; py build-url-list.py; py download-pages.py; py extract-to-md.py; py create-grouped-md-files.py; py update-skill.py
-   ```
+
+```powershell
+cd production/latest/scripts
+py cleanup.py; py build-url-list.py; py download-pages.py --force; py extract-to-md.py; py copy-to-source.py; py create-grouped-md-files.py; py update-skill.py
+```
 
 ## 📖 Documentation Index by Topic
 
 ### Getting Started
+
 - [SDK Initialization](https://js55ct.github.io/WME-SDK-Mirror/production/latest/output/docs/how-to-get-started-with-the-wmeSDK.md)
 - [Migration from Legacy Code](https://js55ct.github.io/WME-SDK-Mirror/production/latest/output/docs/migration-guide.md)
 - [Working Examples](https://js55ct.github.io/WME-SDK-Mirror/production/latest/output/docs/script-example-1.md)
 
 ### API Reference
+
 - [Classes & Main APIs](https://js55ct.github.io/WME-SDK-Mirror/production/latest/output/docs/classes.md) — Map, DataModel, Shortcuts, Sidebar, Events, etc.
 - [Data Types & Interfaces](https://js55ct.github.io/WME-SDK-Mirror/production/latest/output/docs/interfaces.md) — GeoJSON, Feature, Node, Segment, etc.
 - [Type Definitions](https://js55ct.github.io/WME-SDK-Mirror/production/latest/output/docs/types.md) — Enums, unions, custom types
 - [Functions](https://js55ct.github.io/WME-SDK-Mirror/production/latest/output/docs/functions.md) — Utility functions
 
 ### Advanced Topics
+
 - [Geometry & Turf.js](https://js55ct.github.io/WME-SDK-Mirror/production/latest/output/docs/Turf-Docs.md) — Geometry operations (replaces OpenLayers)
 - [GeoJSON Format](https://js55ct.github.io/WME-SDK-Mirror/production/latest/output/docs/GeoJSON-Format-RFC-7946.md) — Specification and examples
 - [Geometry File Converters](https://js55ct.github.io/WME-SDK-Mirror/production/latest/output/docs/geometry-file-converters.md) — SHP, KML, GeoJSON tools

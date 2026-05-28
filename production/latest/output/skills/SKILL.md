@@ -1,6 +1,6 @@
 ---
 name: wme-sdk
-description: Use this skill for ANY Waze Map Editor (WME) script work — migrating legacy W object or OpenLayers code to the WME SDK, querying venues/nodes/junctions/segments, building map layers with advanced styling predicates and dynamic getters, managing keyboard shortcuts with conflict detection, handling data models and country context, or implementing features with Turf.js. Covers error handling, high-performance feature loading (dangerouslyAddFeaturesToLayerWithoutValidation), mutable style state optimization for 1000+ features, zoom-aware predicates, viewport queries (getMapExtent, getMapCenter), event listeners (map-move-end, layer-checkbox-toggled), sidebar tab customization, and IndexedDB persistence. Provides before/after migration examples, SDK method references, real-world patterns from production scripts, working Tampermonkey examples, and best practices. Trigger on WME scripts, SDK migration, venues/nodes/junctions APIs, map styling, layer management, performance optimization, shortcuts, country detection, viewport filtering, or "how do I" questions about WME script development.
+description: Use this skill for ANY Waze Map Editor (WME) script work — migrating legacy W object, OpenLayers, or deprecated WazeWrap functions to the WME SDK, querying venues/nodes/junctions/segments, building map layers with advanced styling predicates and dynamic getters, managing keyboard shortcuts with conflict detection, handling data models and country context, or implementing features with Turf.js. Covers error handling, high-performance feature loading (dangerouslyAddFeaturesToLayerWithoutValidation), mutable style state optimization for 1000+ features, zoom-aware predicates, viewport queries (getMapExtent, getMapCenter), event listeners (map-move-end, layer-checkbox-toggled), sidebar tab customization, and IndexedDB persistence. Provides before/after migration examples, SDK method references, real-world patterns from production scripts, working Tampermonkey examples, and best practices. Trigger on WME scripts, SDK migration, venues/nodes/junctions APIs, map styling, layer management, performance optimization, shortcuts, country detection, viewport filtering, detecting deprecated WazeWrap calls, or "how do I" questions about WME script development.
 compatibility: Requires access to local WME SDK documentation and Tampermonkey userscript context
 ---
 
@@ -18,7 +18,7 @@ You're working with Waze Map Editor (WME) scripts in a Tampermonkey context. Thi
 
 To customize for your local setup, replace the path above with your own clone location. Examples:
 - Mac: `/Users/username/projects/WME-SDK-Mirror/production/latest/output/docs`
-- Windows: `C:\repos\WME-SDK-Mirror\production\latest\output\docs`
+- Windows: `/path/to/your/WME-SDK-Mirror/production/latest/output/docs`
 
 If not set, the skill will reference GitHub Pages: `https://js55ct.github.io/WME-SDK-Mirror/production/latest/output/docs/`
 
@@ -820,6 +820,132 @@ wmeSDK.Events.on({
 
 ---
 
+---
+
+## Detecting & Converting Deprecated WazeWrap Functions
+
+**Status:** WazeWrap v3.0 consolidation complete. Only 3 functions remain; all others must migrate to SDK equivalents.
+
+### Functions to Keep (Intentional Legacy Calls)
+
+These WazeWrap functions are **acceptable to keep** — they're not being replaced by SDK:
+
+```javascript
+WazeWrap.Alerts.error(...)                                    // Alert notifications
+WazeWrap.Remote.RetrieveSettings('script_key')               // Cross-device settings sync
+WazeWrap.Remote.SaveSettings('script_key', settings)
+WazeWrap.Interface.ShowScriptUpdate(scriptName, version)     // Update notifications
+```
+
+### Deprecated Functions to Migrate
+
+All other `WazeWrap.*` calls must be converted to WME SDK or native JS equivalents:
+
+| Deprecated Namespace | Migration Path | Example |
+|----------------------|----------------|---------|
+| `WazeWrap.Model.*` | WME SDK DataModel (Segments, Streets, Venues, Nodes) | `sdk.DataModel.Segments.getById()` |
+| `WazeWrap.Geometry.*` | Turf.js | `turf.distance()`, `turf.area()` |
+| `WazeWrap.Events.*` | WME SDK Events | `sdk.Events.on({ eventName, eventHandler })` |
+| `WazeWrap.User.*` | WME SDK State | `sdk.State.getUserInfo()` |
+| `WazeWrap.Require.*` | Native DOM / Build tools | `document.createElement('script')` |
+| `WazeWrap.String.*` | Native JS | `.trim()`, `.toUpperCase()` |
+| `WazeWrap.Util.*` | Native JS utilities | `Math.random().toString(36)` |
+| `WazeWrap.Remote.*` (others) | SDK DataModel or Fetch API | `sdk.DataModel.*.fetch()` or `fetch()` |
+
+### How to Find & Convert Deprecated Calls
+
+**Step 1: Audit** — Search your script for all `WazeWrap.` calls:
+```bash
+grep -n "WazeWrap\." yourscript.js | head -20
+```
+
+**Step 2: Categorize** — Group by namespace (Model, Geometry, Events, etc.)
+
+**Step 3: Check** — Is it one of the 3 intentional functions listed above?
+- ✅ If YES → Leave it as-is
+- ❌ If NO → Must migrate
+
+**Step 4: Migrate** — For each deprecated call, use the migration patterns from `SDK_MIGRATION_PATTERNS_REFERENCE.md`:
+
+**Example Migration (Model):**
+```javascript
+// ❌ DEPRECATED (v2.x)
+const nodeID = WazeWrap.Model.getSelectedNodeID();
+
+// ✅ MIGRATED (SDK)
+const selection = sdk.Editing.getSelection();
+if (selection?.objectType === 'node') {
+  const nodeID = selection.ids[0];
+}
+```
+
+**Example Migration (Geometry):**
+```javascript
+// ❌ DEPRECATED (v2.x)
+const area = WazeWrap.Geometry.getPolygonArea(coords);
+
+// ✅ MIGRATED (Turf.js)
+const area = turf.area(polygon);
+```
+
+**Example Migration (Events):**
+```javascript
+// ❌ DEPRECATED (v2.x)
+WazeWrap.Events.register('selectionchanged', context, handler);
+
+// ✅ MIGRATED (SDK)
+sdk.Events.on({
+  eventName: 'wme-selection-changed',
+  eventHandler: handler
+});
+```
+
+**Example Migration (User):**
+```javascript
+// ❌ DEPRECATED (v2.x)
+const rank = WazeWrap.User.getRank();
+
+// ✅ MIGRATED (SDK)
+const userSession = sdk.State.getUserInfo();
+const rank = userSession?.rank;
+```
+
+**Example Migration (String):**
+```javascript
+// ❌ DEPRECATED (v2.x)
+const trimmed = WazeWrap.String.trim(text);
+
+// ✅ MIGRATED (Native JS)
+const trimmed = text.trim();
+```
+
+**Example Migration (Remote API Calls):**
+```javascript
+// ❌ DEPRECATED (v2.x)
+WazeWrap.Remote.APICall(
+  new WazeWrap.Remote.Procedures.FetchSegmentInfo({ id: segmentID }),
+  callback
+);
+
+// ✅ MIGRATED (SDK)
+const segment = sdk.DataModel.Segments.getById({ segmentId: segmentID });
+```
+
+### Reference Material
+
+For complete migration patterns with code examples, consult:
+- **File:** `SDK_MIGRATION_PATTERNS_REFERENCE.md` (full migration guide)
+- **Sections:** Each deprecated namespace has detailed before/after examples
+
+### Common Pitfalls
+
+- ❌ Forgetting to check for `WazeWrap.Remote.*` — Many remote calls are hidden deeper in code
+- ❌ Converting Events but forgetting event name prefix — `'moveend'` → `'wme-map-move-end'` (not just `'moveend'`)
+- ❌ Keeping deprecated calls "for now" — They break in newer WazeWrap versions; migrate completely
+- ❌ Coordinate system confusion — SDK/Turf.js use WGS84; v2.x used Web Mercator (see Geometry migration guide)
+
+---
+
 ## When to Use This Skill
 
 ✓ You have WME userscript code using `W` object or OpenLayers  
@@ -828,6 +954,7 @@ wmeSDK.Events.on({
 ✓ You're adding settings UI, keyboard shortcuts, or advanced styling  
 ✓ You're integrating external GIS data or APIs  
 ✓ You need performance optimization for many features  
+✓ You're detecting deprecated WazeWrap functions and converting them to SDK equivalents  
 ✓ You're unsure how to do something in WME SDK (check docs via this skill)  
 
 ✗ General JavaScript questions (use your standard tools)  

@@ -1,7 +1,7 @@
 ---
 title: SDK.SdkEvents interface
 source: interfaces/index.SDK.SdkEvents.html
-created: 2026-04-08
+created: 2026-05-28
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -42,6 +42,7 @@ interface SdkEvents {
   featureType: 
   | "bigJunction"
   | "city"
+  | "googlePlace"
   | "mapComment"
   | "node"
   | "permanentHazard"
@@ -177,6 +178,7 @@ SDK events and their payload (if any).
   featureType: 
   | "bigJunction"
   | "city"
+  | "googlePlace"
   | "mapComment"
   | "node"
   | "permanentHazard"
