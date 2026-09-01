@@ -1,10 +1,233 @@
 ---
-title: # v2.352
+title: # v2.367
 source: documents/CHANGELOG.html
-created: 2026-05-28
+created: 2026-09-01
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
+
+## v2.367
+
+### Add Chat.startChat method
+
+Introduce wmeSDK.Chat.startChat method to start a private chat with
+an editor by username.
+
+### Allow updating restrictions via updateTurn
+
+Added ability to update turn restrictions.
+
+### Support styling map comments layer
+
+Allow userscripts to style the map comments layer via the SDK using addStyleRuleToLayer. This helps close the API gaps for the global W object.
+
+### Allow updating restrictions via updateSegment
+
+Added ability to update segment restrictions.
+
+### Check segment permissions in addClosure
+
+addClosure only checked segment flags, allowing low-rank users to create
+closures.
+this change uses 'SegmentClosuresUseCase' to enforce both segment permissions and user rank.
+
+### Add reject method to SegmentSuggestions module
+
+Implemented reject method for SegmentSuggestions to support bulk segment suggestion rejection with specified reason.
+
+### Expose editable areas in UserSession
+
+Exposed user editable areas in UserSession returned by
+getUserInfo method.
+
+## v2.366
+
+### Enforce edit auth guards on mutation methods
+
+add 'isEditingAllowed' checks to addStreet, updateAddress,
+addHouseNumber, and deleteHouseNumber to prevent FE read-only
+bypass in non-editable states.
+
+## v2.365
+
+### Add turnGuidance support to updateTurn
+
+Extend the updateTurn SDK method to allow updating and clearing turn guidance.
+
+### Add getFilters method to IssueTracker module
+
+- Add getFilters method to retrieve active issue tracker filters
+
+- Add IssueTrackerFilters type
+
+### Fix shortcut UI bug
+
+- fix issue with displaying control button in shortcut UI
+
+- add unit test to cover shortcut with control button
+
+### Add method getById to SegmentSuggestions module
+
+Implemented getById method to read segment suggestion from store by id.
+
+### Implement SegmentSuggestions module with getAll method
+
+Exposed SegmentSuggestion and SegmentSuggestionResolution types available in WME via the new SegmentSuggestions module on the SDK.
+Implemented the getAll method, which allow to read segment suggestions data from store.
+
+### Add unified Issue Tracker panel open and close events
+
+Introduce wme-issue-tracker-panel-opened and wme-issue-tracker-panel-closed events to the Events SDK module.
+These events translate WME's internal events for map problems, map update requests, and edit suggestions into a clean, consistent SDK payload, allowing userscripts to react when issue tracker panels are opened or closed.
+
+### Add generic layer visibility to LayerSwitcher
+
+Add getWMELayerVisibility and setWMELayerVisibility methods to the LayerSwitcher SDK module.
+These methods use a stable set of public layer names (WmeLayerName) defined in the SDK interfaces to control layer visibility, protecting userscripts from internal WME layer key changes.
+
+### Introduce IssueTracker module with showPanel and closePanel
+
+Add the IssueTracker module to the SDK, enabling userscripts to programmatically manage issue tracker panels in the editor.
+
+- Add showPanel to open a specific issue panel by its ID and type (editSuggestion, mapProblem, mapUpdateRequest).
+
+- Add closePanel to close the active issue tracker panel.
+
+### Expand SegmentRestriction
+
+Expanded SegmentRestriction with time frames, default type, description,
+editable, direction, disposition, lane type.
+
+### Expand restrictions
+
+Expanded Segment/TurnRestriction attributes with time frames, restriction type, description, editable.
+
+### Add getById method to PermanentHazard module
+
+Implemented getById method on the PermanentHazard module to allow reading permanent hazard data from store by id.
+
+### Add getAll method to PermanentHazard module
+
+Implemented getAll method on the PermanentHazard module to allow reading all permanent hazard data from store.
+
+### Add StreetView module for street view control
+
+Introduce a new StreetView SDK module to allow userscripts to control Google Street View split-screen panel.
+
+- Add isActive, open, and close methods to check, open, or close the street view panel.
+
+- Deprecate the legacy Map.isStreetViewActive method.
+
+## v2.364
+
+### Add getByUserName method to Users module
+
+Implemented getByUserName method on the Users module to allow reading user data by username.
+
+### Check authorization in setTurnLaneGuidance
+
+Add client authorization checks to setTurnLaneGuidance to verify that editing is allowed and the logged-in user has privileges to update lane guidance for both immediate and far turns.
+
+### Add getCurrentUser method to Users module
+
+Implemented getCurrentUser method on the Users module to allow reading the currently logged-in user from the store.
+
+## v2.363
+
+### Add getById method to Signs module
+
+Implemented getById method on the Signs module to allow fetching a sign type
+by its ID.
+
+### Implement Signs module with getAll method
+
+Exposed all sign types available in WME via the new Signs module on the SDK.
+Implemented the getAll method, which supports optional filtering by SignType.
+
+### Add turnGuidance to Turns
+
+Expose turn guidance information on the SDK Turn interface to allow access to
+exit signs, towards, visual instructions, road shields, and custom Text-To-Speech (TTS).
+
+## v2.360
+
+### Remove isFirstLogin from UserSession
+
+reverting wger/1510663
+we're passing isFirstLogin to walkMe via _walkmeConfig
+instead of relying on SDK
+
+### Route segment flag updates through ActionManager
+
+Currently, Segments.updateSegment mutates flagAttributes directly on the segment model. This updates the client UI but bypasses the ActionManager, so WME fails to register a pending change and the update cannot be saved.
+Fix this by accumulating flagAttributes into newSegmentAttributes and applying them via the updateSegments use case, which correctly records the UpdateObject action on the ActionManager.
+Also fix the validator mapping name from flagAttribute to flagAttributes, and make the TS parameter type Partial.
+
+## v2.359
+
+### Extend updateAddress
+
+Changed the address update contract for Segments and Venues to use a cleaner, unified, and type-safe addressData object.
+What is new:
+
+- Grouped Parameters : All address properties (streetId, houseNumber, alternateStreetIds, and raw components) are now organized under a single addressData object, keeping the method signatures clean.
+
+- Raw Address Updates : Easily update addresses using raw components ( cityName , countryId , stateId , streetName ) instead of only IDs.
+
+- Intuitive Empty Values : Pass an empty string ( "" ) directly to cityName or streetName to clear them, removing the need for separate, redundant boolean flags.
+
+- Strict Validation : Avoid conflicting updates with new validation that prevents mixing street IDs with raw address fields.
+
+- Seamless Transition : Full backward compatibility is preserved for existing scripts using legacy top-level parameters, with deprecation warnings logged to the console to guide migration.
+
+## v2.358
+
+### Expose isFirstLogin in UserSession
+
+### GetTopCountry returning null
+
+Defer W.model.isInitialMapDataLoaded flag setting until getFeatures resolves, preventing a race condition where getOnlineEditors resolved first and triggered wme-ready before country data was merged.
+
+### Expose description in MapUpdateRequest model
+
+Add a getDescription() getter method to the core UpdateRequest class and map the description property in the SDK MapUpdateRequest interface.
+This allows modern WmeSDK consumers to programmatically access public descriptions of map update requests. JSDoc comments and unit tests are updated accordingly.
+
+### Expose resolvedBy in MapUpdateRequest model
+
+Add a getResolvedBy() getter method to the core BaseProblem class and map the resolvedBy property in the SDK MapUpdateRequest interface.
+This allows modern WmeSDK consumers to programmatically access the username of the user who resolved a map update request. JSDoc comments and unit tests are updated accordingly.
+
+## v2.356
+
+### Expose description in Venue model
+
+Add a getDescription() getter method to the core Venue class and map the description property in the SDK Venue interface.
+This allows modern WmeSDK consumers to programmatically access public venue descriptions. JSDoc comments and unit tests are updated accordingly.
+
+### Expose isDrivable in Segment model
+
+Expose the 'isDrivable' property on the SDK Segment interface to allow third-party userscripts to programmatically query whether a segment supports motor vehicle traffic.
+This maps directly to the internal 'segment.isDrivable()' method to determine drivability (excluding walking trails, pedestrian boardwalks, stairways, railroads, and runways). Clear JSDoc comments are also provided for the modern WmeSDK external API contract documentation.
+
+## v2.353
+
+### Remove Closure defaults from TurnClosure's addClosure
+
+The closure defaults led to incorrect payload when creating turn
+closure, preventing save and returning 406/401 incorrect data error on
+Features - POST response
+
+### Failing SDK e2e test
+
+ensures window.SDK_INITIALIZED exists before using it
+to prevent crashes
+the test env intermittently returns a 406 error for authentication
+tokens, triggering a background redirect to /signin. Because the SDK
+test code runs on every page load, it crashes when it tries to access
+window.SDK_INITIALIZED on the sign-in page where it doesn't exist
+It failed with the same 406 error, proving this happens in every test
+but usually finishes too fast to be noticed
 
 ## v2.352
 

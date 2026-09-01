@@ -1,7 +1,7 @@
 ---
 title: SDK.SnapTo type
 source: types/index.SDK.SnapTo.html
-created: 2026-05-28
+created: 2026-09-01
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---

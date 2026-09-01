@@ -1,7 +1,7 @@
 ---
 title: SDK.Segments class
 source: classes/index.SDK.Segments.html
-created: 2026-05-28
+created: 2026-09-01
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -134,7 +134,8 @@ true if the segment's "from" node is part of a big junction, indicating the segm
 ```typescript
 isRoadTypeDrivable ( args: { roadType: RoadTypeId } ) : boolean
 ```
-boolean indicating whether specified road type is drivable.
+boolean indicating whether the specified road type is drivable by vehicles.
+A road type is considered non-drivable if it is a walking trail, pedestrian boardwalk, stairway, railroad, or runway/taxiway.
 ### `isTollSegment`
 
 ```typescript
@@ -165,11 +166,7 @@ two segments the original segment was split into.
 
 ```typescript
 updateAddress (
-  args: {
-  alternateStreetIds ?: number [] ;
-  primaryStreetId ?: number ;
-  segmentId: number ;
-} ,
+  args: { addressData ?: SegmentAddressData ; segmentId: number } ,
   ) : void
 ```
 
@@ -180,18 +177,21 @@ updateSegment (
   args: {
   direction ?: SegmentDirection ;
   elevationLevel ?: number ;
-  flagAttributes ?: Pick <
+  flagAttributes ?: Partial <
+  Pick <
   SegmentFlagAttributes ,
-  "tunnel"
-  | "unpaved"
-  | "headlights"
-  | "nearbyHOV" ,
+  "headlights"
+  | "nearbyHOV"
+  | "tunnel"
+  | "unpaved" ,
+  > ,
   > ;
   fromLanesInfo ?: null | SegmentLanesInfo ;
   fwdSpeedLimit ?: null | number ;
   geometry ?: LineString ;
   hasToll ?: boolean ;
   lockRank ?: UserRank ;
+  restrictions ?: SegmentRestrictionData [] ;
   revSpeedLimit ?: null | number ;
   roadType ?: RoadTypeId ;
   routingRoadType ?: 1 | 2 | 3 | 6 | 7 ;

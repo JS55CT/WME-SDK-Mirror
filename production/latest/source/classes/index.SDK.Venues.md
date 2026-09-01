@@ -1,7 +1,7 @@
 ---
 title: SDK.Venues class
 source: classes/index.SDK.Venues.html
-created: 2026-05-28
+created: 2026-09-01
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -126,9 +126,7 @@ showVenueUpdateRequestDialog ( args: { venueId: string } ) : void
 ### `updateAddress`
 
 ```typescript
-updateAddress (
-  args: { houseNumber ?: string ; streetId ?: number ; venueId: string } ,
-  ) : void
+updateAddress ( args: { addressData ?: VenueAddressData ; venueId: string } ) : void
 ```
 
 ### `updateVenue`
