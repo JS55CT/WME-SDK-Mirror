@@ -1,7 +1,7 @@
 ---
 title: SDK.MapProblemsFilterState interface
 source: interfaces/index.SDK.MapProblemsFilterState.html
-created: 2026-09-01
+created: 2026-10-22
 tool: extract-to-md.py
 notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 ---
@@ -10,12 +10,12 @@ notes: Extracted from Waze SDK HTML docs. Cleaned for LLM context.
 
 ```typescript
 interface MapProblemsFilterState {
-  status: "CLOSED" | "OPEN" ;
+  status: "OPEN" | "CLOSED" ;
 }
 ```
 ## Properties
 ### `status`
 
 ```typescript
-status: "CLOSED" | "OPEN"
+status: "OPEN" | "CLOSED"
 ```
